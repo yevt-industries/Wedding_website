@@ -306,7 +306,7 @@ h4 { font-size: var(--text-lg); }
   .snap-section-dates .snap-section-title {
     background: transparent;
     color: var(--accent);
-    padding: var(--space-sm) var(--space-lg) var(--space-xs);
+    padding: calc(var(--space-sm) + 10px) var(--space-lg) var(--space-xs);
     margin-bottom: 0;
     font-size: clamp(4rem, 16vw, 6rem);
     font-weight: 700;
