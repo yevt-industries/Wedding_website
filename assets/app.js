@@ -140,6 +140,10 @@ const App = (() => {
         await I18n.setLang(lang);
         
         Animations.animateEnvelopeOpenAndDismiss(() => {
+          const scrollContainer = document.getElementById('scroll-container');
+          if (scrollContainer) {
+            scrollContainer.scrollTo({ top: 0, behavior: 'instant' });
+          }
           Animations.init();
           Animations.initFullPageScroll();
         });

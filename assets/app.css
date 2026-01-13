@@ -240,11 +240,12 @@ h4 { font-size: var(--text-lg); }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--header-height) var(--space-lg) var(--space-xl);
+  padding: calc(var(--header-height) + var(--space-sm)) var(--space-md) var(--space-md);
   overflow: hidden;
   position: relative;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  box-sizing: border-box;
 }
 
 .snap-section:nth-child(odd) {
@@ -255,25 +256,40 @@ h4 { font-size: var(--text-lg); }
   background-color: var(--card);
 }
 
-.no-snap {
-  scroll-snap-align: none;
+.snap-section > .container {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Rest of content - scrollable area after snap sections */
+.scroll-rest {
+  scroll-snap-align: start;
 }
 
 .snap-card {
   background: var(--card);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   overflow: hidden;
+  max-height: calc(100vh - var(--header-height) - var(--space-2xl));
 }
 
 .snap-card-venue {
-  max-height: calc(100vh - var(--header-height) - var(--space-3xl));
+  display: flex;
+  flex-direction: column;
 }
 
 .snap-card-venue .venue-image {
-  height: 180px;
+  height: 35vh;
+  min-height: 200px;
+  max-height: 280px;
 }
 
 .snap-card-venue .venue-image img {
@@ -284,57 +300,77 @@ h4 { font-size: var(--text-lg); }
 
 .snap-card-venue .venue-content {
   padding: var(--space-lg);
+  flex: 0 0 auto;
 }
 
 .snap-card-venue .venue-map {
   position: relative;
-  height: 180px;
+  height: 25vh;
+  min-height: 150px;
+  max-height: 200px;
 }
 
 .snap-card-dates {
   padding: var(--space-xl);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .snap-card-title {
   font-family: var(--font-serif);
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   color: var(--accent);
   margin-bottom: var(--space-sm);
 }
 
 .snap-card-title-large {
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
 }
 
 .snap-card-body {
   color: var(--muted);
   line-height: 1.6;
+  font-size: var(--text-lg);
 }
 
 .snap-card-dates .calendar-graphic {
-  margin-top: var(--space-lg);
+  margin-top: var(--space-xl);
   display: flex;
   justify-content: center;
 }
 
 .snap-card-dates .calendar-graphic svg {
   width: 100%;
-  max-width: 280px;
+  max-width: 320px;
   height: auto;
 }
 
 @media (max-width: 768px) {
   .snap-section {
-    padding: calc(var(--header-height) + var(--space-md)) var(--space-md) var(--space-lg);
+    padding: calc(var(--header-height) + var(--space-sm)) var(--space-sm) var(--space-sm);
+  }
+  
+  .snap-card {
+    max-width: 100%;
+    border-radius: var(--radius-md);
+    max-height: calc(100vh - var(--header-height) - var(--space-lg));
   }
   
   .snap-card-venue .venue-image {
-    height: 140px;
+    height: 30vh;
+    min-height: 150px;
   }
   
   .snap-card-venue .venue-map {
-    height: 140px;
+    height: 22vh;
+    min-height: 120px;
+  }
+  
+  .snap-card-venue .venue-content {
+    padding: var(--space-md);
   }
   
   .snap-card-dates {
@@ -342,7 +378,15 @@ h4 { font-size: var(--text-lg); }
   }
   
   .snap-card-dates .calendar-graphic svg {
-    max-width: 240px;
+    max-width: 280px;
+  }
+  
+  .snap-card-title {
+    font-size: var(--text-xl);
+  }
+  
+  .snap-card-title-large {
+    font-size: var(--text-2xl);
   }
 }
 
@@ -1125,18 +1169,33 @@ h4 { font-size: var(--text-lg); }
   text-align: center;
   max-width: var(--container-narrow);
   margin: 0 auto;
+  padding: var(--space-xl);
 }
 
 .intro-title {
   font-family: var(--font-serif);
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   margin-bottom: var(--space-lg);
 }
 
 .intro-body {
   color: var(--muted);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    padding: var(--space-lg);
+  }
+  
+  .intro-title {
+    font-size: var(--text-2xl);
+  }
+  
+  .intro-body {
+    font-size: var(--text-lg);
+  }
 }
 
 /* ============================================
