@@ -172,11 +172,11 @@
 /* Card inside envelope */
 .envelope-card {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
-  height: 85%;
+  width: 94%;
+  height: 90%;
   background: linear-gradient(145deg, #ffffff 0%, #faf8f5 100%);
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -184,17 +184,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 30px;
+  padding: 50px 30px 40px;
   z-index: 5;
-}
-
-.envelope-card::before {
-  content: '';
-  position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(155, 126, 107, 0.15);
-  border-radius: 6px;
-  pointer-events: none;
 }
 
 .envelope-card-title {
@@ -215,8 +206,8 @@
 .envelope-lang-buttons {
   display: flex;
   flex-direction: row;
-  gap: 40px;
-  margin-top: 15px;
+  gap: 60px;
+  margin-top: 20px;
 }
 
 .envelope-lang-btn {
@@ -304,9 +295,13 @@
   }
   
   .envelope-card {
-    padding: 30px 20px;
-    width: 88%;
-    height: 82%;
+    padding: 40px 20px 30px;
+    width: 92%;
+    height: 88%;
+  }
+  
+  .envelope-lang-buttons {
+    gap: 40px;
   }
   
   .envelope-card-title {
