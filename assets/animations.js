@@ -111,20 +111,16 @@ const Animations = (() => {
       ease: 'power2.inOut'
     })
     .to(invitationCard, {
-      zIndex: 30,
-      duration: 0
-    })
-    .to(invitationCard, {
-      y: -100,
-      duration: 1.4,
+      y: -280,
+      duration: 1.6,
       ease: 'power2.out'
-    })
+    }, '-=0.2')
     .to(envelope, {
-      y: 80,
-      duration: 1.4,
+      y: 180,
+      duration: 1.6,
       ease: 'power2.out'
     }, '<')
-    .to({}, { duration: 1.0 })
+    .to({}, { duration: 0.8 })
     .to(overlay, {
       opacity: 0,
       duration: 0.5,
