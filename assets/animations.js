@@ -36,7 +36,6 @@ const Animations = (() => {
     const scene = document.querySelector('.envelope-scene');
     const envelope = document.getElementById('envelope');
     const seal = document.getElementById('envelope-seal');
-    const hint = document.getElementById('envelope-hint');
     const decors = document.querySelectorAll('.envelope-decor');
 
     if (!envelope) return;
@@ -45,7 +44,6 @@ const Animations = (() => {
 
     gsap.set(scene, { opacity: 0, y: 50, scale: 0.9 });
     gsap.set(seal, { scale: 0, rotation: -180 });
-    gsap.set(hint, { opacity: 0, y: 10 });
     gsap.set(decors, { opacity: 0, scale: 0 });
 
     tl.to(scene, {
@@ -61,12 +59,6 @@ const Animations = (() => {
       duration: 0.6,
       ease: 'back.out(1.7)'
     }, '-=0.3')
-    .to(hint, {
-      opacity: 0.8,
-      y: 0,
-      duration: 0.4,
-      ease: 'power2.out'
-    }, '-=0.2')
     .to(decors, {
       opacity: 0.4,
       scale: 1,
@@ -86,7 +78,6 @@ const Animations = (() => {
     const flap = document.getElementById('envelope-flap');
     const seal = document.getElementById('envelope-seal');
     const card = document.getElementById('envelope-card');
-    const hint = document.getElementById('envelope-hint');
 
     if (!envelope || !flap) return;
 
@@ -94,13 +85,7 @@ const Animations = (() => {
 
     const tl = gsap.timeline();
 
-    tl.to(hint, {
-      opacity: 0,
-      y: -10,
-      duration: 0.2,
-      ease: 'power2.in'
-    })
-    .to(seal, {
+    tl.to(seal, {
       scale: 1.2,
       duration: 0.15,
       ease: 'power2.out'

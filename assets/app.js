@@ -87,11 +87,10 @@ const App = (() => {
           <!-- Card inside (language selection) -->
           <div class="envelope-card" id="envelope-card">
             <h2 class="envelope-card-title">Oleh & Inna</h2>
-            <p class="envelope-card-subtitle">You're Invited</p>
             <div class="envelope-card-divider"></div>
             <div class="envelope-lang-buttons">
-              <button class="envelope-lang-btn" data-lang="en">English</button>
-              <button class="envelope-lang-btn" data-lang="uk">Українська</button>
+              <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
+              <button class="envelope-lang-btn" data-lang="uk">🇺🇦 UA</button>
             </div>
           </div>
           
@@ -104,12 +103,6 @@ const App = (() => {
           <!-- Wax seal -->
           <div class="envelope-seal" id="envelope-seal">
             <div class="envelope-seal-circle">O&I</div>
-          </div>
-          
-          <!-- Click hint -->
-          <div class="envelope-hint" id="envelope-hint">
-            <span class="envelope-hint-icon">👆</span>
-            <span>Tap to open</span>
           </div>
         </div>
       </div>

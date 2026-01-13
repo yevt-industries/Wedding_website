@@ -144,11 +144,11 @@
 /* Card inside envelope */
 .envelope-card {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
-  height: 90%;
+  width: 80%;
+  height: 70%;
   background: linear-gradient(145deg, #ffffff 0%, #faf8f5 100%);
   border-radius: 6px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -156,14 +156,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 20px;
+  padding: 15px 15px;
   z-index: 5;
 }
 
 .envelope-card::before {
   content: '';
   position: absolute;
-  inset: 8px;
+  inset: 6px;
   border: 1px solid rgba(155, 126, 107, 0.15);
   border-radius: 4px;
   pointer-events: none;
@@ -171,79 +171,44 @@
 
 .envelope-card-title {
   font-family: var(--font-script);
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
   color: var(--accent);
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.envelope-card-subtitle {
-  font-family: var(--font-serif);
-  font-size: clamp(0.75rem, 2vw, 0.9rem);
-  color: var(--muted);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 0;
   text-align: center;
 }
 
 .envelope-card-divider {
-  width: 60px;
+  width: 50px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  margin-bottom: 24px;
+  margin: 12px 0;
 }
 
 .envelope-lang-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
-  width: 100%;
-  max-width: 200px;
 }
 
 .envelope-lang-btn {
-  padding: 14px 28px;
+  padding: 10px 20px;
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text);
   background: transparent;
   border: 2px solid var(--border);
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .envelope-lang-btn:hover {
   background: var(--accent);
   border-color: var(--accent);
   color: white;
-  transform: scale(1.02);
-}
-
-/* Click hint */
-.envelope-hint {
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  color: var(--muted);
-  opacity: 0.8;
-  white-space: nowrap;
-}
-
-.envelope-hint-icon {
-  display: inline-block;
-  animation: bounce 2s ease-in-out infinite;
-  margin-right: 6px;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  transform: scale(1.05);
 }
 
 /* State: Envelope opened */
@@ -254,10 +219,6 @@
 .envelope-container.is-open .envelope-seal {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.5);
-}
-
-.envelope-container.is-open .envelope-hint {
-  opacity: 0;
 }
 
 /* Decorative elements */
@@ -291,25 +252,39 @@
 /* Mobile adjustments */
 @media (max-width: 480px) {
   .envelope-scene {
-    max-width: 320px;
+    max-width: 280px;
   }
   
   .envelope-seal {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
   }
   
   .envelope-seal-circle {
-    font-size: 22px;
+    font-size: 18px;
   }
   
   .envelope-card {
-    padding: 20px 15px;
+    padding: 12px 10px;
+    width: 78%;
+    height: 65%;
+  }
+  
+  .envelope-card-title {
+    font-size: 1.4rem;
+  }
+  
+  .envelope-card-divider {
+    margin: 8px 0;
   }
   
   .envelope-lang-btn {
-    padding: 12px 24px;
-    font-size: 0.9rem;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .envelope-lang-buttons {
+    gap: 8px;
   }
 }
 
