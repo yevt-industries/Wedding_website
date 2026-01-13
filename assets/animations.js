@@ -111,10 +111,14 @@ const Animations = (() => {
       ease: 'power2.inOut'
     })
     .to(invitationCard, {
-      y: -280,
+      zIndex: 9,
+      duration: 0
+    })
+    .to(invitationCard, {
+      y: -300,
       duration: 1.6,
       ease: 'power2.out'
-    }, '-=0.2')
+    })
     .to(envelope, {
       y: 180,
       duration: 1.6,
