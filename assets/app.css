@@ -299,15 +299,16 @@ h4 { font-size: var(--text-lg); }
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 12vh;
   }
   
   .snap-section-venue .snap-section-title,
   .snap-section-dates .snap-section-title {
     background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
     color: white;
-    padding: calc(var(--header-height) + var(--space-md)) var(--space-lg) var(--space-md);
+    padding: calc(var(--header-height) + var(--space-xs)) var(--space-lg) var(--space-xs);
     margin-bottom: 0;
-    font-size: clamp(3rem, 12vw, 5rem);
+    font-size: clamp(2.5rem, 10vw, 4rem);
     width: 100%;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
@@ -327,6 +328,14 @@ h4 { font-size: var(--text-lg); }
   
   .snap-section-venue .venue-map iframe {
     height: 100%;
+  }
+  
+  .snap-section-dates .snap-section-title {
+    padding: calc(var(--header-height) + var(--space-xs)) var(--space-lg) var(--space-xs);
+  }
+  
+  .snap-section-dates > .container {
+    padding-bottom: 18vh;
   }
 
   #intro.snap-section {
@@ -757,16 +766,21 @@ h4 { font-size: var(--text-lg); }
 
 @media (max-width: 768px) {
   .hero-content {
-    justify-content: space-between;
-    padding: calc(var(--header-height) + var(--space-xl)) var(--space-lg) var(--space-3xl);
+    justify-content: flex-start;
+    padding: calc(var(--header-height) + 8vh) var(--space-lg) 15vh;
   }
   
   .hero-top {
-    padding-top: var(--space-lg);
+    padding-top: 0;
+  }
+  
+  .hero-title {
+    margin-bottom: var(--space-sm);
   }
   
   .hero-bottom {
-    margin-top: 0;
+    margin-top: auto;
+    padding-bottom: 5vh;
   }
 }
 
@@ -1324,11 +1338,11 @@ h4 { font-size: var(--text-lg); }
 
 @media (max-width: 768px) {
   #intro.snap-section {
-    padding: calc(var(--header-height) + var(--space-md)) var(--space-md) var(--space-xl);
+    padding: calc(var(--header-height) + var(--space-sm)) var(--space-md) 12vh;
   }
   
   #intro.snap-section > .container {
-    height: calc(100vh - var(--header-height) - var(--space-md) - var(--space-xl));
+    height: calc(100vh - var(--header-height) - var(--space-sm) - 12vh);
   }
   
   .intro-section {
