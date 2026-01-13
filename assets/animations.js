@@ -258,29 +258,26 @@ const Animations = (() => {
     if (snapSections.length === 0) return;
 
     gsap.registerPlugin(ScrollTrigger);
-
-    const sectionHeight = window.innerHeight;
-    const totalSnapHeight = snapSections.length * sectionHeight;
     
-    const snapPoints = [];
-    for (let i = 0; i < snapSections.length; i++) {
-      snapPoints.push(i / (snapSections.length - 1));
+    const scrollContainer = document.getElementById('scroll-container');
+    if (scrollContainer) {
+      ScrollTrigger.scrollerProxy(scrollContainer, {
+        scrollTop(value) {
+          if (arguments.length) {
+            scrollContainer.scrollTop = value;
+          }
+          return scrollContainer.scrollTop;
+        }
+      });
+      
+      ScrollTrigger.defaults({ scroller: scrollContainer });
+      
+      scrollContainer.addEventListener('scroll', () => {
+        ScrollTrigger.update();
+      });
     }
 
-    ScrollTrigger.create({
-      trigger: snapSections[0],
-      start: 'top top',
-      end: () => `+=${totalSnapHeight - sectionHeight}`,
-      snap: {
-        snapTo: snapPoints,
-        duration: { min: 0.2, max: 0.5 },
-        delay: 0,
-        ease: 'power2.inOut',
-        inertia: false
-      }
-    });
-
-    snapSections.forEach((section, index) => {
+    snapSections.forEach((section) => {
       gsap.fromTo(section.querySelectorAll('.snap-card, .intro-section, .countdown-wrapper'),
         { opacity: 0, y: 40 },
         {

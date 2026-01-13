@@ -166,12 +166,13 @@ const App = (() => {
           e.preventDefault();
           const targetId = href.substring(1);
           const targetSection = document.getElementById(targetId);
+          const scrollContainer = document.getElementById('scroll-container');
           
-          if (targetSection) {
+          if (targetSection && scrollContainer) {
             const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
             const targetPosition = targetSection.offsetTop - headerHeight;
             
-            window.scrollTo({
+            scrollContainer.scrollTo({
               top: targetPosition,
               behavior: 'smooth'
             });
@@ -187,11 +188,12 @@ const App = (() => {
   function initScrollSpy() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const scrollContainer = document.getElementById('scroll-container');
     
-    if (sections.length === 0) return;
+    if (sections.length === 0 || !scrollContainer) return;
 
     const updateActiveLink = () => {
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = scrollContainer.scrollTop + 100;
       
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
@@ -209,7 +211,7 @@ const App = (() => {
       });
     };
 
-    window.addEventListener('scroll', updateActiveLink, { passive: true });
+    scrollContainer.addEventListener('scroll', updateActiveLink, { passive: true });
     updateActiveLink();
   }
 

@@ -94,6 +94,19 @@ body {
   background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ============================================
+   SCROLL CONTAINER (for iOS Safari snap)
+   ============================================ */
+.scroll-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 img {
@@ -230,6 +243,8 @@ h4 { font-size: var(--text-lg); }
   padding: var(--header-height) var(--space-lg) var(--space-xl);
   overflow: hidden;
   position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .snap-section:nth-child(odd) {
@@ -238,6 +253,10 @@ h4 { font-size: var(--text-lg); }
 
 .snap-section:nth-child(even) {
   background-color: var(--card);
+}
+
+.no-snap {
+  scroll-snap-align: none;
 }
 
 .snap-card {
@@ -518,6 +537,8 @@ h4 { font-size: var(--text-lg); }
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .hero-bg {
