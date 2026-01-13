@@ -35,7 +35,7 @@
     "heroSubtitle": "May 24–26, 2026 • Budva, Montenegro",
     "heroTagline": "Mediterranean, romantic, intimate, and fun.",
     "ctaPrimary": "View Schedule",
-    "ctaSecondary": "RSVP (Details Coming Soon)",
+    "ctaSecondary": "RSVP Now",
     "ctaTertiary": "Travel & Stay",
     "introTitle": "We can't wait to celebrate with you",
     "introBody1": "We're inviting our closest people to spend a long weekend with us in Montenegro.",
@@ -48,7 +48,7 @@
     "quickNotesTitle": "Quick Notes",
     "quickNotes": {
       "b1": "Language: English / Ukrainian",
-      "b2": "Schedule & RSVP details will be added soon",
+      "b2": "RSVP is now open — please respond by April 1, 2026",
       "b3": "Most guests will arrive via Podgorica Airport (TGD)"
     },
     "galleryTitle": "Photos",
@@ -78,12 +78,12 @@
   },
   "rsvp": {
     "title": "RSVP",
-    "subtitle": "We'll publish the RSVP link closer to the date.",
-    "button": "RSVP Link (Coming Soon)",
-    "body1": "We're keeping RSVP simple. You'll receive a link to a short form to confirm attendance.",
+    "subtitle": "Please let us know if you can make it!",
+    "button": "Fill Out RSVP Form",
+    "body1": "We're keeping RSVP simple — just fill out the form below to confirm your attendance.",
     "body2": "Most guests are couples; we'll collect details per person so we can plan comfortably.",
     "deadlineTitle": "RSVP Deadline",
-    "deadlineBody": "TBD (we will update this page)",
+    "deadlineBody": "Please respond by April 1, 2026",
     "questionnaireTitle": "What we'll ask",
     "q": {
       "titleA": "A) About you",

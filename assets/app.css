@@ -338,6 +338,7 @@ h4 { font-size: var(--text-lg); }
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+    z-index: 1001;
   }
 
   .main-nav {
@@ -352,10 +353,17 @@ h4 { font-size: var(--text-lg); }
     padding: var(--space-2xl);
     transform: translateX(100%);
     transition: transform var(--transition-base);
+    z-index: 1000;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
   }
 
   .main-nav.is-open {
     transform: translateX(0);
+  }
+  
+  .site-header {
+    background: var(--bg);
+    backdrop-filter: none;
   }
 
   .nav-list {
