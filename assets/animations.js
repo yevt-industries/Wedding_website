@@ -68,79 +68,46 @@ const Animations = (() => {
     }, '-=0.4');
   }
 
-  function animateEnvelopeOpen() {
-    const envelope = document.getElementById('envelope');
+  function animateEnvelopeOpenAndDismiss(onComplete) {
+    const overlay = document.getElementById('envelope-overlay');
     const flap = document.getElementById('envelope-flap');
     const seal = document.getElementById('envelope-seal');
-    const card = document.getElementById('envelope-card');
 
-    if (!envelope || !flap) return;
-    if (envelope.classList.contains('is-open')) return;
-
-    envelope.classList.add('is-open');
-
-    if (!gsapLoaded) {
-      seal.style.opacity = '0';
-      flap.style.transform = 'rotateX(-180deg)';
+    if (!overlay || !flap) {
+      if (onComplete) onComplete();
       return;
     }
-
-    const tl = gsap.timeline();
-
-    tl.to(seal, {
-      scale: 0,
-      opacity: 0,
-      duration: 0.4,
-      ease: 'power2.in'
-    })
-    .to(flap, {
-      rotateX: -180,
-      duration: 0.7,
-      ease: 'power3.inOut'
-    }, '-=0.2')
-    .to(card, {
-      y: -15,
-      duration: 0.4,
-      ease: 'power2.out'
-    }, '-=0.3');
-  }
-
-  async function animateEnvelopeClose() {
-    const overlay = document.getElementById('envelope-overlay');
-    const card = document.getElementById('envelope-card');
-    const scene = document.querySelector('.envelope-scene');
-
-    if (!overlay) return;
 
     if (!gsapLoaded) {
       overlay.classList.add('is-hidden');
+      if (onComplete) onComplete();
       return;
     }
 
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({
+      onComplete: () => {
+        overlay.classList.add('is-hidden');
+        if (onComplete) onComplete();
+      }
+    });
 
-    await new Promise(resolve => {
-      tl.to(card, {
-        y: -100,
-        scale: 1.1,
-        duration: 0.4,
-        ease: 'power2.in'
-      })
-      .to(scene, {
-        scale: 1.5,
-        opacity: 0,
-        duration: 0.5,
-        ease: 'power2.in'
-      }, '-=0.2')
-      .to(overlay, {
-        opacity: 0,
-        duration: 0.3,
-        ease: 'power2.in',
-        onComplete: () => {
-          overlay.classList.add('is-hidden');
-          resolve();
-        }
-      }, '-=0.2');
+    tl.to(seal, {
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.2,
+      ease: 'power2.in'
+    })
+    .to(flap, {
+      rotation: -160,
+      duration: 0.5,
+      ease: 'power2.out'
+    })
+    .to({}, { duration: 0.15 })
+    .to(overlay, {
+      opacity: 0,
+      scale: 1.05,
+      duration: 0.4,
+      ease: 'power2.in'
     });
   }
 
@@ -300,8 +267,7 @@ const Animations = (() => {
   return {
     init,
     animateEnvelopeEntrance,
-    animateEnvelopeOpen,
-    animateEnvelopeClose,
+    animateEnvelopeOpenAndDismiss,
     checkReducedMotion
   };
 })();

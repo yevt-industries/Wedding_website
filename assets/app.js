@@ -97,7 +97,6 @@ const App = (() => {
           <!-- Envelope flap -->
           <div class="envelope-flap" id="envelope-flap">
             <div class="envelope-flap-front"></div>
-            <div class="envelope-flap-back"></div>
           </div>
           
           <!-- Wax seal -->
@@ -113,36 +112,21 @@ const App = (() => {
   }
 
   function initEnvelopeInteraction() {
-    const envelope = document.getElementById('envelope');
-    const seal = document.getElementById('envelope-seal');
-    let isOpen = false;
-
-    const openEnvelope = () => {
-      if (isOpen) return;
-      isOpen = true;
-      Animations.animateEnvelopeOpen();
-    };
-
-    envelope.addEventListener('click', (e) => {
-      if (e.target.closest('.envelope-lang-btn')) return;
-      openEnvelope();
-    });
+    let isAnimating = false;
 
     document.querySelectorAll('.envelope-lang-btn').forEach(btn => {
       btn.addEventListener('click', async (e) => {
         e.stopPropagation();
         
-        if (!envelope.classList.contains('is-open')) {
-          openEnvelope();
-          await new Promise(resolve => setTimeout(resolve, 800));
-        }
+        if (isAnimating) return;
+        isAnimating = true;
 
         const lang = btn.dataset.lang;
         await I18n.setLang(lang);
         
-        await Animations.animateEnvelopeClose();
-        
-        Animations.init();
+        Animations.animateEnvelopeOpenAndDismiss(() => {
+          Animations.init();
+        });
       });
     });
   }
