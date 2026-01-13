@@ -1310,22 +1310,85 @@ h4 { font-size: var(--text-lg); }
 }
 
 /* ============================================
-   RSVP FORM CARD (Mobile Optimized)
+   RSVP SECTION
    ============================================ */
-.rsvp-form-card {
-  padding: 0;
+.rsvp-header {
+  margin-bottom: var(--space-xl);
+}
+
+.rsvp-title {
+  font-family: var(--font-script);
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+}
+
+.rsvp-subtitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--muted);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.rsvp-deadline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md) var(--space-xl);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  border-radius: var(--radius-full);
+  color: var(--card);
+  font-weight: 600;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rsvp-deadline-label {
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.rsvp-deadline-value {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+}
+
+.rsvp-form-container {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
 }
 
-.rsvp-form-card iframe {
+.rsvp-form-container iframe {
   width: 100%;
-  min-height: 600px;
+  min-height: 1400px;
   border: none;
+  display: block;
 }
 
 @media (max-width: 768px) {
-  .rsvp-form-card iframe {
-    min-height: 700px;
+  .rsvp-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+  
+  .rsvp-deadline {
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-md);
+  }
+  
+  .rsvp-form-container iframe {
+    min-height: 1600px;
   }
   
   .section {

@@ -79,12 +79,12 @@
   },
   "rsvp": {
     "title": "RSVP",
-    "subtitle": "Please let us know if you can make it!",
+    "subtitle": "Please let us know if you can make it — feel free to fill out this form for all members of your group.",
     "button": "Fill Out RSVP Form",
     "body1": "We're keeping RSVP simple — just fill out the form below to confirm your attendance.",
     "body2": "Most guests are couples; we'll collect details per person so we can plan comfortably.",
-    "deadlineTitle": "RSVP Deadline",
-    "deadlineBody": "Please respond by April 1, 2026",
+    "deadlineTitle": "Deadline:",
+    "deadlineBody": "April 1, 2026",
     "questionnaireTitle": "What we'll ask",
     "q": {
       "titleA": "A) About you",
