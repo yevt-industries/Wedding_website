@@ -95,17 +95,20 @@ const App = (() => {
       <span class="envelope-decor envelope-decor-3">✾</span>
       
       <div class="envelope-scene">
+        <!-- Invitation card that slides OUT of envelope -->
+        <div class="invitation-card" id="invitation-card">
+          <h2 class="invitation-card-title" id="invitation-card-title">You're Invited</h2>
+          <div class="invitation-card-divider"></div>
+          <p class="invitation-card-names">Oleh & Inna</p>
+        </div>
+        
+        <!-- The envelope itself -->
         <div class="envelope-container" id="envelope">
-          <!-- Envelope body -->
-          <div class="envelope-body"></div>
-          
-          <!-- Card inside (language selection) -->
-          <div class="envelope-card" id="envelope-card">
-            <h2 class="envelope-card-title">You're Invited</h2>
-            <div class="envelope-card-divider"></div>
+          <!-- Envelope body with language buttons -->
+          <div class="envelope-body">
             <div class="envelope-lang-buttons">
-              <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
-              <button class="envelope-lang-btn" data-lang="uk">🇺🇦 UA</button>
+              <button class="envelope-lang-btn" data-lang="en">🇬🇧 English</button>
+              <button class="envelope-lang-btn" data-lang="uk">🇺🇦 Українська</button>
             </div>
           </div>
           
@@ -129,6 +132,11 @@ const App = (() => {
   function initEnvelopeInteraction() {
     let isAnimating = false;
 
+    const invitationTexts = {
+      en: "You're Invited",
+      uk: "Вас Запрошено"
+    };
+
     document.querySelectorAll('.envelope-lang-btn').forEach(btn => {
       btn.addEventListener('click', async (e) => {
         e.stopPropagation();
@@ -137,6 +145,12 @@ const App = (() => {
         isAnimating = true;
 
         const lang = btn.dataset.lang;
+        
+        const cardTitle = document.getElementById('invitation-card-title');
+        if (cardTitle) {
+          cardTitle.textContent = invitationTexts[lang] || invitationTexts.en;
+        }
+        
         await I18n.setLang(lang);
         
         Animations.animateEnvelopeOpenAndDismiss(() => {

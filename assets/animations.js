@@ -37,6 +37,7 @@ const Animations = (() => {
     const envelope = document.getElementById('envelope');
     const seal = document.getElementById('envelope-seal');
     const decors = document.querySelectorAll('.envelope-decor');
+    const invitationCard = document.getElementById('invitation-card');
 
     if (!envelope) return;
 
@@ -45,6 +46,7 @@ const Animations = (() => {
     gsap.set(scene, { opacity: 0, y: 50, scale: 0.9 });
     gsap.set(seal, { scale: 0, rotation: -180 });
     gsap.set(decors, { opacity: 0, scale: 0 });
+    gsap.set(invitationCard, { opacity: 0, y: 100 });
 
     tl.to(scene, {
       opacity: 1,
@@ -70,10 +72,13 @@ const Animations = (() => {
 
   function animateEnvelopeOpenAndDismiss(onComplete) {
     const overlay = document.getElementById('envelope-overlay');
+    const envelope = document.getElementById('envelope');
     const flap = document.getElementById('envelope-flap');
     const seal = document.getElementById('envelope-seal');
+    const invitationCard = document.getElementById('invitation-card');
+    const langButtons = document.querySelector('.envelope-lang-buttons');
 
-    if (!overlay || !flap) {
+    if (!overlay || !flap || !envelope) {
       if (onComplete) onComplete();
       return;
     }
@@ -91,21 +96,36 @@ const Animations = (() => {
       }
     });
 
-    tl.to(seal, {
+    tl.to(langButtons, {
+      opacity: 0,
+      duration: 0.15,
+      ease: 'power2.in'
+    })
+    .to(seal, {
       opacity: 0,
       scale: 0.8,
       duration: 0.2,
       ease: 'power2.in'
-    })
+    }, '-=0.1')
     .to(flap, {
       rotateX: -180,
-      duration: 0.5,
+      duration: 0.4,
       ease: 'power2.out'
     })
-    .to({}, { duration: 0.15 })
+    .to(invitationCard, {
+      opacity: 1,
+      y: -80,
+      duration: 0.9,
+      ease: 'power2.out'
+    }, '-=0.1')
+    .to(envelope, {
+      y: 100,
+      duration: 0.9,
+      ease: 'power2.out'
+    }, '<')
+    .to({}, { duration: 0.8 })
     .to(overlay, {
       opacity: 0,
-      scale: 1.05,
       duration: 0.4,
       ease: 'power2.in'
     });

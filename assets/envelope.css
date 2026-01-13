@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 8vh;
+  padding-top: 6vh;
   background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d8 50%, #d4c5b5 100%);
   opacity: 1;
   visibility: visible;
@@ -19,7 +19,7 @@
 
 .envelope-header {
   text-align: center;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
   z-index: 1;
 }
 
@@ -60,20 +60,64 @@
   perspective: 1200px;
   width: 100%;
   max-width: 90vw;
-  max-height: 85vh;
   padding: 20px;
   position: relative;
   z-index: 1;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* ============================================
+   INVITATION CARD (slides out of envelope)
+   ============================================ */
+.invitation-card {
+  width: 100%;
+  max-width: 500px;
+  background: linear-gradient(145deg, #ffffff 0%, #faf8f5 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  padding: 50px 40px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+  z-index: 5;
+  margin-bottom: -60px;
+}
+
+.invitation-card-title {
+  font-family: var(--font-script);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--accent);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.invitation-card-divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  margin: 0 auto 20px;
+}
+
+.invitation-card-names {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+/* ============================================
+   ENVELOPE CONTAINER
+   ============================================ */
 .envelope-container {
   position: relative;
   width: 100%;
   max-width: 550px;
   aspect-ratio: 1.4;
-  cursor: pointer;
   margin: 0 auto;
+  z-index: 10;
 }
 
 /* Envelope Body */
@@ -87,6 +131,10 @@
     0 8px 25px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 15%;
 }
 
 /* Paper texture overlay */
@@ -109,6 +157,38 @@
   height: 50%;
   background: linear-gradient(to top, rgba(0,0,0,0.03) 0%, transparent 100%);
   pointer-events: none;
+}
+
+/* Language buttons ON the envelope body */
+.envelope-lang-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  position: relative;
+  z-index: 15;
+}
+
+.envelope-lang-btn {
+  padding: 14px 28px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5a4d42;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #d4c5b5;
+  border-radius: 30px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.envelope-lang-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(155, 126, 107, 0.3);
 }
 
 /* Envelope Flap (the triangle that opens) */
@@ -142,7 +222,7 @@
 /* Wax Seal */
 .envelope-seal {
   position: absolute;
-  top: 48%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   width: 85px;
@@ -168,67 +248,6 @@
   color: #f5ebe5;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-
-/* Card inside envelope */
-.envelope-card {
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 94%;
-  height: 90%;
-  background: linear-gradient(145deg, #ffffff 0%, #faf8f5 100%);
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 30px 40px;
-  z-index: 5;
-}
-
-.envelope-card-title {
-  font-family: var(--font-script);
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  color: var(--accent);
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-.envelope-card-divider {
-  width: 80px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  margin: 20px 0;
-}
-
-.envelope-lang-buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 60px;
-  margin-top: 20px;
-}
-
-.envelope-lang-btn {
-  padding: 14px 32px;
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text);
-  background: transparent;
-  border: 2px solid var(--border);
-  border-radius: 30px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.envelope-lang-btn:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: white;
-}
-
 
 /* Decorative elements */
 .envelope-decor {
@@ -258,31 +277,54 @@
   transform: rotate(10deg);
 }
 
-/* Tablet adjustments */
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Tablet */
 @media (max-width: 768px) {
   .envelope-container {
-    max-width: 450px;
+    max-width: 420px;
   }
   
-  .envelope-card-title {
-    font-size: 2rem;
+  .invitation-card {
+    max-width: 380px;
+    padding: 40px 30px;
   }
   
   .envelope-lang-btn {
-    padding: 12px 24px;
-    font-size: 1rem;
+    padding: 12px 22px;
+    font-size: 0.95rem;
   }
 }
 
-/* Mobile adjustments */
+/* Mobile */
 @media (max-width: 480px) {
+  .envelope-overlay {
+    padding-top: 4vh;
+  }
+  
+  .envelope-header {
+    margin-bottom: 2vh;
+  }
+  
   .envelope-scene {
     max-width: 95vw;
-    padding: 15px;
+    padding: 10px;
   }
   
   .envelope-container {
     max-width: 100%;
+  }
+  
+  .invitation-card {
+    max-width: 95%;
+    padding: 35px 25px;
+    margin-bottom: -40px;
+  }
+  
+  .invitation-card-title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
   }
   
   .envelope-seal {
@@ -294,32 +336,12 @@
     font-size: 24px;
   }
   
-  .envelope-card {
-    padding: 40px 20px 30px;
-    width: 92%;
-    height: 88%;
-  }
-  
   .envelope-lang-buttons {
-    gap: 40px;
-  }
-  
-  .envelope-card-title {
-    font-size: 1.8rem;
-  }
-  
-  .envelope-card-divider {
-    margin: 15px 0;
-    width: 60px;
+    gap: 20px;
   }
   
   .envelope-lang-btn {
-    padding: 12px 22px;
-    font-size: 0.95rem;
-  }
-  
-  .envelope-lang-buttons {
-    gap: 15px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
   }
 }
-
