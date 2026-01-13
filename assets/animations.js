@@ -30,6 +30,138 @@ const Animations = (() => {
     });
   }
 
+  function animateEnvelopeEntrance() {
+    if (!gsapLoaded) return;
+    
+    const scene = document.querySelector('.envelope-scene');
+    const envelope = document.getElementById('envelope');
+    const seal = document.getElementById('envelope-seal');
+    const hint = document.getElementById('envelope-hint');
+    const decors = document.querySelectorAll('.envelope-decor');
+
+    if (!envelope) return;
+
+    const tl = gsap.timeline();
+
+    gsap.set(scene, { opacity: 0, y: 50, scale: 0.9 });
+    gsap.set(seal, { scale: 0, rotation: -180 });
+    gsap.set(hint, { opacity: 0, y: 10 });
+    gsap.set(decors, { opacity: 0, scale: 0 });
+
+    tl.to(scene, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 0.8,
+      ease: 'power3.out'
+    })
+    .to(seal, {
+      scale: 1,
+      rotation: 0,
+      duration: 0.6,
+      ease: 'back.out(1.7)'
+    }, '-=0.3')
+    .to(hint, {
+      opacity: 0.8,
+      y: 0,
+      duration: 0.4,
+      ease: 'power2.out'
+    }, '-=0.2')
+    .to(decors, {
+      opacity: 0.4,
+      scale: 1,
+      duration: 0.5,
+      stagger: 0.1,
+      ease: 'back.out(1.5)'
+    }, '-=0.4');
+  }
+
+  function animateEnvelopeOpen() {
+    if (!gsapLoaded) {
+      document.getElementById('envelope')?.classList.add('is-open');
+      return;
+    }
+
+    const envelope = document.getElementById('envelope');
+    const flap = document.getElementById('envelope-flap');
+    const seal = document.getElementById('envelope-seal');
+    const card = document.getElementById('envelope-card');
+    const hint = document.getElementById('envelope-hint');
+
+    if (!envelope || !flap) return;
+
+    envelope.classList.add('is-open');
+
+    const tl = gsap.timeline();
+
+    tl.to(hint, {
+      opacity: 0,
+      y: -10,
+      duration: 0.2,
+      ease: 'power2.in'
+    })
+    .to(seal, {
+      scale: 1.2,
+      duration: 0.15,
+      ease: 'power2.out'
+    })
+    .to(seal, {
+      scale: 0,
+      opacity: 0,
+      duration: 0.3,
+      ease: 'power2.in'
+    })
+    .to(flap, {
+      rotateX: -180,
+      duration: 0.8,
+      ease: 'power2.inOut'
+    }, '-=0.2')
+    .to(card, {
+      y: -20,
+      duration: 0.5,
+      ease: 'power2.out'
+    }, '-=0.3');
+  }
+
+  async function animateEnvelopeClose() {
+    const overlay = document.getElementById('envelope-overlay');
+    const card = document.getElementById('envelope-card');
+    const scene = document.querySelector('.envelope-scene');
+
+    if (!overlay) return;
+
+    if (!gsapLoaded) {
+      overlay.classList.add('is-hidden');
+      return;
+    }
+
+    const tl = gsap.timeline();
+
+    await new Promise(resolve => {
+      tl.to(card, {
+        y: -100,
+        scale: 1.1,
+        duration: 0.4,
+        ease: 'power2.in'
+      })
+      .to(scene, {
+        scale: 1.5,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.in'
+      }, '-=0.2')
+      .to(overlay, {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power2.in',
+        onComplete: () => {
+          overlay.classList.add('is-hidden');
+          resolve();
+        }
+      }, '-=0.2');
+    });
+  }
+
   function initPageTransition() {
     if (reducedMotion || !gsapLoaded) {
       document.querySelector('.page')?.classList.add('loaded');
@@ -170,45 +302,6 @@ const Animations = (() => {
     });
   }
 
-  function animateModalIn(modal) {
-    if (!gsapLoaded) {
-      modal.classList.add('is-visible');
-      return;
-    }
-
-    modal.classList.add('is-visible');
-    
-    const content = modal.querySelector('.lang-modal-content');
-    if (content) {
-      gsap.fromTo(content,
-        { scale: 0.9, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.2)' }
-      );
-    }
-  }
-
-  function animateModalOut(modal) {
-    if (!gsapLoaded) {
-      modal.classList.remove('is-visible');
-      return Promise.resolve();
-    }
-
-    return new Promise((resolve) => {
-      const content = modal.querySelector('.lang-modal-content');
-      
-      gsap.to(content, {
-        scale: 0.9,
-        opacity: 0,
-        duration: 0.25,
-        ease: 'power2.in',
-        onComplete: () => {
-          modal.classList.remove('is-visible');
-          resolve();
-        }
-      });
-    });
-  }
-
   async function init() {
     checkReducedMotion();
     await waitForGSAP();
@@ -220,13 +313,15 @@ const Animations = (() => {
     initCardHovers();
   }
 
+  waitForGSAP();
+
   return {
     init,
-    animateModalIn,
-    animateModalOut,
+    animateEnvelopeEntrance,
+    animateEnvelopeOpen,
+    animateEnvelopeClose,
     checkReducedMotion
   };
 })();
 
 export default Animations;
-

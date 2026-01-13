@@ -6,8 +6,12 @@ const I18n = (() => {
   let currentLang = DEFAULT_LANG;
   let dictionaries = {};
 
-  function getStoredLang() {
-    return localStorage.getItem(STORAGE_KEY);
+  function getSavedLang() {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored && SUPPORTED_LANGS.includes(stored)) {
+      return stored;
+    }
+    return null;
   }
 
   function setStoredLang(lang) {
@@ -20,21 +24,6 @@ const I18n = (() => {
     if (lang && SUPPORTED_LANGS.includes(lang)) {
       return lang;
     }
-    return null;
-  }
-
-  function detectLang() {
-    const urlLang = getUrlLang();
-    if (urlLang) {
-      setStoredLang(urlLang);
-      return urlLang;
-    }
-    
-    const storedLang = getStoredLang();
-    if (storedLang && SUPPORTED_LANGS.includes(storedLang)) {
-      return storedLang;
-    }
-    
     return null;
   }
 
@@ -54,6 +43,10 @@ const I18n = (() => {
       console.error(`Error loading dictionary for ${lang}:`, error);
       return null;
     }
+  }
+
+  async function preloadDictionaries() {
+    await Promise.all(SUPPORTED_LANGS.map(loadDictionary));
   }
 
   function getNestedValue(obj, path) {
@@ -121,20 +114,23 @@ const I18n = (() => {
     return currentLang;
   }
 
-  function needsLangModal() {
-    return !getStoredLang();
-  }
-
   async function init() {
-    const detectedLang = detectLang();
-    
-    if (detectedLang) {
-      await loadDictionary(detectedLang);
-      applyTranslations(detectedLang);
-      return { showModal: false, lang: detectedLang };
+    const urlLang = getUrlLang();
+    if (urlLang) {
+      setStoredLang(urlLang);
+      await loadDictionary(urlLang);
+      applyTranslations(urlLang);
+      return { showModal: false, lang: urlLang };
     }
 
-    await Promise.all(SUPPORTED_LANGS.map(loadDictionary));
+    const savedLang = getSavedLang();
+    if (savedLang) {
+      await loadDictionary(savedLang);
+      applyTranslations(savedLang);
+      return { showModal: false, lang: savedLang };
+    }
+
+    await preloadDictionaries();
     return { showModal: true, lang: null };
   }
 
@@ -142,13 +138,13 @@ const I18n = (() => {
     init,
     setLang,
     getCurrentLang,
-    needsLangModal,
+    getSavedLang,
     applyTranslations,
     loadDictionary,
+    preloadDictionaries,
     SUPPORTED_LANGS,
     DEFAULT_LANG
   };
 })();
 
 export default I18n;
-

@@ -66,40 +66,92 @@ const App = (() => {
     `;
   }
 
-  function renderLangModal() {
-    const existingModal = document.getElementById('lang-modal');
-    if (existingModal) return;
+  function renderEnvelope() {
+    const existingEnvelope = document.getElementById('envelope-overlay');
+    if (existingEnvelope) return;
 
-    const modal = document.createElement('div');
-    modal.id = 'lang-modal';
-    modal.className = 'lang-modal';
-    modal.innerHTML = `
-      <div class="lang-modal-content">
-        <h2 class="lang-modal-title">Choose language<br>Оберіть мову</h2>
-        <div class="lang-modal-buttons">
-          <button class="lang-modal-btn" data-lang="en">English</button>
-          <button class="lang-modal-btn" data-lang="uk">Українська</button>
+    const overlay = document.createElement('div');
+    overlay.id = 'envelope-overlay';
+    overlay.className = 'envelope-overlay';
+    overlay.innerHTML = `
+      <!-- Decorative elements -->
+      <span class="envelope-decor envelope-decor-1">✿</span>
+      <span class="envelope-decor envelope-decor-2">❀</span>
+      <span class="envelope-decor envelope-decor-3">✾</span>
+      
+      <div class="envelope-scene">
+        <div class="envelope-container" id="envelope">
+          <!-- Envelope body -->
+          <div class="envelope-body"></div>
+          
+          <!-- Card inside (language selection) -->
+          <div class="envelope-card" id="envelope-card">
+            <h2 class="envelope-card-title">Oleh & Inna</h2>
+            <p class="envelope-card-subtitle">You're Invited</p>
+            <div class="envelope-card-divider"></div>
+            <div class="envelope-lang-buttons">
+              <button class="envelope-lang-btn" data-lang="en">English</button>
+              <button class="envelope-lang-btn" data-lang="uk">Українська</button>
+            </div>
+          </div>
+          
+          <!-- Envelope flap -->
+          <div class="envelope-flap" id="envelope-flap">
+            <div class="envelope-flap-front"></div>
+            <div class="envelope-flap-back"></div>
+          </div>
+          
+          <!-- Wax seal -->
+          <div class="envelope-seal" id="envelope-seal">
+            <div class="envelope-seal-circle">O&I</div>
+          </div>
+          
+          <!-- Click hint -->
+          <div class="envelope-hint" id="envelope-hint">
+            <span class="envelope-hint-icon">👆</span>
+            <span>Tap to open</span>
+          </div>
         </div>
       </div>
     `;
 
-    document.body.appendChild(modal);
+    document.body.appendChild(overlay);
+    initEnvelopeInteraction();
+  }
 
-    modal.querySelectorAll('.lang-modal-btn').forEach(btn => {
-      btn.addEventListener('click', async () => {
+  function initEnvelopeInteraction() {
+    const envelope = document.getElementById('envelope');
+    const seal = document.getElementById('envelope-seal');
+    let isOpen = false;
+
+    const openEnvelope = () => {
+      if (isOpen) return;
+      isOpen = true;
+      Animations.animateEnvelopeOpen();
+    };
+
+    envelope.addEventListener('click', (e) => {
+      if (e.target.closest('.envelope-lang-btn')) return;
+      openEnvelope();
+    });
+
+    document.querySelectorAll('.envelope-lang-btn').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        
+        if (!envelope.classList.contains('is-open')) {
+          openEnvelope();
+          await new Promise(resolve => setTimeout(resolve, 800));
+        }
+
         const lang = btn.dataset.lang;
         await I18n.setLang(lang);
-        await Animations.animateModalOut(modal);
+        
+        await Animations.animateEnvelopeClose();
+        
         Animations.init();
       });
     });
-  }
-
-  function showLangModal() {
-    const modal = document.getElementById('lang-modal');
-    if (modal) {
-      Animations.animateModalIn(modal);
-    }
   }
 
   function initMobileNav() {
@@ -152,15 +204,16 @@ const App = (() => {
     
     renderHeader(currentPage);
     renderFooter();
-    renderLangModal();
+    renderEnvelope();
 
-    const { showModal } = await I18n.init();
+    await I18n.preloadDictionaries();
 
-    if (showModal) {
-      showLangModal();
-    } else {
-      Animations.init();
+    const savedLang = I18n.getSavedLang();
+    if (savedLang) {
+      await I18n.setLang(savedLang);
     }
+
+    Animations.animateEnvelopeEntrance();
 
     initFaqAccordion();
 
@@ -174,4 +227,3 @@ const App = (() => {
 })();
 
 document.addEventListener('DOMContentLoaded', App.init);
-
