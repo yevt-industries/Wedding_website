@@ -102,16 +102,26 @@
       }
     },
     "day3": {
-      "title": "May 26 — Farewell",
+      "title": "May 26 — After Party",
       "e1": {
         "time": "11:00 AM",
         "event": "Brunch",
-        "desc": "Relaxed farewell brunch"
+        "desc": "Relaxed late morning brunch"
       },
       "e2": {
-        "time": "2:00 PM",
-        "event": "Departures",
-        "desc": "Safe travels home"
+        "time": "3:00 PM",
+        "event": "Pool & Chill",
+        "desc": "Relax by the pool, games & refreshments"
+      },
+      "e3": {
+        "time": "7:00 PM",
+        "event": "Farewell Dinner",
+        "desc": "Final dinner together"
+      },
+      "e4": {
+        "time": "9:00 PM",
+        "event": "Party Night",
+        "desc": "Dancing & celebrating into the night"
       }
     },
     "callout": "Please plan to arrive by May 23 if you can."
