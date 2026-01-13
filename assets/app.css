@@ -350,11 +350,7 @@ h4 { font-size: var(--text-lg); }
   padding-top: 0;
 }
 
-@media (max-width: 768px) {
-  .scroll-rest {
-    scroll-snap-align: start;
-  }
-}
+/* scroll-rest has no snap - allows free scrolling after snap sections */
 
 .snap-card {
   background: var(--card);
