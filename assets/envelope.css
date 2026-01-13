@@ -227,15 +227,7 @@
   transform: scale(1.05);
 }
 
-/* State: Envelope opened */
-.envelope-container.is-open .envelope-flap {
-  transform: rotateX(-180deg);
-}
-
-.envelope-container.is-open .envelope-seal {
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.5);
-}
+/* State: Envelope opened - GSAP handles animations, CSS just for fallback */
 
 /* Decorative elements */
 .envelope-decor {

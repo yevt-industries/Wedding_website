@@ -69,41 +69,38 @@ const Animations = (() => {
   }
 
   function animateEnvelopeOpen() {
-    if (!gsapLoaded) {
-      document.getElementById('envelope')?.classList.add('is-open');
-      return;
-    }
-
     const envelope = document.getElementById('envelope');
     const flap = document.getElementById('envelope-flap');
     const seal = document.getElementById('envelope-seal');
     const card = document.getElementById('envelope-card');
 
     if (!envelope || !flap) return;
+    if (envelope.classList.contains('is-open')) return;
 
     envelope.classList.add('is-open');
+
+    if (!gsapLoaded) {
+      seal.style.opacity = '0';
+      flap.style.transform = 'rotateX(-180deg)';
+      return;
+    }
 
     const tl = gsap.timeline();
 
     tl.to(seal, {
-      scale: 1.2,
-      duration: 0.15,
-      ease: 'power2.out'
-    })
-    .to(seal, {
       scale: 0,
       opacity: 0,
-      duration: 0.3,
+      duration: 0.4,
       ease: 'power2.in'
     })
     .to(flap, {
       rotateX: -180,
-      duration: 0.8,
-      ease: 'power2.inOut'
+      duration: 0.7,
+      ease: 'power3.inOut'
     }, '-=0.2')
     .to(card, {
-      y: -20,
-      duration: 0.5,
+      y: -15,
+      duration: 0.4,
       ease: 'power2.out'
     }, '-=0.3');
   }
