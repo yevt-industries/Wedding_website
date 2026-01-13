@@ -142,7 +142,7 @@
 /* Wax Seal */
 .envelope-seal {
   position: absolute;
-  top: 42%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   width: 85px;
@@ -215,7 +215,8 @@
 .envelope-lang-buttons {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 40px;
+  margin-top: 15px;
 }
 
 .envelope-lang-btn {

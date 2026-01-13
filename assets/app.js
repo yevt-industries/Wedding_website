@@ -101,7 +101,7 @@ const App = (() => {
           
           <!-- Card inside (language selection) -->
           <div class="envelope-card" id="envelope-card">
-            <h2 class="envelope-card-title">Oleh & Inna</h2>
+            <h2 class="envelope-card-title">You're Invited</h2>
             <div class="envelope-card-divider"></div>
             <div class="envelope-lang-buttons">
               <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
