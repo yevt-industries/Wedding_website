@@ -1035,6 +1035,18 @@ h4 { font-size: var(--text-lg); }
   line-height: 1.8;
 }
 
+.calendar-graphic {
+  margin-top: var(--space-xl);
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-graphic svg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
 /* ============================================
    QUICK NOTES
    ============================================ */
