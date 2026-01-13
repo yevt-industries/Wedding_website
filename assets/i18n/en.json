@@ -61,19 +61,58 @@
     "placeholderTitle": "Placeholder Weekend Outline",
     "placeholderNote": "Exact timings and locations will be confirmed closer to the date.",
     "day1": {
-      "title": "May 24 — Welcome",
-      "b1": "Evening welcome drinks & light bites",
-      "b2": "Dress code: TBD"
+      "title": "May 24 — Welcome Day",
+      "e1": {
+        "time": "4:00 PM",
+        "event": "Guest Arrivals",
+        "desc": "Check in and settle at the villa"
+      },
+      "e2": {
+        "time": "6:00 PM",
+        "event": "Welcome Cocktails",
+        "desc": "Drinks and light bites by the pool"
+      },
+      "e3": {
+        "time": "8:00 PM",
+        "event": "Welcome Dinner",
+        "desc": "Casual dinner together"
+      }
     },
     "day2": {
       "title": "May 25 — Wedding Day",
-      "b1": "Ceremony + dinner + celebration",
-      "b2": "Dress code: TBD"
+      "e1": {
+        "time": "3:00 PM",
+        "event": "Getting Ready",
+        "desc": "Hair, makeup & preparations"
+      },
+      "e2": {
+        "time": "5:00 PM",
+        "event": "Ceremony",
+        "desc": "Exchange of vows"
+      },
+      "e3": {
+        "time": "6:30 PM",
+        "event": "Cocktail Hour",
+        "desc": "Drinks and canapés"
+      },
+      "e4": {
+        "time": "8:00 PM",
+        "event": "Reception & Celebration",
+        "desc": "Dinner, dancing & festivities"
+      }
     },
     "day3": {
-      "title": "May 26 — After Party",
-      "b1": "Relaxed daytime gathering / brunch",
-      "b2": "Dress code: TBD"
+      "title": "May 26 — Farewell",
+      "e1": {
+        "time": "11:00 AM",
+        "event": "Brunch",
+        "desc": "Relaxed farewell brunch"
+      },
+      "e2": {
+        "time": "2:00 PM",
+        "event": "Departures",
+        "desc": "Safe travels home"
+      }
     },
     "callout": "Please plan to arrive by May 23 if you can."
   },

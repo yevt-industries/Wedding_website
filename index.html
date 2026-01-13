@@ -88,41 +88,6 @@
         </div>
       </section>
 
-      <!-- Venue Section -->
-      <section id="venue" class="snap-section snap-section-venue" data-snap="true">
-        <div class="container">
-          <h2 class="snap-section-title" data-i18n="home.venueTitle"></h2>
-          <div class="snap-card snap-card-venue">
-            <div class="venue-image">
-              <img src="/photos/IMG_5016.jpeg" alt="Villa Mona Lisa" loading="lazy">
-            </div>
-            <div class="venue-content">
-              <p class="snap-card-body" data-i18n="home.venueBody1"></p>
-              <p class="snap-card-body" data-i18n="home.venueBody2"></p>
-            </div>
-            <div class="venue-map">
-              <iframe 
-                src="https://maps.google.com/maps?q=Villa+Mona+Lisa+Montenegro&t=&z=10&ie=UTF8&iwloc=&output=embed"
-                width="100%" 
-                height="150" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-              <a href="https://maps.app.goo.gl/eb7QNK1TuarS9A2M8" target="_blank" rel="noopener" class="venue-map-overlay">
-                <span data-i18n="home.venueMapBtn">Open in Google Maps</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Dates Section -->
       <section id="dates" class="snap-section snap-section-dates" data-snap="true">
         <div class="container">
@@ -227,77 +192,180 @@
         </div>
       </section>
 
+      <!-- Venue Section -->
+      <section id="venue" class="snap-section snap-section-venue" data-snap="true">
+        <div class="container">
+          <h2 class="snap-section-title" data-i18n="home.venueTitle"></h2>
+          <div class="snap-card snap-card-venue">
+            <div class="venue-image">
+              <img src="/photos/IMG_5016.jpeg" alt="Villa Mona Lisa" loading="lazy">
+            </div>
+            <div class="venue-content">
+              <p class="snap-card-body venue-name" data-i18n="home.venueBody1"></p>
+              <p class="snap-card-body venue-description" data-i18n="home.venueBody2"></p>
+            </div>
+            <div class="venue-map">
+              <iframe 
+                src="https://maps.google.com/maps?q=Villa+Mona+Lisa+Montenegro&t=&z=10&ie=UTF8&iwloc=&output=embed"
+                width="100%" 
+                height="150" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              <a href="https://maps.app.goo.gl/eb7QNK1TuarS9A2M8" target="_blank" rel="noopener" class="venue-map-overlay">
+                <span data-i18n="home.venueMapBtn">Open in Google Maps</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ============================================
            REST OF CONTENT (scrollable section)
            ============================================ -->
       <div class="scroll-rest" id="more-content">
         
-        <!-- SCHEDULE SECTION -->
-        <section id="schedule" class="section section-alt reveal">
-        <div class="container container-narrow">
-          <div class="section-header text-center">
-            <h2 class="section-title-large" data-i18n="schedule.title"></h2>
-            <p class="section-subtitle" data-i18n="schedule.subtitle"></p>
-          </div>
+        <!-- ============================================
+             RSVP SECTION
+             ============================================ -->
+        <section id="rsvp" class="section reveal">
+          <div class="container container-narrow">
+            <div class="rsvp-header text-center">
+              <h2 class="rsvp-title" data-i18n="rsvp.title"></h2>
+              <p class="rsvp-subtitle" data-i18n="rsvp.subtitle"></p>
+            </div>
 
-          <div class="text-center mb-xl">
-            <p class="section-subtitle" data-i18n="schedule.placeholderNote"></p>
-          </div>
+            <!-- Deadline -->
+            <div class="rsvp-deadline reveal-item">
+              <span class="rsvp-deadline-label" data-i18n="rsvp.deadlineTitle"></span>
+              <span class="rsvp-deadline-value" data-i18n="rsvp.deadlineBody"></span>
+            </div>
 
-          <!-- Day Cards -->
-          <div class="day-card mb-lg reveal-item">
-            <h3 class="day-card-title" data-i18n="schedule.day1.title"></h3>
-            <ul>
-              <li data-i18n="schedule.day1.b1"></li>
-              <li data-i18n="schedule.day1.b2"></li>
-            </ul>
-          </div>
-
-          <div class="day-card mb-lg reveal-item">
-            <h3 class="day-card-title" data-i18n="schedule.day2.title"></h3>
-            <ul>
-              <li data-i18n="schedule.day2.b1"></li>
-              <li data-i18n="schedule.day2.b2"></li>
-            </ul>
-          </div>
-
-          <div class="day-card mb-lg reveal-item">
-            <h3 class="day-card-title" data-i18n="schedule.day3.title"></h3>
-            <ul>
-              <li data-i18n="schedule.day3.b1"></li>
-              <li data-i18n="schedule.day3.b2"></li>
-            </ul>
-          </div>
-
-          <!-- Callout -->
-          <div class="callout reveal-item" data-i18n="schedule.callout"></div>
-        </div>
-      </section>
-
-      <!-- ============================================
-           RSVP SECTION
-           ============================================ -->
-      <section id="rsvp" class="section reveal">
-        <div class="container container-narrow">
-          <div class="rsvp-header text-center">
-            <h2 class="rsvp-title" data-i18n="rsvp.title"></h2>
-            <p class="rsvp-subtitle" data-i18n="rsvp.subtitle"></p>
-          </div>
-
-          <!-- Deadline -->
-          <div class="rsvp-deadline reveal-item">
-            <span class="rsvp-deadline-label" data-i18n="rsvp.deadlineTitle"></span>
-            <span class="rsvp-deadline-value" data-i18n="rsvp.deadlineBody"></span>
-          </div>
-
-          <!-- Google Form Embed -->
-          <div class="reveal-item">
-            <div class="rsvp-form-container">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeRtIj-G27TjVBCIqLlzM7OkBfrYSOaKqbZtJ_QBGmUq4m0iA/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <!-- Google Form Embed -->
+            <div class="reveal-item">
+              <div class="rsvp-form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeRtIj-G27TjVBCIqLlzM7OkBfrYSOaKqbZtJ_QBGmUq4m0iA/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- SCHEDULE SECTION -->
+        <section id="schedule" class="section section-alt reveal">
+          <div class="container container-narrow">
+            <div class="section-header text-center">
+              <h2 class="section-title-large" data-i18n="schedule.title"></h2>
+              <p class="section-subtitle" data-i18n="schedule.subtitle"></p>
+            </div>
+
+            <div class="text-center mb-xl">
+              <p class="section-subtitle" data-i18n="schedule.placeholderNote"></p>
+            </div>
+
+            <!-- Day 1 Timeline -->
+            <div class="timeline-day reveal-item">
+              <h3 class="timeline-day-title" data-i18n="schedule.day1.title"></h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-time" data-i18n="schedule.day1.e1.time"></div>
+                  <div class="timeline-node"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-event" data-i18n="schedule.day1.e1.event"></h4>
+                    <p class="timeline-desc" data-i18n="schedule.day1.e1.desc"></p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-time" data-i18n="schedule.day1.e2.time"></div>
+                  <div class="timeline-node"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-event" data-i18n="schedule.day1.e2.event"></h4>
+                    <p class="timeline-desc" data-i18n="schedule.day1.e2.desc"></p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-time" data-i18n="schedule.day1.e3.time"></div>
+                  <div class="timeline-node"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-event" data-i18n="schedule.day1.e3.event"></h4>
+                    <p class="timeline-desc" data-i18n="schedule.day1.e3.desc"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Day 2 Timeline -->
+            <div class="timeline-day reveal-item">
+              <h3 class="timeline-day-title" data-i18n="schedule.day2.title"></h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-time" data-i18n="schedule.day2.e1.time"></div>
+                  <div class="timeline-node"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-event" data-i18n="schedule.day2.e1.event"></h4>
+                    <p class="timeline-desc" data-i18n="schedule.day2.e1.desc"></p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-time" data-i18n="schedule.day2.e2.time"></div>
+                  <div class="timeline-node"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-event" data-i18n="schedule.day2.e2.event"></h4>
+                    <p class="timeline-desc" data-i18n="schedule.day2.e2.desc"></p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-time" data-i18n="schedule.day2.e3.time"></div>
+                  <div class="timeline-node"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-event" data-i18n="schedule.day2.e3.event"></h4>
+                    <p class="timeline-desc" data-i18n="schedule.day2.e3.desc"></p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-time" data-i18n="schedule.day2.e4.time"></div>
+                  <div class="timeline-node"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-event" data-i18n="schedule.day2.e4.event"></h4>
+                    <p class="timeline-desc" data-i18n="schedule.day2.e4.desc"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Day 3 Timeline -->
+            <div class="timeline-day reveal-item">
+              <h3 class="timeline-day-title" data-i18n="schedule.day3.title"></h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-time" data-i18n="schedule.day3.e1.time"></div>
+                  <div class="timeline-node"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-event" data-i18n="schedule.day3.e1.event"></h4>
+                    <p class="timeline-desc" data-i18n="schedule.day3.e1.desc"></p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-time" data-i18n="schedule.day3.e2.time"></div>
+                  <div class="timeline-node"></div>
+                  <div class="timeline-content">
+                    <h4 class="timeline-event" data-i18n="schedule.day3.e2.event"></h4>
+                    <p class="timeline-desc" data-i18n="schedule.day3.e2.desc"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Callout -->
+            <div class="callout reveal-item" data-i18n="schedule.callout"></div>
+          </div>
+        </section>
 
       <!-- ============================================
            FAQ SECTION
