@@ -212,6 +212,43 @@ const App = (() => {
     updateActiveLink();
   }
 
+  function initCountdown() {
+    const weddingDate = new Date('2026-05-25T00:00:00');
+    
+    const daysEl = document.getElementById('countdown-days');
+    const hoursEl = document.getElementById('countdown-hours');
+    const minutesEl = document.getElementById('countdown-minutes');
+    const secondsEl = document.getElementById('countdown-seconds');
+    
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = weddingDate - now;
+      
+      if (diff <= 0) {
+        daysEl.textContent = '0';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
+        return;
+      }
+      
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      daysEl.textContent = days;
+      hoursEl.textContent = hours.toString().padStart(2, '0');
+      minutesEl.textContent = minutes.toString().padStart(2, '0');
+      secondsEl.textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
+
   function initLangToggle() {
     document.querySelectorAll('.lang-toggle button').forEach(btn => {
       btn.addEventListener('click', async () => {
@@ -256,6 +293,7 @@ const App = (() => {
 
     initFaqAccordion();
     initScrollSpy();
+    initCountdown();
 
     const currentLang = I18n.getCurrentLang();
     document.querySelectorAll('.lang-toggle button').forEach(btn => {
