@@ -354,6 +354,11 @@ h4 { font-size: var(--text-lg); }
   .scroll-rest {
     scroll-snap-align: start;
   }
+  
+  .scroll-end-spacer {
+    height: 1px;
+    scroll-snap-align: end;
+  }
 }
 
 .snap-card {
