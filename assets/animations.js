@@ -98,7 +98,7 @@ const Animations = (() => {
       ease: 'power2.in'
     })
     .to(flap, {
-      rotation: -160,
+      rotateX: -180,
       duration: 0.5,
       ease: 'power2.out'
     })
