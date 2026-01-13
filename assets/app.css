@@ -764,7 +764,7 @@ h4 { font-size: var(--text-lg); }
 @media (max-width: 768px) {
   .hero-content {
     justify-content: flex-start;
-    padding: calc(var(--header-height) + 8vh) var(--space-lg) 15vh;
+    padding: calc(var(--header-height) + 4vh) var(--space-lg) 15vh;
   }
   
   .hero-top {
