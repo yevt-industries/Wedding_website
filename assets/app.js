@@ -118,8 +118,8 @@ const App = (() => {
           
           <!-- Language buttons on envelope body -->
           <div class="envelope-lang-buttons">
-            <button class="envelope-lang-btn" data-lang="en">EN</button>
-            <button class="envelope-lang-btn" data-lang="uk">UA</button>
+            <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
+            <button class="envelope-lang-btn" data-lang="uk">🇺🇦 UA</button>
           </div>
           
           <!-- Top flap (opens when clicked) -->
