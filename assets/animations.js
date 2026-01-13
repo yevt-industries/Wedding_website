@@ -37,7 +37,6 @@ const Animations = (() => {
     const envelope = document.getElementById('envelope');
     const seal = document.getElementById('envelope-seal');
     const decors = document.querySelectorAll('.envelope-decor');
-    const invitationCard = document.getElementById('invitation-card');
 
     if (!envelope) return;
 
@@ -46,7 +45,6 @@ const Animations = (() => {
     gsap.set(scene, { opacity: 0, y: 50, scale: 0.9 });
     gsap.set(seal, { scale: 0, rotation: -180 });
     gsap.set(decors, { opacity: 0, scale: 0 });
-    gsap.set(invitationCard, { opacity: 0, y: 100 });
 
     tl.to(scene, {
       opacity: 1,
@@ -98,35 +96,34 @@ const Animations = (() => {
 
     tl.to(langButtons, {
       opacity: 0,
-      duration: 0.15,
+      duration: 0.2,
       ease: 'power2.in'
     })
     .to(seal, {
       opacity: 0,
       scale: 0.8,
-      duration: 0.2,
+      duration: 0.25,
       ease: 'power2.in'
     }, '-=0.1')
     .to(flap, {
       rotateX: -180,
-      duration: 0.4,
+      duration: 0.6,
       ease: 'power2.out'
     })
     .to(invitationCard, {
-      opacity: 1,
-      y: -150,
-      duration: 0.9,
+      y: -80,
+      duration: 1.2,
       ease: 'power2.out'
-    }, '-=0.1')
+    }, '-=0.2')
     .to(envelope, {
-      y: 120,
-      duration: 0.9,
+      y: 60,
+      duration: 1.2,
       ease: 'power2.out'
     }, '<')
-    .to({}, { duration: 0.8 })
+    .to({}, { duration: 1.0 })
     .to(overlay, {
       opacity: 0,
-      duration: 0.4,
+      duration: 0.5,
       ease: 'power2.in'
     });
   }

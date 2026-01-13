@@ -95,24 +95,34 @@ const App = (() => {
       <span class="envelope-decor envelope-decor-3">✾</span>
       
       <div class="envelope-scene">
-        <!-- Invitation card that slides OUT of envelope -->
-        <div class="invitation-card" id="invitation-card">
-          <h2 class="invitation-card-title" id="invitation-card-title">You're Invited</h2>
-          <div class="invitation-card-divider"></div>
-          <p class="invitation-card-names">Oleh & Inna</p>
-        </div>
-        
         <!-- The envelope itself -->
         <div class="envelope-container" id="envelope">
-          <!-- Envelope body with language buttons -->
-          <div class="envelope-body">
-            <div class="envelope-lang-buttons">
-              <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
-              <button class="envelope-lang-btn" data-lang="uk">🇺🇦 UA</button>
-            </div>
+          <!-- Envelope body -->
+          <div class="envelope-body"></div>
+          
+          <!-- Inner card visible inside envelope -->
+          <div class="envelope-inner-card" id="invitation-card">
+            <h2 class="invitation-card-title" id="invitation-card-title">You're Invited</h2>
+            <div class="invitation-card-divider"></div>
+            <p class="invitation-card-names">Oleh & Inna</p>
           </div>
           
-          <!-- Envelope flap -->
+          <!-- Bottom flap (covers bottom of inner card) -->
+          <div class="envelope-flap-bottom"></div>
+          
+          <!-- Left flap -->
+          <div class="envelope-flap-left"></div>
+          
+          <!-- Right flap -->
+          <div class="envelope-flap-right"></div>
+          
+          <!-- Language buttons -->
+          <div class="envelope-lang-buttons">
+            <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
+            <button class="envelope-lang-btn" data-lang="uk">🇺🇦 UA</button>
+          </div>
+          
+          <!-- Top flap (opens) -->
           <div class="envelope-flap" id="envelope-flap">
             <div class="envelope-flap-front"></div>
           </div>

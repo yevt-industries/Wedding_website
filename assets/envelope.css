@@ -70,55 +70,6 @@
 }
 
 /* ============================================
-   INVITATION CARD (slides out of envelope)
-   ============================================ */
-.invitation-card {
-  width: 100%;
-  max-width: 480px;
-  background: linear-gradient(145deg, #ffffff 0%, #faf8f5 100%);
-  border-radius: 12px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
-  padding: 50px 40px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(100px);
-  z-index: 25;
-  margin-bottom: -80px;
-  position: relative;
-}
-
-.invitation-card::before {
-  content: '';
-  position: absolute;
-  inset: 8px;
-  border: 1px solid rgba(92, 37, 43, 0.15);
-  border-radius: 8px;
-  pointer-events: none;
-}
-
-.invitation-card-title {
-  font-family: var(--font-script);
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  color: #5c252b;
-  margin-bottom: 15px;
-  line-height: 1.2;
-}
-
-.invitation-card-divider {
-  width: 100px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #5c252b, transparent);
-  margin: 0 auto 20px;
-}
-
-.invitation-card-names {
-  font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
-  color: var(--muted);
-  letter-spacing: 0.1em;
-}
-
-/* ============================================
    ENVELOPE CONTAINER
    ============================================ */
 .envelope-container {
@@ -138,16 +89,11 @@
   border-radius: 8px;
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.3),
-    0 8px 25px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 8px 25px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 10%;
 }
 
-/* Subtle texture overlay */
+/* Subtle texture */
 .envelope-body::before {
   content: '';
   position: absolute;
@@ -157,37 +103,167 @@
   pointer-events: none;
 }
 
-/* Envelope inner shadow */
-.envelope-body::after {
+/* ============================================
+   INNER CARD (visible inside envelope)
+   ============================================ */
+.envelope-inner-card {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  right: 10%;
+  bottom: 15%;
+  background: linear-gradient(145deg, #ffffff 0%, #faf8f5 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  z-index: 5;
+}
+
+.envelope-inner-card::before {
   content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(92, 37, 43, 0.12);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.invitation-card-title {
+  font-family: var(--font-script);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #5c252b;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.invitation-card-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #5c252b, transparent);
+  margin: 0 auto 15px;
+}
+
+.invitation-card-names {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #6b6560;
+  letter-spacing: 0.1em;
+}
+
+/* ============================================
+   ENVELOPE FLAPS (with white edges)
+   ============================================ */
+
+/* Bottom flap - triangle pointing up */
+.envelope-flap-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 40%;
-  background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, transparent 100%);
-  pointer-events: none;
+  height: 45%;
+  background: linear-gradient(0deg, #5c252b 0%, #4a1e23 100%);
+  clip-path: polygon(0 100%, 50% 20%, 100% 100%);
+  z-index: 12;
 }
 
-/* Subtle gold edge detail on envelope */
-.envelope-container::after {
+.envelope-flap-bottom::before {
   content: '';
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 8px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  clip-path: polygon(0 100%, 50% 20%, 100% 100%);
   pointer-events: none;
-  z-index: 15;
 }
 
-/* Language buttons ON the envelope body - White style */
+/* Left flap - triangle pointing right */
+.envelope-flap-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  background: linear-gradient(90deg, #663333 0%, #5c252b 100%);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  z-index: 11;
+}
+
+.envelope-flap-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  pointer-events: none;
+}
+
+/* Right flap - triangle pointing left */
+.envelope-flap-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  background: linear-gradient(270deg, #663333 0%, #5c252b 100%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  z-index: 11;
+}
+
+.envelope-flap-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  pointer-events: none;
+}
+
+/* Top flap (the one that opens) */
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  transform-origin: top center;
+  z-index: 20;
+}
+
+.envelope-flap-front {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #663333 0%, #4a252a 100%);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* White edge on top flap */
+.envelope-flap-front::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  clip-path: polygon(1% 0, 50% 97%, 99% 0);
+  pointer-events: none;
+}
+
+/* ============================================
+   LANGUAGE BUTTONS
+   ============================================ */
 .envelope-lang-buttons {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: row;
   gap: 30px;
-  position: relative;
   z-index: 15;
-  margin-bottom: 5%;
 }
 
 .envelope-lang-btn {
@@ -211,35 +287,9 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Envelope Flap (the triangle that opens) - Burgundy */
-.envelope-flap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 55%;
-  transform-origin: top center;
-  z-index: 20;
-}
-
-.envelope-flap-front {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, #663333 0%, #4a252a 100%);
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-}
-
-.envelope-flap-front::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.03;
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
-}
-
-/* Wax Seal - White/Cream */
+/* ============================================
+   WAX SEAL
+   ============================================ */
 .envelope-seal {
   position: absolute;
   top: 45%;
@@ -266,7 +316,6 @@
   font-family: var(--font-script);
   font-size: 32px;
   color: #5c252b;
-  text-shadow: none;
   border: 2px solid rgba(212, 175, 55, 0.35);
 }
 
@@ -308,10 +357,8 @@
     max-width: 420px;
   }
   
-  .invitation-card {
-    max-width: 380px;
-    padding: 40px 30px;
-    margin-bottom: -60px;
+  .envelope-inner-card {
+    padding: 25px 15px;
   }
   
   .envelope-lang-btn {
@@ -348,14 +395,16 @@
     max-width: 100%;
   }
   
-  .invitation-card {
-    max-width: 95%;
-    padding: 35px 25px;
-    margin-bottom: -50px;
+  .envelope-inner-card {
+    top: 10%;
+    left: 12%;
+    right: 12%;
+    bottom: 18%;
+    padding: 20px 15px;
   }
   
   .invitation-card-title {
-    font-size: clamp(2rem, 8vw, 2.8rem);
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
   }
   
   .envelope-seal {
@@ -370,6 +419,7 @@
   
   .envelope-lang-buttons {
     gap: 20px;
+    bottom: 8%;
   }
   
   .envelope-lang-btn {
