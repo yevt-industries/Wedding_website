@@ -91,7 +91,7 @@
   content: '';
   position: absolute;
   inset: 8px;
-  border: 1px solid rgba(139, 69, 69, 0.2);
+  border: 1px solid rgba(92, 37, 43, 0.15);
   border-radius: 8px;
   pointer-events: none;
 }
@@ -99,7 +99,7 @@
 .invitation-card-title {
   font-family: var(--font-script);
   font-size: clamp(2.5rem, 6vw, 4rem);
-  color: #8b4545;
+  color: #5c252b;
   margin-bottom: 15px;
   line-height: 1.2;
 }
@@ -107,7 +107,7 @@
 .invitation-card-divider {
   width: 100px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #8b4545, transparent);
+  background: linear-gradient(90deg, transparent, #5c252b, transparent);
   margin: 0 auto 20px;
 }
 
@@ -130,16 +130,16 @@
   z-index: 10;
 }
 
-/* Envelope Body - Royal Red */
+/* Envelope Body - Burgundy */
 .envelope-body {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #a83232 0%, #8b2828 50%, #6d1f1f 100%);
+  background: linear-gradient(145deg, #722f37 0%, #5c252b 50%, #4a1e23 100%);
   border-radius: 8px;
   box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.25),
-    0 8px 25px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 8px 25px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -147,54 +147,34 @@
   padding-bottom: 10%;
 }
 
-/* Paper texture overlay */
+/* Subtle texture overlay */
 .envelope-body::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.05;
+  opacity: 0.03;
   pointer-events: none;
 }
 
-/* Envelope inner shadow and detail lines */
+/* Envelope inner shadow */
 .envelope-body::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60%;
-  background: linear-gradient(to top, rgba(0,0,0,0.15) 0%, transparent 100%);
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, transparent 100%);
   pointer-events: none;
 }
 
-/* Envelope stitching detail */
-.envelope-body .envelope-stitch {
-  position: absolute;
-  pointer-events: none;
-}
-
-/* Inner envelope liner peek */
-.envelope-container::before {
-  content: '';
-  position: absolute;
-  top: 2%;
-  left: 3%;
-  right: 3%;
-  height: 50%;
-  background: linear-gradient(180deg, #f5e6d3 0%, #e8d4bc 100%);
-  border-radius: 6px 6px 0 0;
-  z-index: 1;
-  clip-path: polygon(0 100%, 50% 30%, 100% 100%);
-}
-
-/* Gold edge detail on envelope */
+/* Subtle gold edge detail on envelope */
 .envelope-container::after {
   content: '';
   position: absolute;
   inset: 0;
-  border: 2px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 8px;
   pointer-events: none;
   z-index: 15;
@@ -215,23 +195,23 @@
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 600;
-  color: #8b2828;
+  color: #5c252b;
   background: rgba(255, 255, 255, 0.95);
   border: none;
   border-radius: 30px;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .envelope-lang-btn:hover {
   background: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Envelope Flap (the triangle that opens) - Royal Red */
+/* Envelope Flap (the triangle that opens) - Burgundy */
 .envelope-flap {
   position: absolute;
   top: 0;
@@ -245,9 +225,9 @@
 .envelope-flap-front {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #9a2d2d 0%, #7d2323 100%);
+  background: linear-gradient(180deg, #663333 0%, #4a252a 100%);
   clip-path: polygon(0 0, 50% 100%, 100% 0);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .envelope-flap-front::before {
@@ -255,21 +235,8 @@
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.05;
+  opacity: 0.03;
   clip-path: polygon(0 0, 50% 100%, 100% 0);
-}
-
-/* Gold trim on flap */
-.envelope-flap-front::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px solid rgba(212, 175, 55, 0.25);
-  clip-path: polygon(2% 0, 50% 96%, 98% 0);
-  pointer-events: none;
 }
 
 /* Wax Seal - White/Cream */
@@ -286,21 +253,21 @@
 .envelope-seal-circle {
   width: 100%;
   height: 100%;
-  background: linear-gradient(145deg, #ffffff 0%, #f5f0eb 50%, #e8e0d8 100%);
+  background: linear-gradient(145deg, #ffffff 0%, #f8f5f2 50%, #f0ebe5 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 
-    0 6px 25px rgba(0, 0, 0, 0.3),
+    0 6px 25px rgba(0, 0, 0, 0.35),
     0 3px 10px rgba(0, 0, 0, 0.2),
-    inset 0 2px 4px rgba(255, 255, 255, 0.8),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.08);
   font-family: var(--font-script);
   font-size: 32px;
-  color: #8b2828;
+  color: #5c252b;
   text-shadow: none;
-  border: 3px solid rgba(212, 175, 55, 0.4);
+  border: 2px solid rgba(212, 175, 55, 0.35);
 }
 
 /* Decorative elements */
