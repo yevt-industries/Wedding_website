@@ -45,7 +45,8 @@
     "venueBody2": "A private villa in the hills above Budva with views of the Adriatic.",
     "venueMapBtn": "Open in Google Maps",
     "datesTitle": "Dates",
-    "datesBody": "May 24–26, 2026 (arrivals likely May 23)",
+    "datesBody": "May 24–26, 2026",
+    "datesArrival": "Arrivals likely May 23",
     "quickNotesTitle": "Quick Notes",
     "quickNotes": {
       "b1": "Language: English / Ukrainian",

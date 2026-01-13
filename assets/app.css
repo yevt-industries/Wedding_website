@@ -1147,6 +1147,33 @@ h4 { font-size: var(--text-lg); }
   line-height: 1.8;
 }
 
+.highlight-card-title-large {
+  font-size: var(--text-2xl);
+}
+
+.highlight-card-dates {
+  display: flex;
+  flex-direction: column;
+}
+
+.dates-arrival {
+  font-style: italic;
+  font-size: var(--text-base);
+  margin-top: var(--space-xs);
+}
+
+.highlight-card-dates .calendar-graphic {
+  margin-top: var(--space-lg);
+  display: flex;
+  justify-content: center;
+}
+
+.highlight-card-dates .calendar-graphic svg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
 .highlight-card-venue {
   padding: 0;
   overflow: hidden;
@@ -1212,37 +1239,6 @@ h4 { font-size: var(--text-lg); }
   flex-shrink: 0;
 }
 
-.calendar-wrapper {
-  margin-top: var(--space-xl);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-}
-
-.calendar-graphic {
-  grid-column: 2;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.calendar-graphic svg {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .calendar-wrapper {
-    grid-template-columns: 1fr;
-  }
-  
-  .calendar-graphic {
-    grid-column: 1;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-}
 
 /* ============================================
    QUICK NOTES
