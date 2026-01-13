@@ -351,7 +351,7 @@ h4 { font-size: var(--text-lg); }
 }
 
 @media (max-width: 768px) {
-  .scroll-rest > section:first-child {
+  .scroll-rest {
     scroll-snap-align: start;
   }
 }
