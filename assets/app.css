@@ -352,8 +352,7 @@ h4 { font-size: var(--text-lg); }
 
 @media (max-width: 768px) {
   .scroll-rest {
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
+    scroll-snap-align: start;
   }
 }
 
