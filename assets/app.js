@@ -74,6 +74,13 @@ const App = (() => {
     overlay.id = 'envelope-overlay';
     overlay.className = 'envelope-overlay';
     overlay.innerHTML = `
+      <!-- Header -->
+      <div class="envelope-header">
+        <h1 class="envelope-header-title">Oleh & Inna</h1>
+        <p class="envelope-header-date">May 24 – May 26, 2026</p>
+        <p class="envelope-header-location">Budva, Montenegro</p>
+      </div>
+      
       <!-- Decorative elements -->
       <span class="envelope-decor envelope-decor-1">✿</span>
       <span class="envelope-decor envelope-decor-2">❀</span>
