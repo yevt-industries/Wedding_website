@@ -107,17 +107,21 @@ const Animations = (() => {
     }, '-=0.1')
     .to(flap, {
       rotateX: -180,
-      duration: 0.6,
-      ease: 'power2.out'
+      duration: 0.7,
+      ease: 'power2.inOut'
     })
     .to(invitationCard, {
-      y: -80,
-      duration: 1.2,
+      zIndex: 30,
+      duration: 0
+    })
+    .to(invitationCard, {
+      y: -100,
+      duration: 1.4,
       ease: 'power2.out'
-    }, '-=0.2')
+    })
     .to(envelope, {
-      y: 60,
-      duration: 1.2,
+      y: 80,
+      duration: 1.4,
       ease: 'power2.out'
     }, '<')
     .to({}, { duration: 1.0 })

@@ -97,7 +97,7 @@ const App = (() => {
       <div class="envelope-scene">
         <!-- The envelope itself -->
         <div class="envelope-container" id="envelope">
-          <!-- Envelope body -->
+          <!-- Envelope body (burgundy background) -->
           <div class="envelope-body"></div>
           
           <!-- Inner card visible inside envelope -->
@@ -107,24 +107,25 @@ const App = (() => {
             <p class="invitation-card-names">Oleh & Inna</p>
           </div>
           
-          <!-- Bottom flap (covers bottom of inner card) -->
-          <div class="envelope-flap-bottom"></div>
-          
-          <!-- Left flap -->
+          <!-- Left flap (side fold) -->
           <div class="envelope-flap-left"></div>
           
-          <!-- Right flap -->
+          <!-- Right flap (side fold) -->
           <div class="envelope-flap-right"></div>
           
-          <!-- Language buttons -->
+          <!-- Bottom flap (bottom fold) -->
+          <div class="envelope-flap-bottom"></div>
+          
+          <!-- Language buttons on envelope body -->
           <div class="envelope-lang-buttons">
-            <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
-            <button class="envelope-lang-btn" data-lang="uk">🇺🇦 UA</button>
+            <button class="envelope-lang-btn" data-lang="en">EN</button>
+            <button class="envelope-lang-btn" data-lang="uk">UA</button>
           </div>
           
-          <!-- Top flap (opens) -->
+          <!-- Top flap (opens when clicked) -->
           <div class="envelope-flap" id="envelope-flap">
             <div class="envelope-flap-front"></div>
+            <div class="envelope-flap-back"></div>
           </div>
           
           <!-- Wax seal -->

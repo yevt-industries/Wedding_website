@@ -108,28 +108,19 @@
    ============================================ */
 .envelope-inner-card {
   position: absolute;
-  top: 8%;
-  left: 10%;
-  right: 10%;
-  bottom: 15%;
+  top: 10%;
+  left: 18%;
+  right: 18%;
+  bottom: 12%;
   background: linear-gradient(145deg, #ffffff 0%, #faf8f5 100%);
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 20px;
-  z-index: 5;
-}
-
-.envelope-inner-card::before {
-  content: '';
-  position: absolute;
-  inset: 6px;
-  border: 1px solid rgba(92, 37, 43, 0.12);
-  border-radius: 6px;
-  pointer-events: none;
+  padding: 25px 20px;
+  z-index: 7;
 }
 
 .invitation-card-title {
@@ -156,71 +147,58 @@
 }
 
 /* ============================================
-   ENVELOPE FLAPS (with white edges)
+   ENVELOPE FOLDS (subtle edge overlaps)
    ============================================ */
 
-/* Bottom flap - triangle pointing up */
+/* The inner card pocket - visible area in center */
+.envelope-pocket {
+  position: absolute;
+  top: 8%;
+  left: 15%;
+  right: 15%;
+  bottom: 10%;
+  background: #f8f5f2;
+  border-radius: 4px;
+  z-index: 6;
+}
+
+/* Bottom fold - covers bottom edge */
 .envelope-flap-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 45%;
-  background: linear-gradient(0deg, #5c252b 0%, #4a1e23 100%);
-  clip-path: polygon(0 100%, 50% 20%, 100% 100%);
-  z-index: 12;
+  height: 20%;
+  background: linear-gradient(0deg, #4a1e23 0%, #5c252b 100%);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 65%);
+  z-index: 14;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.envelope-flap-bottom::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  clip-path: polygon(0 100%, 50% 20%, 100% 100%);
-  pointer-events: none;
-}
-
-/* Left flap - triangle pointing right */
+/* Left fold - covers left edge */
 .envelope-flap-left {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  width: 35%;
-  background: linear-gradient(90deg, #663333 0%, #5c252b 100%);
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-  z-index: 11;
+  width: 18%;
+  height: 100%;
+  background: linear-gradient(90deg, #4a1e23 0%, #5a2428 100%);
+  clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 15%);
+  z-index: 13;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.envelope-flap-left::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-  pointer-events: none;
-}
-
-/* Right flap - triangle pointing left */
+/* Right fold - covers right edge */
 .envelope-flap-right {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  width: 35%;
-  background: linear-gradient(270deg, #663333 0%, #5c252b 100%);
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
-  z-index: 11;
-}
-
-.envelope-flap-right::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
-  pointer-events: none;
+  width: 18%;
+  height: 100%;
+  background: linear-gradient(270deg, #4a1e23 0%, #5a2428 100%);
+  clip-path: polygon(100% 0, 100% 100%, 0 85%, 0 15%);
+  z-index: 13;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Top flap (the one that opens) */
@@ -231,25 +209,28 @@
   right: 0;
   height: 55%;
   transform-origin: top center;
+  transform-style: preserve-3d;
   z-index: 20;
 }
 
 .envelope-flap-front {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #663333 0%, #4a252a 100%);
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  background: linear-gradient(180deg, #5c252b 0%, #4a252a 100%);
+  clip-path: polygon(0 0, 50% 85%, 100% 0);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* White edge on top flap */
-.envelope-flap-front::after {
-  content: '';
+/* Back of top flap (visible when opened) */
+.envelope-flap-back {
   position: absolute;
   inset: 0;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  clip-path: polygon(1% 0, 50% 97%, 99% 0);
-  pointer-events: none;
+  background: linear-gradient(0deg, #3d1a1e 0%, #4a252a 100%);
+  clip-path: polygon(0 0, 50% 85%, 100% 0);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
 
 /* ============================================
@@ -257,13 +238,13 @@
    ============================================ */
 .envelope-lang-buttons {
   position: absolute;
-  bottom: 12%;
+  bottom: 8%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: row;
-  gap: 30px;
-  z-index: 15;
+  gap: 40px;
+  z-index: 25;
 }
 
 .envelope-lang-btn {
@@ -292,12 +273,12 @@
    ============================================ */
 .envelope-seal {
   position: absolute;
-  top: 45%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   width: 90px;
   height: 90px;
-  z-index: 22;
+  z-index: 30;
 }
 
 .envelope-seal-circle {
