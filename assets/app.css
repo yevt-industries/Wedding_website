@@ -299,18 +299,19 @@ h4 { font-size: var(--text-lg); }
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 12vh;
+    padding-bottom: 22vh;
   }
   
   .snap-section-venue .snap-section-title,
   .snap-section-dates .snap-section-title {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
-    color: white;
-    padding: calc(var(--header-height) + var(--space-xs)) var(--space-lg) var(--space-xs);
+    background: transparent;
+    color: var(--accent);
+    padding: calc(var(--header-height) + var(--space-sm)) var(--space-lg) var(--space-xs);
     margin-bottom: 0;
-    font-size: clamp(2.5rem, 10vw, 4rem);
+    font-size: clamp(4rem, 16vw, 6rem);
+    font-weight: 700;
     width: 100%;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
   }
   
   .snap-section-venue .snap-card-venue {
@@ -330,12 +331,8 @@ h4 { font-size: var(--text-lg); }
     height: 100%;
   }
   
-  .snap-section-dates .snap-section-title {
-    padding: calc(var(--header-height) + var(--space-xs)) var(--space-lg) var(--space-xs);
-  }
-  
   .snap-section-dates > .container {
-    padding-bottom: 18vh;
+    padding-bottom: 28vh;
   }
 
   #intro.snap-section {
