@@ -31,16 +31,19 @@
   
   <main>
     <div class="page">
-      <!-- Hero Section -->
-      <section class="hero">
+      
+      <!-- ============================================
+           HERO SECTION
+           ============================================ -->
+      <section id="home" class="hero">
         <div class="hero-bg" style="background-image: url('/photos/IMG_1050.jpeg'); background-color: #7d6a5a;"></div>
         <div class="hero-content">
           <h1 class="hero-title" data-i18n="home.heroTitle"></h1>
           <p class="hero-subtitle" data-i18n="home.heroSubtitle"></p>
           <p class="hero-tagline" data-i18n="home.heroTagline"></p>
           <div class="hero-ctas">
-            <a href="/schedule.html" class="btn btn-primary" data-i18n="home.ctaPrimary"></a>
-            <a href="/rsvp.html" class="btn btn-secondary" data-i18n="home.ctaSecondary"></a>
+            <a href="#schedule" class="btn btn-primary" data-i18n="home.ctaPrimary"></a>
+            <a href="#rsvp" class="btn btn-secondary" data-i18n="home.ctaSecondary"></a>
             <a href="/travel.html" class="btn btn-secondary" data-i18n="home.ctaTertiary"></a>
           </div>
         </div>
@@ -74,22 +77,216 @@
         </div>
       </section>
 
-      <!-- Quick Notes -->
-      <section class="section reveal">
+      <!-- ============================================
+           SCHEDULE SECTION
+           ============================================ -->
+      <section id="schedule" class="section section-alt reveal">
         <div class="container container-narrow">
-          <div class="quick-notes">
-            <h3 class="quick-notes-title" data-i18n="home.quickNotesTitle"></h3>
-            <ul class="quick-notes-list">
-              <li class="reveal-item" data-i18n="home.quickNotes.b1"></li>
-              <li class="reveal-item" data-i18n="home.quickNotes.b2"></li>
-              <li class="reveal-item" data-i18n="home.quickNotes.b3"></li>
+          <div class="section-header text-center">
+            <h2 class="section-title-large" data-i18n="schedule.title"></h2>
+            <p class="section-subtitle" data-i18n="schedule.subtitle"></p>
+          </div>
+
+          <div class="text-center mb-xl">
+            <p class="section-subtitle" data-i18n="schedule.placeholderNote"></p>
+          </div>
+
+          <!-- Day Cards -->
+          <div class="day-card mb-lg reveal-item">
+            <h3 class="day-card-title" data-i18n="schedule.day1.title"></h3>
+            <ul>
+              <li data-i18n="schedule.day1.b1"></li>
+              <li data-i18n="schedule.day1.b2"></li>
             </ul>
+          </div>
+
+          <div class="day-card mb-lg reveal-item">
+            <h3 class="day-card-title" data-i18n="schedule.day2.title"></h3>
+            <ul>
+              <li data-i18n="schedule.day2.b1"></li>
+              <li data-i18n="schedule.day2.b2"></li>
+            </ul>
+          </div>
+
+          <div class="day-card mb-lg reveal-item">
+            <h3 class="day-card-title" data-i18n="schedule.day3.title"></h3>
+            <ul>
+              <li data-i18n="schedule.day3.b1"></li>
+              <li data-i18n="schedule.day3.b2"></li>
+            </ul>
+          </div>
+
+          <!-- Callout -->
+          <div class="callout reveal-item" data-i18n="schedule.callout"></div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           RSVP SECTION
+           ============================================ -->
+      <section id="rsvp" class="section reveal">
+        <div class="container container-narrow">
+          <div class="section-header text-center">
+            <h2 class="section-title-large" data-i18n="rsvp.title"></h2>
+            <p class="section-subtitle" data-i18n="rsvp.subtitle"></p>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="text-center mb-xl">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRtIj-G27TjVBCIqLlzM7OkBfrYSOaKqbZtJ_QBGmUq4m0iA/viewform" target="_blank" class="btn btn-primary btn-lg" data-i18n="rsvp.button"></a>
+          </div>
+
+          <!-- Explanation -->
+          <div class="card mb-lg reveal-item">
+            <p class="card-body" data-i18n="rsvp.body1"></p>
+            <p class="card-body mt-md" data-i18n="rsvp.body2"></p>
+          </div>
+
+          <!-- Deadline -->
+          <div class="card mb-xl reveal-item">
+            <h3 class="card-title" data-i18n="rsvp.deadlineTitle"></h3>
+            <p class="card-body" data-i18n="rsvp.deadlineBody"></p>
+          </div>
+
+          <!-- Google Form Embed -->
+          <div class="reveal-item">
+            <div class="card rsvp-form-card">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeRtIj-G27TjVBCIqLlzM7OkBfrYSOaKqbZtJ_QBGmUq4m0iA/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="display: block;">Loading…</iframe>
+            </div>
+          </div>
+
+          <!-- Confirmation -->
+          <div class="callout mt-xl reveal-item" data-i18n="rsvp.confirmation"></div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           FAQ SECTION
+           ============================================ -->
+      <section id="faq" class="section section-alt reveal">
+        <div class="container container-narrow">
+          <div class="section-header text-center">
+            <h2 class="section-title-large" data-i18n="faq.title"></h2>
+            <p class="section-subtitle" data-i18n="faq.subtitle"></p>
+          </div>
+          
+          <!-- Basics Section -->
+          <div class="faq-section reveal-item">
+            <h3 class="faq-section-title" data-i18n="faq.basics.title"></h3>
+            
+            <div class="faq-item">
+              <button class="faq-question" data-i18n="faq.basics.q1"></button>
+              <div class="faq-answer">
+                <p data-i18n="faq.basics.a1"></p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" data-i18n="faq.basics.q2"></button>
+              <div class="faq-answer">
+                <p data-i18n="faq.basics.a2"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dress Code Section -->
+          <div class="faq-section reveal-item">
+            <h3 class="faq-section-title" data-i18n="faq.dress.title"></h3>
+            
+            <div class="faq-item">
+              <button class="faq-question" data-i18n="faq.dress.q1"></button>
+              <div class="faq-answer">
+                <p data-i18n="faq.dress.a1"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu Section -->
+          <div class="faq-section reveal-item">
+            <h3 class="faq-section-title" data-i18n="faq.menu.title"></h3>
+            
+            <div class="faq-item">
+              <button class="faq-question" data-i18n="faq.menu.q1"></button>
+              <div class="faq-answer">
+                <p data-i18n="faq.menu.a1"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gifts Section -->
+          <div class="faq-section reveal-item">
+            <h3 class="faq-section-title" data-i18n="faq.gifts.title"></h3>
+            
+            <div class="faq-item">
+              <button class="faq-question" data-i18n="faq.gifts.q1"></button>
+              <div class="faq-answer">
+                <p data-i18n="faq.gifts.a1"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transport Section -->
+          <div class="faq-section reveal-item">
+            <h3 class="faq-section-title" data-i18n="faq.transport.title"></h3>
+            
+            <div class="faq-item">
+              <button class="faq-question" data-i18n="faq.transport.q1"></button>
+              <div class="faq-answer">
+                <p data-i18n="faq.transport.a1"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Updates Section -->
+          <div class="faq-section reveal-item">
+            <h3 class="faq-section-title" data-i18n="faq.updates.title"></h3>
+            
+            <div class="faq-item">
+              <button class="faq-question" data-i18n="faq.updates.q1"></button>
+              <div class="faq-answer">
+                <p data-i18n="faq.updates.a1"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           CONTACT SECTION
+           ============================================ -->
+      <section id="contact" class="section reveal">
+        <div class="container container-narrow">
+          <div class="section-header text-center">
+            <h2 class="section-title-large" data-i18n="contact.title"></h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle"></p>
+          </div>
+
+          <div class="card-grid">
+            <!-- Primary Contact -->
+            <div class="contact-card reveal-item">
+              <h3 class="contact-card-title" data-i18n="contact.primary.title"></h3>
+              <p class="card-body" data-i18n="contact.primary.body"></p>
+              
+              <dl class="contact-info">
+                <dt data-i18n="contact.primary.emailLabel"></dt>
+                <dd data-i18n="contact.primary.emailValue"></dd>
+                
+                <dt data-i18n="contact.primary.phoneLabel"></dt>
+                <dd data-i18n="contact.primary.phoneValue"></dd>
+              </dl>
+            </div>
+
+            <!-- Day-of Contact -->
+            <div class="contact-card reveal-item">
+              <h3 class="contact-card-title" data-i18n="contact.dayof.title"></h3>
+              <p class="card-body" data-i18n="contact.dayof.body"></p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Photo Gallery -->
-      <section class="section reveal">
+      <section class="section section-alt reveal">
         <div class="container">
           <div class="text-center mb-xl">
             <h2 class="section-title" data-i18n="home.galleryTitle"></h2>
@@ -97,7 +294,6 @@
           </div>
           
           <div class="gallery-grid" id="gallery">
-            <!-- TODO: Add more photos as they become available -->
             <a href="/photos/IMG_1050.jpeg" class="gallery-item reveal-item" data-pswp-width="1200" data-pswp-height="800">
               <img src="/photos/IMG_1050.jpeg" alt="Save the Date" loading="lazy" decoding="async">
             </a>
@@ -110,10 +306,10 @@
           </div>
         </div>
       </section>
+
     </div>
   </main>
   
   <footer id="site-footer" class="site-footer"></footer>
 </body>
 </html>
-

@@ -173,6 +173,18 @@ h4 { font-size: var(--text-lg); }
   margin-bottom: var(--space-xl);
 }
 
+.section-title-large {
+  font-family: var(--font-script);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: var(--space-md);
+}
+
+.section-header {
+  margin-bottom: var(--space-2xl);
+}
+
 /* ============================================
    LAYOUT
    ============================================ */
@@ -198,9 +210,10 @@ h4 { font-size: var(--text-lg); }
 
 .section {
   padding: var(--space-4xl) 0;
+  scroll-margin-top: var(--header-height);
 }
 
-.section:nth-child(even) {
+.section-alt {
   background-color: var(--card);
 }
 
@@ -386,6 +399,7 @@ h4 { font-size: var(--text-lg); }
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  scroll-margin-top: 0;
 }
 
 .hero-bg {
@@ -1084,6 +1098,50 @@ h4 { font-size: var(--text-lg); }
   font-family: var(--font-serif);
   font-size: var(--text-lg);
   opacity: 0.9;
+}
+
+/* ============================================
+   RSVP FORM CARD (Mobile Optimized)
+   ============================================ */
+.rsvp-form-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.rsvp-form-card iframe {
+  width: 100%;
+  min-height: 600px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .rsvp-form-card iframe {
+    min-height: 700px;
+  }
+  
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+  
+  .section-title-large {
+    font-size: var(--text-2xl);
+  }
+  
+  .day-card {
+    padding: var(--space-lg);
+  }
+  
+  .faq-question {
+    padding: var(--space-md);
+  }
+  
+  .contact-card {
+    padding: var(--space-xl);
+  }
+  
+  .card-grid {
+    gap: var(--space-lg);
+  }
 }
 
 /* ============================================

@@ -12,23 +12,31 @@ const App = (() => {
     const header = document.getElementById('site-header');
     if (!header) return;
 
-    const navItems = [
-      { slug: 'index', key: 'nav.home', href: '/index.html' },
-      { slug: 'schedule', key: 'nav.schedule', href: '/schedule.html' },
-      { slug: 'rsvp', key: 'nav.rsvp', href: '/rsvp.html' },
-      { slug: 'faq', key: 'nav.faq', href: '/faq.html' },
-      { slug: 'travel', key: 'nav.travel', href: '/travel.html' },
-      { slug: 'contact', key: 'nav.contact', href: '/contact.html' }
+    const isHomePage = currentPage === 'index' || currentPage === '';
+    
+    const navItems = isHomePage ? [
+      { key: 'nav.home', href: '#home' },
+      { key: 'nav.schedule', href: '#schedule' },
+      { key: 'nav.rsvp', href: '#rsvp' },
+      { key: 'nav.faq', href: '#faq' },
+      { key: 'nav.travel', href: '/travel.html' },
+      { key: 'nav.contact', href: '#contact' }
+    ] : [
+      { key: 'nav.home', href: '/index.html#home' },
+      { key: 'nav.schedule', href: '/index.html#schedule' },
+      { key: 'nav.rsvp', href: '/index.html#rsvp' },
+      { key: 'nav.faq', href: '/index.html#faq' },
+      { key: 'nav.travel', href: '/travel.html' },
+      { key: 'nav.contact', href: '/index.html#contact' }
     ];
 
     const navLinksHTML = navItems.map(item => {
-      const isActive = item.slug === currentPage ? 'is-active' : '';
-      return `<li><a href="${item.href}" class="nav-link ${isActive}" data-i18n="${item.key}"></a></li>`;
+      return `<li><a href="${item.href}" class="nav-link" data-i18n="${item.key}"></a></li>`;
     }).join('');
 
     header.innerHTML = `
       <div class="header-inner">
-        <a href="/index.html" class="site-logo">O & I</a>
+        <a href="${isHomePage ? '#home' : '/index.html'}" class="site-logo">O & I</a>
         
         <button class="menu-toggle" aria-label="Toggle menu">
           <span></span>
@@ -150,11 +158,58 @@ const App = (() => {
     });
 
     mainNav.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const targetId = href.substring(1);
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
+            const targetPosition = targetSection.offsetTop - headerHeight;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+        
         menuToggle.classList.remove('is-open');
         mainNav.classList.remove('is-open');
       });
     });
+  }
+
+  function initScrollSpy() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (sections.length === 0) return;
+
+    const updateActiveLink = () => {
+      const scrollPosition = window.scrollY + 100;
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          navLinks.forEach(link => {
+            link.classList.remove('is-active');
+            if (link.getAttribute('href') === `#${sectionId}`) {
+              link.classList.add('is-active');
+            }
+          });
+        }
+      });
+    };
+
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+    updateActiveLink();
   }
 
   function initLangToggle() {
@@ -200,6 +255,7 @@ const App = (() => {
     Animations.animateEnvelopeEntrance();
 
     initFaqAccordion();
+    initScrollSpy();
 
     const currentLang = I18n.getCurrentLang();
     document.querySelectorAll('.lang-toggle button').forEach(btn => {
