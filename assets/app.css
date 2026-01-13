@@ -260,10 +260,7 @@ h4 { font-size: var(--text-lg); }
   }
 }
 
-.snap-section:nth-child(odd) {
-  background-color: var(--bg);
-}
-
+.snap-section:nth-child(odd),
 .snap-section:nth-child(even) {
   background-color: var(--card);
 }
@@ -306,7 +303,7 @@ h4 { font-size: var(--text-lg); }
   .snap-section-dates .snap-section-title {
     background: transparent;
     color: var(--accent);
-    padding: calc(var(--header-height) + var(--space-sm)) var(--space-lg) var(--space-xs);
+    padding: var(--header-height) var(--space-lg) var(--space-xs);
     margin-bottom: 0;
     font-size: clamp(4rem, 16vw, 6rem);
     font-weight: 700;
@@ -389,28 +386,8 @@ h4 { font-size: var(--text-lg); }
 }
 
 .snap-card-venue .venue-content {
-  padding: var(--space-lg) var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
   flex: 0 0 auto;
-  text-align: center;
-  border-top: 3px solid var(--accent);
-  border-bottom: 3px solid var(--accent);
-  background: linear-gradient(135deg, rgba(155, 126, 107, 0.05) 0%, rgba(196, 169, 139, 0.08) 100%);
-}
-
-.snap-card-venue .venue-name {
-  font-family: var(--font-serif);
-  font-size: var(--text-xl);
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: var(--space-sm);
-  letter-spacing: 0.02em;
-}
-
-.snap-card-venue .venue-description {
-  font-style: italic;
-  color: var(--muted);
-  font-size: var(--text-base);
-  line-height: 1.7;
 }
 
 .snap-card-venue .venue-map {
