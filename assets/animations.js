@@ -115,13 +115,13 @@ const Animations = (() => {
       duration: 0
     })
     .to(invitationCard, {
-      y: -300,
-      duration: 1.6,
+      y: -380,
+      duration: 1.8,
       ease: 'power2.out'
     })
     .to(envelope, {
-      y: 180,
-      duration: 1.6,
+      y: 120,
+      duration: 1.8,
       ease: 'power2.out'
     }, '<')
     .to({}, { duration: 0.8 })
