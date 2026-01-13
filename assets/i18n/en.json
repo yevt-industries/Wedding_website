@@ -1,0 +1,228 @@
+{
+  "nav": {
+    "home": "Home",
+    "schedule": "Schedule",
+    "rsvp": "RSVP",
+    "faq": "Event FAQ",
+    "travel": "Travel & Stay",
+    "contact": "Contact"
+  },
+  "common": {
+    "language": "Language",
+    "chooseLanguageTitle": "Choose language",
+    "english": "English",
+    "ukrainian": "Українська",
+    "cta": {
+      "rsvp": "RSVP",
+      "schedule": "View Schedule",
+      "travel": "Travel & Stay"
+    },
+    "palette": {
+      "title": "Wedding Colors",
+      "body": "Color palette will be shared closer to the date. (Placeholder: TBD)"
+    },
+    "dress": {
+      "title": "Dress Code",
+      "body": "Details coming soon. (Placeholder: TBD)"
+    },
+    "menu": {
+      "title": "Menu",
+      "body": "Details coming soon. (Placeholder: TBD)"
+    }
+  },
+  "home": {
+    "heroTitle": "Oleh & Inna",
+    "heroSubtitle": "May 24–26, 2026 • Budva, Montenegro",
+    "heroTagline": "Mediterranean, romantic, intimate, and fun.",
+    "ctaPrimary": "View Schedule",
+    "ctaSecondary": "RSVP (Details Coming Soon)",
+    "ctaTertiary": "Travel & Stay",
+    "introTitle": "We can't wait to celebrate with you",
+    "introBody1": "We're inviting our closest people to spend a long weekend with us in Montenegro.",
+    "introBody2": "This site will be updated as we get closer — please check back for details.",
+    "venueTitle": "Venue",
+    "venueBody1": "Villa Mona Lisa, near Budva",
+    "venueBody2": "A private villa in the hills above Budva with views of the Adriatic.",
+    "datesTitle": "Dates",
+    "datesBody": "May 24–26, 2026 (arrivals likely May 23)",
+    "quickNotesTitle": "Quick Notes",
+    "quickNotes": {
+      "b1": "Language: English / Ukrainian",
+      "b2": "Schedule & RSVP details will be added soon",
+      "b3": "Most guests will arrive via Podgorica Airport (TGD)"
+    },
+    "galleryTitle": "Photos",
+    "galleryBody": "A few moments and Montenegro inspiration."
+  },
+  "schedule": {
+    "title": "Schedule",
+    "subtitle": "A long weekend together • Details coming soon",
+    "placeholderTitle": "Placeholder Weekend Outline",
+    "placeholderNote": "Exact timings and locations will be confirmed closer to the date.",
+    "day1": {
+      "title": "May 24 — Welcome",
+      "b1": "Evening welcome drinks & light bites",
+      "b2": "Dress code: TBD"
+    },
+    "day2": {
+      "title": "May 25 — Wedding Day",
+      "b1": "Ceremony + dinner + celebration",
+      "b2": "Dress code: TBD"
+    },
+    "day3": {
+      "title": "May 26 — After Party",
+      "b1": "Relaxed daytime gathering / brunch",
+      "b2": "Dress code: TBD"
+    },
+    "callout": "Please plan to arrive by May 23 if you can."
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "We'll publish the RSVP link closer to the date.",
+    "button": "RSVP Link (Coming Soon)",
+    "body1": "We're keeping RSVP simple. You'll receive a link to a short form to confirm attendance.",
+    "body2": "Most guests are couples; we'll collect details per person so we can plan comfortably.",
+    "deadlineTitle": "RSVP Deadline",
+    "deadlineBody": "TBD (we will update this page)",
+    "questionnaireTitle": "What we'll ask",
+    "q": {
+      "titleA": "A) About you",
+      "a1": "Full name",
+      "a2": "Email (optional, for updates)",
+      "a3": "Phone (optional, for day‑of logistics)",
+      "titleB": "B) Attendance",
+      "b1": "Will you attend the wedding weekend?",
+      "b1Options": "Yes / No",
+      "b2": "Who will be attending?",
+      "b2Options": {
+        "o1": "Me",
+        "o2": "My partner (please write their name)",
+        "o3": "Other (please specify)"
+      },
+      "b3": "Which events will you attend?",
+      "b3Options": {
+        "o1": "May 24 — Welcome",
+        "o2": "May 25 — Wedding Day",
+        "o3": "May 26 — After Party"
+      },
+      "titleC": "C) Food",
+      "c1": "Do you have any allergies or dietary restrictions?",
+      "c2": "Menu choice (placeholder — details coming soon)",
+      "c2Options": {
+        "o1": "Option 1 (TBD)",
+        "o2": "Option 2 (TBD)",
+        "o3": "Option 3 (TBD)"
+      },
+      "titleD": "D) Travel (optional)",
+      "d1": "Planned arrival date (approx.)",
+      "d2": "Planned departure date (approx.)",
+      "d3": "Are you flying into Podgorica (TGD)?",
+      "d3Options": "Yes / No / Not sure",
+      "titleE": "E) Notes",
+      "e1": "Anything we should know?"
+    },
+    "confirmation": "Thank you — we can't wait to celebrate with you. This website will be updated with details as we get closer."
+  },
+  "faq": {
+    "title": "Event FAQ",
+    "subtitle": "Helpful details • More to be added",
+    "basics": {
+      "title": "Basics",
+      "q1": "Where is the wedding?",
+      "a1": "Near Budva, Montenegro at Villa Mona Lisa.",
+      "q2": "What are the dates?",
+      "a2": "May 24–26, 2026. Many guests will arrive May 23."
+    },
+    "dress": {
+      "title": "Dress Code",
+      "q1": "What should I wear?",
+      "a1": "Dress code will be shared closer to the date. (Placeholder: TBD)"
+    },
+    "menu": {
+      "title": "Menu",
+      "q1": "What will food be like?",
+      "a1": "Menu details will be shared closer to the date. (Placeholder: TBD)"
+    },
+    "gifts": {
+      "title": "Gifts",
+      "q1": "Is there a registry?",
+      "a1": "Your presence is the biggest gift. More details (if any) will be shared later."
+    },
+    "transport": {
+      "title": "Getting around",
+      "q1": "What's the easiest way to get there?",
+      "a1": "Most guests will arrive via Podgorica Airport (TGD) and take a private transfer or taxi. Budget option: bus to Podgorica station, then bus to Budva."
+    },
+    "updates": {
+      "title": "Updates",
+      "q1": "When will you share final details?",
+      "a1": "We'll update the site closer to the date. Please check back for schedule timing, RSVP, dress code, and menu."
+    }
+  },
+  "travel": {
+    "title": "Travel & Stay",
+    "subtitle": "How to get to Budva • Simple options",
+    "section1": {
+      "title": "Arriving",
+      "body1": "Most guests will fly into Podgorica Airport (TGD).",
+      "body2": "We recommend arriving on May 23 if possible.",
+      "note": "If you're considering other airports, choose what's easiest for your route."
+    },
+    "section2": {
+      "title": "From Podgorica Airport (TGD) to Budva",
+      "intro": "Private transfer is the easiest. Bus is the cheapest."
+    },
+    "opt1": {
+      "title": "Option 1 — Private transfer (recommended)",
+      "body": "Door‑to‑door pickup, easiest with luggage or late arrivals."
+    },
+    "opt2": {
+      "title": "Option 2 — Taxi",
+      "body": "Confirm price before you start the ride."
+    },
+    "opt3": {
+      "title": "Option 3 — Bus (budget)",
+      "body": "Airport → Podgorica bus station → Budva, then taxi to the venue."
+    },
+    "providers": {
+      "title": "Suggested transfer providers",
+      "p1": {
+        "name": "Go Montenegro",
+        "note": "Private transfers • online booking"
+      },
+      "p2": {
+        "name": "Red Taxi (Podgorica)",
+        "note": "Taxi & airport pickups • call/WhatsApp"
+      },
+      "p3": {
+        "name": "Montenegro Travel Service",
+        "note": "Private transfers • request a quote"
+      }
+    },
+    "stay": {
+      "title": "Where to stay",
+      "body1": "We recommend staying in or near Budva for easiest access.",
+      "body2": "More specific recommendations will be added closer to the date.",
+      "b1": "Area suggestion #1 (TBD)",
+      "b2": "Area suggestion #2 (TBD)",
+      "b3": "Hotel/apartment suggestions (TBD)"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Questions? Reach out anytime.",
+    "primary": {
+      "title": "For wedding questions",
+      "body": "Please contact us here:",
+      "emailLabel": "Email:",
+      "emailValue": "TBD",
+      "phoneLabel": "Phone / WhatsApp:",
+      "phoneValue": "TBD"
+    },
+    "dayof": {
+      "title": "Day‑of contact",
+      "body": "We'll share a day‑of contact closer to the date."
+    }
+  }
+}
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP | Oleh & Inna Wedding</title>
+  <meta name="description" content="RSVP for Oleh & Inna's wedding - May 24-26, 2026 in Budva, Montenegro">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/app.css">
+  
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  
+  <!-- App JS -->
+  <script type="module" src="/assets/app.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  
+  <main>
+    <div class="page">
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="container">
+          <h1 class="page-title" data-i18n="rsvp.title"></h1>
+          <p class="page-subtitle" data-i18n="rsvp.subtitle"></p>
+        </div>
+      </div>
+
+      <!-- RSVP Content -->
+      <section class="section reveal">
+        <div class="container container-narrow">
+          <!-- CTA Button -->
+          <div class="text-center mb-2xl">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRtIj-G27TjVBCIqLlzM7OkBfrYSOaKqbZtJ_QBGmUq4m0iA/viewform" target="_blank" class="btn btn-primary btn-lg" data-i18n="rsvp.button"></a>
+          </div>
+
+          <!-- Explanation -->
+          <div class="card mb-xl reveal-item">
+            <p class="card-body" data-i18n="rsvp.body1"></p>
+            <p class="card-body mt-md" data-i18n="rsvp.body2"></p>
+          </div>
+
+          <!-- Deadline -->
+          <div class="card mb-2xl reveal-item">
+            <h3 class="card-title" data-i18n="rsvp.deadlineTitle"></h3>
+            <p class="card-body" data-i18n="rsvp.deadlineBody"></p>
+          </div>
+
+          <!-- Questionnaire Preview -->
+          <div class="reveal-item">
+            <h2 class="section-title text-center" data-i18n="rsvp.questionnaireTitle"></h2>
+            
+            <!-- Section A -->
+            <div class="questionnaire-section">
+              <h4 class="questionnaire-section-title" data-i18n="rsvp.q.titleA"></h4>
+              <div class="questionnaire-item" data-i18n="rsvp.q.a1"></div>
+              <div class="questionnaire-item" data-i18n="rsvp.q.a2"></div>
+              <div class="questionnaire-item" data-i18n="rsvp.q.a3"></div>
+            </div>
+
+            <!-- Section B -->
+            <div class="questionnaire-section">
+              <h4 class="questionnaire-section-title" data-i18n="rsvp.q.titleB"></h4>
+              <div class="questionnaire-item">
+                <span data-i18n="rsvp.q.b1"></span>
+                <ul class="questionnaire-options">
+                  <li data-i18n="rsvp.q.b1Options"></li>
+                </ul>
+              </div>
+              <div class="questionnaire-item">
+                <span data-i18n="rsvp.q.b2"></span>
+                <ul class="questionnaire-options">
+                  <li data-i18n="rsvp.q.b2Options.o1"></li>
+                  <li data-i18n="rsvp.q.b2Options.o2"></li>
+                  <li data-i18n="rsvp.q.b2Options.o3"></li>
+                </ul>
+              </div>
+              <div class="questionnaire-item">
+                <span data-i18n="rsvp.q.b3"></span>
+                <ul class="questionnaire-options">
+                  <li data-i18n="rsvp.q.b3Options.o1"></li>
+                  <li data-i18n="rsvp.q.b3Options.o2"></li>
+                  <li data-i18n="rsvp.q.b3Options.o3"></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section C -->
+            <div class="questionnaire-section">
+              <h4 class="questionnaire-section-title" data-i18n="rsvp.q.titleC"></h4>
+              <div class="questionnaire-item" data-i18n="rsvp.q.c1"></div>
+              <div class="questionnaire-item">
+                <span data-i18n="rsvp.q.c2"></span>
+                <ul class="questionnaire-options">
+                  <li data-i18n="rsvp.q.c2Options.o1"></li>
+                  <li data-i18n="rsvp.q.c2Options.o2"></li>
+                  <li data-i18n="rsvp.q.c2Options.o3"></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section D -->
+            <div class="questionnaire-section">
+              <h4 class="questionnaire-section-title" data-i18n="rsvp.q.titleD"></h4>
+              <div class="questionnaire-item" data-i18n="rsvp.q.d1"></div>
+              <div class="questionnaire-item" data-i18n="rsvp.q.d2"></div>
+              <div class="questionnaire-item">
+                <span data-i18n="rsvp.q.d3"></span>
+                <ul class="questionnaire-options">
+                  <li data-i18n="rsvp.q.d3Options"></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section E -->
+            <div class="questionnaire-section">
+              <h4 class="questionnaire-section-title" data-i18n="rsvp.q.titleE"></h4>
+              <div class="questionnaire-item" data-i18n="rsvp.q.e1"></div>
+            </div>
+          </div>
+
+          <!-- Google Form Embed -->
+          <div class="mt-2xl reveal-item">
+            <div class="card" style="padding: 0; overflow: hidden;">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeRtIj-G27TjVBCIqLlzM7OkBfrYSOaKqbZtJ_QBGmUq4m0iA/viewform?embedded=true" width="100%" height="807" frameborder="0" marginheight="0" marginwidth="0" style="display: block;">Loading…</iframe>
+            </div>
+          </div>
+
+          <!-- Confirmation -->
+          <div class="callout mt-2xl reveal-item" data-i18n="rsvp.confirmation"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>
+

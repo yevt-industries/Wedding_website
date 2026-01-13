@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule | Oleh & Inna Wedding</title>
+  <meta name="description" content="Wedding weekend schedule - May 24-26, 2026 in Budva, Montenegro">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/app.css">
+  
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  
+  <!-- App JS -->
+  <script type="module" src="/assets/app.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  
+  <main>
+    <div class="page">
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="container">
+          <h1 class="page-title" data-i18n="schedule.title"></h1>
+          <p class="page-subtitle" data-i18n="schedule.subtitle"></p>
+        </div>
+      </div>
+
+      <!-- Schedule Content -->
+      <section class="section reveal">
+        <div class="container container-narrow">
+          <div class="text-center mb-2xl">
+            <h2 class="section-title" data-i18n="schedule.placeholderTitle"></h2>
+            <p class="section-subtitle" data-i18n="schedule.placeholderNote"></p>
+          </div>
+
+          <!-- Day Cards -->
+          <div class="day-card mb-xl reveal-item">
+            <h3 class="day-card-title" data-i18n="schedule.day1.title"></h3>
+            <ul>
+              <li data-i18n="schedule.day1.b1"></li>
+              <li data-i18n="schedule.day1.b2"></li>
+            </ul>
+          </div>
+
+          <div class="day-card mb-xl reveal-item">
+            <h3 class="day-card-title" data-i18n="schedule.day2.title"></h3>
+            <ul>
+              <li data-i18n="schedule.day2.b1"></li>
+              <li data-i18n="schedule.day2.b2"></li>
+            </ul>
+          </div>
+
+          <div class="day-card mb-xl reveal-item">
+            <h3 class="day-card-title" data-i18n="schedule.day3.title"></h3>
+            <ul>
+              <li data-i18n="schedule.day3.b1"></li>
+              <li data-i18n="schedule.day3.b2"></li>
+            </ul>
+          </div>
+
+          <!-- Callout -->
+          <div class="callout reveal-item" data-i18n="schedule.callout"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>
+

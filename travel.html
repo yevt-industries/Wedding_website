@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel & Stay | Oleh & Inna Wedding</title>
+  <meta name="description" content="Travel information for Oleh & Inna's wedding - May 24-26, 2026 in Budva, Montenegro">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/app.css">
+  
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  
+  <!-- App JS -->
+  <script type="module" src="/assets/app.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  
+  <main>
+    <div class="page">
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="container">
+          <h1 class="page-title" data-i18n="travel.title"></h1>
+          <p class="page-subtitle" data-i18n="travel.subtitle"></p>
+        </div>
+      </div>
+
+      <!-- Arriving Section -->
+      <section class="section reveal">
+        <div class="container container-narrow">
+          <h2 class="section-title" data-i18n="travel.section1.title"></h2>
+          <p class="mb-md" data-i18n="travel.section1.body1"></p>
+          <p class="mb-md" data-i18n="travel.section1.body2"></p>
+          <p class="text-muted" data-i18n="travel.section1.note"></p>
+        </div>
+      </section>
+
+      <!-- Transport Options Section -->
+      <section class="section reveal">
+        <div class="container container-narrow">
+          <h2 class="section-title" data-i18n="travel.section2.title"></h2>
+          <p class="section-subtitle" data-i18n="travel.section2.intro"></p>
+
+          <!-- Option Cards -->
+          <div class="travel-option recommended mb-xl reveal-item">
+            <h3 class="travel-option-title" data-i18n="travel.opt1.title"></h3>
+            <p class="travel-option-body" data-i18n="travel.opt1.body"></p>
+          </div>
+
+          <div class="travel-option mb-xl reveal-item">
+            <h3 class="travel-option-title" data-i18n="travel.opt2.title"></h3>
+            <p class="travel-option-body" data-i18n="travel.opt2.body"></p>
+          </div>
+
+          <div class="travel-option mb-xl reveal-item">
+            <h3 class="travel-option-title" data-i18n="travel.opt3.title"></h3>
+            <p class="travel-option-body" data-i18n="travel.opt3.body"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Providers Section -->
+      <section class="section reveal">
+        <div class="container container-narrow">
+          <h2 class="section-title" data-i18n="travel.providers.title"></h2>
+          
+          <div class="card">
+            <div class="provider-list">
+              <div class="provider-item reveal-item">
+                <div>
+                  <div class="provider-name" data-i18n="travel.providers.p1.name"></div>
+                  <div class="provider-note" data-i18n="travel.providers.p1.note"></div>
+                </div>
+              </div>
+              
+              <div class="provider-item reveal-item">
+                <div>
+                  <div class="provider-name" data-i18n="travel.providers.p2.name"></div>
+                  <div class="provider-note" data-i18n="travel.providers.p2.note"></div>
+                </div>
+              </div>
+              
+              <div class="provider-item reveal-item">
+                <div>
+                  <div class="provider-name" data-i18n="travel.providers.p3.name"></div>
+                  <div class="provider-note" data-i18n="travel.providers.p3.note"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Where to Stay Section -->
+      <section class="section reveal">
+        <div class="container container-narrow">
+          <h2 class="section-title" data-i18n="travel.stay.title"></h2>
+          <p class="mb-md" data-i18n="travel.stay.body1"></p>
+          <p class="mb-xl" data-i18n="travel.stay.body2"></p>
+
+          <div class="card reveal-item">
+            <ul class="quick-notes-list">
+              <li data-i18n="travel.stay.b1"></li>
+              <li data-i18n="travel.stay.b2"></li>
+              <li data-i18n="travel.stay.b3"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>
+

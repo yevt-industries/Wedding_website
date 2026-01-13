@@ -1,13 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oleh & Inna | Wedding</title>
+  <meta name="description" content="Wedding celebration of Oleh & Inna - May 24-26, 2026 in Budva, Montenegro">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/app.css">
+  
+  <!-- PhotoSwipe CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+  
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  
+  <!-- App JS -->
+  <script type="module" src="/assets/app.js"></script>
+  <script type="module" src="/assets/gallery.js"></script>
 </head>
 <body>
-    <h1>Coming Soon</h1>
-    <p>Our wedding website is under construction.</p>
+  <header id="site-header" class="site-header"></header>
+  
+  <main>
+    <div class="page">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-bg" style="background-image: url('/photos/IMG_1050.jpeg'); background-color: #7d6a5a;"></div>
+        <div class="hero-content">
+          <h1 class="hero-title" data-i18n="home.heroTitle"></h1>
+          <p class="hero-subtitle" data-i18n="home.heroSubtitle"></p>
+          <p class="hero-tagline" data-i18n="home.heroTagline"></p>
+          <div class="hero-ctas">
+            <a href="/schedule.html" class="btn btn-primary" data-i18n="home.ctaPrimary"></a>
+            <a href="/rsvp.html" class="btn btn-secondary" data-i18n="home.ctaSecondary"></a>
+            <a href="/travel.html" class="btn btn-secondary" data-i18n="home.ctaTertiary"></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro Section -->
+      <section class="section reveal">
+        <div class="container">
+          <div class="intro-section">
+            <h2 class="intro-title" data-i18n="home.introTitle"></h2>
+            <p class="intro-body" data-i18n="home.introBody1"></p>
+            <p class="intro-body mt-md" data-i18n="home.introBody2"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Venue & Dates -->
+      <section class="section reveal">
+        <div class="container">
+          <div class="highlight-grid">
+            <div class="highlight-card reveal-item">
+              <h3 class="highlight-card-title" data-i18n="home.venueTitle"></h3>
+              <p class="highlight-card-body" data-i18n="home.venueBody1"></p>
+              <p class="highlight-card-body mt-sm" data-i18n="home.venueBody2"></p>
+            </div>
+            <div class="highlight-card reveal-item">
+              <h3 class="highlight-card-title" data-i18n="home.datesTitle"></h3>
+              <p class="highlight-card-body" data-i18n="home.datesBody"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Notes -->
+      <section class="section reveal">
+        <div class="container container-narrow">
+          <div class="quick-notes">
+            <h3 class="quick-notes-title" data-i18n="home.quickNotesTitle"></h3>
+            <ul class="quick-notes-list">
+              <li class="reveal-item" data-i18n="home.quickNotes.b1"></li>
+              <li class="reveal-item" data-i18n="home.quickNotes.b2"></li>
+              <li class="reveal-item" data-i18n="home.quickNotes.b3"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photo Gallery -->
+      <section class="section reveal">
+        <div class="container">
+          <div class="text-center mb-xl">
+            <h2 class="section-title" data-i18n="home.galleryTitle"></h2>
+            <p class="section-subtitle" data-i18n="home.galleryBody"></p>
+          </div>
+          
+          <div class="gallery-grid" id="gallery">
+            <!-- TODO: Add more photos as they become available -->
+            <a href="/photos/IMG_1050.jpeg" class="gallery-item reveal-item" data-pswp-width="1200" data-pswp-height="800">
+              <img src="/photos/IMG_1050.jpeg" alt="Save the Date" loading="lazy" decoding="async">
+            </a>
+            <a href="/photos/IMG_4966.jpeg" class="gallery-item reveal-item" data-pswp-width="1200" data-pswp-height="800">
+              <img src="/photos/IMG_4966.jpeg" alt="Oleh & Inna" loading="lazy" decoding="async">
+            </a>
+            <a href="/photos/IMG_4985.jpeg" class="gallery-item reveal-item" data-pswp-width="1200" data-pswp-height="800">
+              <img src="/photos/IMG_4985.jpeg" alt="Oleh & Inna" loading="lazy" decoding="async">
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer id="site-footer" class="site-footer"></footer>
 </body>
 </html>
 
