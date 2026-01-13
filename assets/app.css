@@ -1371,7 +1371,7 @@ h4 { font-size: var(--text-lg); }
 
 .rsvp-form-container iframe {
   width: 100%;
-  min-height: 1400px;
+  min-height: 1000px;
   border: none;
   display: block;
 }
@@ -1388,7 +1388,7 @@ h4 { font-size: var(--text-lg); }
   }
   
   .rsvp-form-container iframe {
-    min-height: 1600px;
+    min-height: 1200px;
   }
   
   .section {
