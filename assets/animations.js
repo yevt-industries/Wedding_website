@@ -115,7 +115,7 @@ const Animations = (() => {
       duration: 0
     })
     .to(invitationCard, {
-      y: -380,
+      y: -350,
       duration: 1.8,
       ease: 'power2.out'
     })
