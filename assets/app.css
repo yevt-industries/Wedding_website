@@ -84,6 +84,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -211,6 +212,15 @@ h4 { font-size: var(--text-lg); }
 .section {
   padding: var(--space-4xl) 0;
   scroll-margin-top: var(--header-height);
+}
+
+.section-snap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+  padding-top: var(--header-height);
 }
 
 .section-alt {
@@ -402,12 +412,14 @@ h4 { font-size: var(--text-lg); }
 .hero {
   position: relative;
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
   scroll-margin-top: 0;
+  scroll-snap-align: start;
 }
 
 .hero-bg {
