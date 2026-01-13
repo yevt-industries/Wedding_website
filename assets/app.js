@@ -141,6 +141,7 @@ const App = (() => {
         
         Animations.animateEnvelopeOpenAndDismiss(() => {
           Animations.init();
+          Animations.initFullPageScroll();
         });
       });
     });

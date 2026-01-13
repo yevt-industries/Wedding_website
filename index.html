@@ -35,7 +35,7 @@
       <!-- ============================================
            HERO SECTION
            ============================================ -->
-      <section id="home" class="hero">
+      <section id="home" class="hero snap-section" data-snap="true">
         <div class="hero-bg" style="background-image: url('/photos/IMG_5015.jpeg'); background-color: #7d6a5a;"></div>
         <div class="hero-content">
           <h1 class="hero-title" data-i18n="home.heroTitle"></h1>
@@ -50,7 +50,7 @@
       </section>
 
       <!-- Intro Section -->
-      <section class="section section-snap reveal">
+      <section id="intro" class="snap-section" data-snap="true">
         <div class="container">
           <div class="intro-section">
             <h2 class="intro-title" data-i18n="home.introTitle"></h2>
@@ -85,46 +85,51 @@
         </div>
       </section>
 
-      <!-- Venue & Dates -->
-      <section class="section section-snap reveal">
+      <!-- Venue Section -->
+      <section id="venue" class="snap-section" data-snap="true">
         <div class="container">
-          <div class="highlight-grid">
-            <div class="highlight-card highlight-card-venue reveal-item">
-              <div class="venue-image">
-                <img src="/photos/IMG_5016.jpeg" alt="Villa Mona Lisa" loading="lazy">
-              </div>
-              <div class="venue-content">
-                <h3 class="highlight-card-title" data-i18n="home.venueTitle"></h3>
-                <p class="highlight-card-body" data-i18n="home.venueBody1"></p>
-                <p class="highlight-card-body mt-sm" data-i18n="home.venueBody2"></p>
-              </div>
-              <div class="venue-map">
-                <iframe 
-                  src="https://maps.google.com/maps?q=Villa+Mona+Lisa+Montenegro&t=&z=10&ie=UTF8&iwloc=&output=embed"
-                  width="100%" 
-                  height="200" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <a href="https://maps.app.goo.gl/eb7QNK1TuarS9A2M8" target="_blank" rel="noopener" class="venue-map-overlay">
-                  <span data-i18n="home.venueMapBtn">Open in Google Maps</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                </a>
-              </div>
+          <div class="snap-card snap-card-venue">
+            <div class="venue-image">
+              <img src="/photos/IMG_5016.jpeg" alt="Villa Mona Lisa" loading="lazy">
             </div>
-            <div class="highlight-card highlight-card-dates reveal-item">
-              <h3 class="highlight-card-title highlight-card-title-large" data-i18n="home.datesTitle"></h3>
-              <p class="highlight-card-body" data-i18n="home.datesBody"></p>
-              <p class="highlight-card-body dates-arrival" data-i18n="home.datesArrival"></p>
-              
-              <!-- May 2026 Calendar -->
-              <div class="calendar-graphic">
+            <div class="venue-content">
+              <h3 class="snap-card-title" data-i18n="home.venueTitle"></h3>
+              <p class="snap-card-body" data-i18n="home.venueBody1"></p>
+              <p class="snap-card-body" data-i18n="home.venueBody2"></p>
+            </div>
+            <div class="venue-map">
+              <iframe 
+                src="https://maps.google.com/maps?q=Villa+Mona+Lisa+Montenegro&t=&z=10&ie=UTF8&iwloc=&output=embed"
+                width="100%" 
+                height="180" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              <a href="https://maps.app.goo.gl/eb7QNK1TuarS9A2M8" target="_blank" rel="noopener" class="venue-map-overlay">
+                <span data-i18n="home.venueMapBtn">Open in Google Maps</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dates Section -->
+      <section id="dates" class="snap-section" data-snap="true">
+        <div class="container">
+          <div class="snap-card snap-card-dates">
+            <h3 class="snap-card-title snap-card-title-large" data-i18n="home.datesTitle"></h3>
+            <p class="snap-card-body" data-i18n="home.datesBody"></p>
+            <p class="snap-card-body dates-arrival" data-i18n="home.datesArrival"></p>
+            
+            <!-- May 2026 Calendar -->
+            <div class="calendar-graphic">
               <svg viewBox="0 0 280 230" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="pageGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -214,7 +219,6 @@
                 <!-- The 25 date (white, on top of heart) -->
                 <text x="68" y="196" text-anchor="middle" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700">25</text>
               </svg>
-            </div>
             </div>
           </div>
         </div>

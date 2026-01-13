@@ -251,6 +251,53 @@ const Animations = (() => {
     });
   }
 
+  function initFullPageScroll() {
+    if (!gsapLoaded) return;
+    
+    const snapSections = document.querySelectorAll('[data-snap="true"]');
+    if (snapSections.length === 0) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const sectionHeight = window.innerHeight;
+    const totalSnapHeight = snapSections.length * sectionHeight;
+    
+    const snapPoints = [];
+    for (let i = 0; i < snapSections.length; i++) {
+      snapPoints.push(i / (snapSections.length - 1));
+    }
+
+    ScrollTrigger.create({
+      trigger: snapSections[0],
+      start: 'top top',
+      end: () => `+=${totalSnapHeight - sectionHeight}`,
+      snap: {
+        snapTo: snapPoints,
+        duration: { min: 0.2, max: 0.5 },
+        delay: 0,
+        ease: 'power2.inOut',
+        inertia: false
+      }
+    });
+
+    snapSections.forEach((section, index) => {
+      gsap.fromTo(section.querySelectorAll('.snap-card, .intro-section, .countdown-wrapper'),
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top center',
+            once: true
+          }
+        }
+      );
+    });
+  }
+
   async function init() {
     checkReducedMotion();
     await waitForGSAP();
@@ -266,6 +313,7 @@ const Animations = (() => {
 
   return {
     init,
+    initFullPageScroll,
     animateEnvelopeEntrance,
     animateEnvelopeOpenAndDismiss,
     checkReducedMotion
