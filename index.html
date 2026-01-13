@@ -57,14 +57,15 @@
             <h2 class="intro-title" data-i18n="home.introTitle"></h2>
             <p class="intro-body" data-i18n="home.introBody1"></p>
             
-            <!-- Countdown Timer -->
+            <!-- Countdown Timer - 2 Row Layout -->
             <div class="countdown-wrapper">
-              <div class="countdown" id="wedding-countdown">
-                <div class="countdown-item">
-                  <span class="countdown-value" id="countdown-days">000</span>
+              <div class="countdown-row countdown-row-days">
+                <div class="countdown-item countdown-item-days">
+                  <span class="countdown-value countdown-value-days" id="countdown-days">000</span>
                   <span class="countdown-label">Days</span>
                 </div>
-                <div class="countdown-separator">:</div>
+              </div>
+              <div class="countdown-row countdown-row-time">
                 <div class="countdown-item">
                   <span class="countdown-value" id="countdown-hours">00</span>
                   <span class="countdown-label">Hours</span>
@@ -80,21 +81,21 @@
                   <span class="countdown-label">Seconds</span>
                 </div>
               </div>
-              <p class="countdown-caption">until the wedding day ✨</p>
+              <p class="countdown-caption">Until the Wedding Day ✨</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Venue Section -->
-      <section id="venue" class="snap-section" data-snap="true">
+      <section id="venue" class="snap-section snap-section-venue" data-snap="true">
         <div class="container">
+          <h2 class="snap-section-title" data-i18n="home.venueTitle"></h2>
           <div class="snap-card snap-card-venue">
             <div class="venue-image">
               <img src="/photos/IMG_5016.jpeg" alt="Villa Mona Lisa" loading="lazy">
             </div>
             <div class="venue-content">
-              <h3 class="snap-card-title" data-i18n="home.venueTitle"></h3>
               <p class="snap-card-body" data-i18n="home.venueBody1"></p>
               <p class="snap-card-body" data-i18n="home.venueBody2"></p>
             </div>
@@ -102,7 +103,7 @@
               <iframe 
                 src="https://maps.google.com/maps?q=Villa+Mona+Lisa+Montenegro&t=&z=10&ie=UTF8&iwloc=&output=embed"
                 width="100%" 
-                height="180" 
+                height="150" 
                 style="border:0;" 
                 allowfullscreen="" 
                 loading="lazy" 
@@ -122,16 +123,16 @@
       </section>
 
       <!-- Dates Section -->
-      <section id="dates" class="snap-section" data-snap="true">
+      <section id="dates" class="snap-section snap-section-dates" data-snap="true">
         <div class="container">
+          <h2 class="snap-section-title" data-i18n="home.datesTitle"></h2>
           <div class="snap-card snap-card-dates">
-            <h3 class="snap-card-title snap-card-title-large" data-i18n="home.datesTitle"></h3>
-            <p class="snap-card-body" data-i18n="home.datesBody"></p>
+            <p class="snap-card-body snap-card-body-large" data-i18n="home.datesBody"></p>
             <p class="snap-card-body dates-arrival" data-i18n="home.datesArrival"></p>
             
             <!-- May 2026 Calendar -->
             <div class="calendar-graphic">
-              <svg viewBox="0 0 280 230" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="pageGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" style="stop-color:#faf9f7"/>
@@ -143,82 +144,82 @@
                 </defs>
                 
                 <!-- Calendar body -->
-                <rect x="10" y="20" width="260" height="200" rx="8" fill="url(#pageGradient)" filter="url(#shadow)"/>
+                <rect x="10" y="20" width="300" height="220" rx="10" fill="url(#pageGradient)" filter="url(#shadow)"/>
                 
                 <!-- Header bar -->
-                <rect x="10" y="20" width="260" height="45" rx="8" fill="#9b7e6b"/>
-                <rect x="10" y="45" width="260" height="20" fill="#9b7e6b"/>
+                <rect x="10" y="20" width="300" height="50" rx="10" fill="#9b7e6b"/>
+                <rect x="10" y="50" width="300" height="20" fill="#9b7e6b"/>
                 
                 <!-- Month title -->
-                <text x="140" y="50" text-anchor="middle" fill="#fff" font-family="'Cormorant Garamond', serif" font-size="22" font-weight="500">May 2026</text>
+                <text x="160" y="55" text-anchor="middle" fill="#fff" font-family="'Cormorant Garamond', serif" font-size="26" font-weight="600">May 2026</text>
                 
                 <!-- Binding rings -->
-                <circle cx="70" cy="20" r="6" fill="#c4a98b" stroke="#9b7e6b" stroke-width="2"/>
-                <circle cx="140" cy="20" r="6" fill="#c4a98b" stroke="#9b7e6b" stroke-width="2"/>
-                <circle cx="210" cy="20" r="6" fill="#c4a98b" stroke="#9b7e6b" stroke-width="2"/>
+                <circle cx="80" cy="20" r="7" fill="#c4a98b" stroke="#9b7e6b" stroke-width="2"/>
+                <circle cx="160" cy="20" r="7" fill="#c4a98b" stroke="#9b7e6b" stroke-width="2"/>
+                <circle cx="240" cy="20" r="7" fill="#c4a98b" stroke="#9b7e6b" stroke-width="2"/>
                 
-                <!-- Day headers (centered: 7 columns from x=30 to x=250, spacing=36.67) -->
-                <g fill="#6b6560" font-family="'Montserrat', sans-serif" font-size="9" font-weight="500">
-                  <text x="32" y="85" text-anchor="middle">SUN</text>
-                  <text x="68" y="85" text-anchor="middle">MON</text>
-                  <text x="104" y="85" text-anchor="middle">TUE</text>
-                  <text x="140" y="85" text-anchor="middle">WED</text>
-                  <text x="176" y="85" text-anchor="middle">THU</text>
-                  <text x="212" y="85" text-anchor="middle">FRI</text>
-                  <text x="248" y="85" text-anchor="middle">SAT</text>
+                <!-- Day headers -->
+                <g fill="#6b6560" font-family="'Montserrat', sans-serif" font-size="11" font-weight="600">
+                  <text x="37" y="92" text-anchor="middle">SUN</text>
+                  <text x="79" y="92" text-anchor="middle">MON</text>
+                  <text x="121" y="92" text-anchor="middle">TUE</text>
+                  <text x="163" y="92" text-anchor="middle">WED</text>
+                  <text x="205" y="92" text-anchor="middle">THU</text>
+                  <text x="247" y="92" text-anchor="middle">FRI</text>
+                  <text x="289" y="92" text-anchor="middle">SAT</text>
                 </g>
                 
                 <!-- Calendar days -->
-                <g fill="#2c2825" font-family="'Montserrat', sans-serif" font-size="13">
+                <g fill="#2c2825" font-family="'Montserrat', sans-serif" font-size="16" font-weight="500">
                   <!-- Week 1: May 1-2 (Fri-Sat) -->
-                  <text x="212" y="108" text-anchor="middle">1</text>
-                  <text x="248" y="108" text-anchor="middle">2</text>
+                  <text x="247" y="118" text-anchor="middle">1</text>
+                  <text x="289" y="118" text-anchor="middle">2</text>
                   
                   <!-- Week 2: 3-9 -->
-                  <text x="32" y="130" text-anchor="middle">3</text>
-                  <text x="68" y="130" text-anchor="middle">4</text>
-                  <text x="104" y="130" text-anchor="middle">5</text>
-                  <text x="140" y="130" text-anchor="middle">6</text>
-                  <text x="176" y="130" text-anchor="middle">7</text>
-                  <text x="212" y="130" text-anchor="middle">8</text>
-                  <text x="248" y="130" text-anchor="middle">9</text>
+                  <text x="37" y="142" text-anchor="middle">3</text>
+                  <text x="79" y="142" text-anchor="middle">4</text>
+                  <text x="121" y="142" text-anchor="middle">5</text>
+                  <text x="163" y="142" text-anchor="middle">6</text>
+                  <text x="205" y="142" text-anchor="middle">7</text>
+                  <text x="247" y="142" text-anchor="middle">8</text>
+                  <text x="289" y="142" text-anchor="middle">9</text>
                   
                   <!-- Week 3: 10-16 -->
-                  <text x="32" y="152" text-anchor="middle">10</text>
-                  <text x="68" y="152" text-anchor="middle">11</text>
-                  <text x="104" y="152" text-anchor="middle">12</text>
-                  <text x="140" y="152" text-anchor="middle">13</text>
-                  <text x="176" y="152" text-anchor="middle">14</text>
-                  <text x="212" y="152" text-anchor="middle">15</text>
-                  <text x="248" y="152" text-anchor="middle">16</text>
+                  <text x="37" y="166" text-anchor="middle">10</text>
+                  <text x="79" y="166" text-anchor="middle">11</text>
+                  <text x="121" y="166" text-anchor="middle">12</text>
+                  <text x="163" y="166" text-anchor="middle">13</text>
+                  <text x="205" y="166" text-anchor="middle">14</text>
+                  <text x="247" y="166" text-anchor="middle">15</text>
+                  <text x="289" y="166" text-anchor="middle">16</text>
                   
                   <!-- Week 4: 17-23 -->
-                  <text x="32" y="174" text-anchor="middle">17</text>
-                  <text x="68" y="174" text-anchor="middle">18</text>
-                  <text x="104" y="174" text-anchor="middle">19</text>
-                  <text x="140" y="174" text-anchor="middle">20</text>
-                  <text x="176" y="174" text-anchor="middle">21</text>
-                  <text x="212" y="174" text-anchor="middle">22</text>
-                  <text x="248" y="174" text-anchor="middle">23</text>
+                  <text x="37" y="190" text-anchor="middle">17</text>
+                  <text x="79" y="190" text-anchor="middle">18</text>
+                  <text x="121" y="190" text-anchor="middle">19</text>
+                  <text x="163" y="190" text-anchor="middle">20</text>
+                  <text x="205" y="190" text-anchor="middle">21</text>
+                  <text x="247" y="190" text-anchor="middle">22</text>
+                  <text x="289" y="190" text-anchor="middle">23</text>
                   
                   <!-- Week 5: 24-30 -->
-                  <text x="32" y="196" text-anchor="middle" fill="#9b7e6b" font-weight="600">24</text>
+                  <text x="37" y="214" text-anchor="middle" fill="#9b7e6b" font-weight="700">24</text>
                   <!-- 25 has heart - rendered separately -->
-                  <text x="104" y="196" text-anchor="middle" fill="#9b7e6b" font-weight="600">26</text>
-                  <text x="140" y="196" text-anchor="middle">27</text>
-                  <text x="176" y="196" text-anchor="middle">28</text>
-                  <text x="212" y="196" text-anchor="middle">29</text>
-                  <text x="248" y="196" text-anchor="middle">30</text>
+                  <text x="121" y="214" text-anchor="middle" fill="#9b7e6b" font-weight="700">26</text>
+                  <text x="163" y="214" text-anchor="middle">27</text>
+                  <text x="205" y="214" text-anchor="middle">28</text>
+                  <text x="247" y="214" text-anchor="middle">29</text>
+                  <text x="289" y="214" text-anchor="middle">30</text>
                   
                   <!-- Week 6: 31 -->
-                  <text x="32" y="215" text-anchor="middle">31</text>
+                  <text x="37" y="235" text-anchor="middle">31</text>
                 </g>
                 
                 <!-- Large heart for May 25 -->
-                <path d="M68 180 C60 170, 46 174, 46 186 C46 198, 68 212, 68 212 C68 212, 90 198, 90 186 C90 174, 76 170, 68 180" fill="#c4a98b"/>
+                <path d="M79 195 C69 182, 52 187, 52 202 C52 217, 79 235, 79 235 C79 235, 106 217, 106 202 C106 187, 89 182, 79 195" fill="#c4a98b"/>
                 
                 <!-- The 25 date (white, on top of heart) -->
-                <text x="68" y="196" text-anchor="middle" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700">25</text>
+                <text x="79" y="214" text-anchor="middle" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="17" font-weight="700">25</text>
               </svg>
             </div>
           </div>
