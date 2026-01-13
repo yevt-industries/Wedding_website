@@ -114,12 +114,12 @@ const Animations = (() => {
     })
     .to(invitationCard, {
       opacity: 1,
-      y: -80,
+      y: -150,
       duration: 0.9,
       ease: 'power2.out'
     }, '-=0.1')
     .to(envelope, {
-      y: 100,
+      y: 120,
       duration: 0.9,
       ease: 'power2.out'
     }, '<')

@@ -107,8 +107,8 @@ const App = (() => {
           <!-- Envelope body with language buttons -->
           <div class="envelope-body">
             <div class="envelope-lang-buttons">
-              <button class="envelope-lang-btn" data-lang="en">🇬🇧 English</button>
-              <button class="envelope-lang-btn" data-lang="uk">🇺🇦 Українська</button>
+              <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
+              <button class="envelope-lang-btn" data-lang="uk">🇺🇦 UA</button>
             </div>
           </div>
           
