@@ -80,13 +80,13 @@
   z-index: 10;
 }
 
-/* Envelope Body - Ice Melt */
+/* Envelope Body - Classic Blue */
 .envelope-body {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #D6E8ED 0%, #C8DDE4 50%, #B5CFD9 100%);
+  background: linear-gradient(145deg, #1A5A91 0%, #0F4C81 50%, #0A3D6A 100%);
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.3),
     0 8px 25px rgba(0, 0, 0, 0.2);
@@ -184,42 +184,42 @@
 .envelope-flap-bottom {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #A8C8D3 0%, #B5CFD9 100%);
+  background: linear-gradient(0deg, #0A3D6A 0%, #0F4C81 100%);
   clip-path: polygon(0 100%, 50% 50%, 100% 100%);
   z-index: 10;
   filter: 
-    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.7));
+    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.5));
 }
 
 /* Left triangle - points RIGHT to center */
 .envelope-flap-left {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #A8C8D3 0%, #B5CFD9 100%);
+  background: linear-gradient(90deg, #0A3D6A 0%, #0F4C81 100%);
   clip-path: polygon(0 0, 50% 50%, 0 100%);
   z-index: 11;
   filter: 
-    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.7));
+    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.5));
 }
 
 /* Right triangle - points LEFT to center */
 .envelope-flap-right {
   position: absolute;
   inset: 0;
-  background: linear-gradient(270deg, #A8C8D3 0%, #B5CFD9 100%);
+  background: linear-gradient(270deg, #0A3D6A 0%, #0F4C81 100%);
   clip-path: polygon(100% 0, 50% 50%, 100% 100%);
   z-index: 11;
   filter: 
-    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.7));
+    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.5));
 }
 
 /* Top flap/triangle (the one that opens) - points DOWN to center */
@@ -234,22 +234,22 @@
 .envelope-flap-front {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #C8DDE4 0%, #B5CFD9 100%);
+  background: linear-gradient(180deg, #1A5A91 0%, #0F4C81 100%);
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   backface-visibility: hidden;
   filter: 
-    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7))
-    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.7));
+    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.5));
 }
 
 /* Back of top flap (visible when opened) */
 .envelope-flap-back {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #9BC0CC 0%, #A8C8D3 100%);
+  background: linear-gradient(0deg, #083358 0%, #0A3D6A 100%);
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   transform: rotateY(180deg);
   backface-visibility: hidden;
@@ -376,7 +376,7 @@
   font-family: var(--font-script);
   font-size: 32px;
   color: #0F4C81;
-  border: 2px solid rgba(200, 221, 228, 0.6);
+  border: 2px solid rgba(15, 76, 129, 0.4);
 }
 
 /* Decorative elements */
