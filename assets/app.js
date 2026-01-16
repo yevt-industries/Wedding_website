@@ -19,14 +19,12 @@ const App = (() => {
       { key: 'nav.schedule', href: '#schedule' },
       { key: 'nav.rsvp', href: '#rsvp' },
       { key: 'nav.faq', href: '#faq' },
-      { key: 'nav.travel', href: '/travel.html' },
       { key: 'nav.contact', href: '#contact' }
     ] : [
       { key: 'nav.home', href: '/index.html#home' },
       { key: 'nav.schedule', href: '/index.html#schedule' },
       { key: 'nav.rsvp', href: '/index.html#rsvp' },
       { key: 'nav.faq', href: '/index.html#faq' },
-      { key: 'nav.travel', href: '/travel.html' },
       { key: 'nav.contact', href: '/index.html#contact' }
     ];
 
