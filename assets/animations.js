@@ -30,12 +30,8 @@ const Animations = (() => {
     });
   }
 
-  async function animateEnvelopeEntrance() {
-    await waitForGSAP();
-    
-    if (document.fonts && document.fonts.ready) {
-      await document.fonts.ready;
-    }
+  function animateEnvelopeEntrance() {
+    if (!gsapLoaded) return;
     
     const pretext = document.querySelector('.envelope-header-pretext');
     const titleText = document.querySelector('.envelope-header-title-text');
@@ -49,13 +45,43 @@ const Animations = (() => {
 
     const tl = gsap.timeline();
 
-    tl.to(envelope, {
+    tl.to(pretext, {
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power2.out'
+    })
+    .to(titleText, {
+      strokeDashoffset: 0,
+      duration: 1.4,
+      ease: 'power2.inOut'
+    }, 0.1)
+    .to(titleText, {
+      fillOpacity: 1,
+      duration: 0.6,
+      ease: 'power2.out'
+    }, 0.9)
+    .to(date, {
+      opacity: 1,
+      duration: 0.4,
+      ease: 'power2.out'
+    }, 0.7)
+    .to(location, {
+      opacity: 1,
+      duration: 0.4,
+      ease: 'power2.out'
+    }, 0.9)
+    .to(hint, {
+      opacity: 1,
+      duration: 0.4,
+      ease: 'power2.out'
+    }, 1.1)
+    .to(envelope, {
       y: 0,
       opacity: 1,
       scale: 1,
       duration: 0.8,
       ease: 'power3.out'
-    })
+    }, 1.4)
     .to(envelope, {
       y: 8,
       duration: 0.12,
@@ -66,43 +92,13 @@ const Animations = (() => {
       duration: 0.2,
       ease: 'power2.out'
     })
-    .to(pretext, {
-      opacity: 1,
-      duration: 0.4,
-      ease: 'power2.out'
-    }, 1.0)
-    .to(titleText, {
-      strokeDashoffset: 0,
-      duration: 1.4,
-      ease: 'power2.out'
-    }, 1.0)
-    .to(titleText, {
-      fillOpacity: 1,
-      duration: 0.6,
-      ease: 'power2.out'
-    }, 2.0)
-    .to(date, {
-      opacity: 1,
-      duration: 0.4,
-      ease: 'power2.out'
-    }, 1.8)
-    .to(location, {
-      opacity: 1,
-      duration: 0.4,
-      ease: 'power2.out'
-    }, 2.0)
-    .to(hint, {
-      opacity: 1,
-      duration: 0.4,
-      ease: 'power2.out'
-    }, 2.2)
     .to(seal, {
       scale: 1,
       rotation: 0,
       opacity: 1,
       duration: 0.5,
       ease: 'back.out(2)'
-    }, 2.5);
+    }, '-=0.15');
   }
 
   function animateEnvelopeOpenAndDismiss(onComplete) {
