@@ -829,6 +829,16 @@ h4 { font-size: var(--text-lg); }
   animation: fadeInUp 1s ease 0.5s both;
 }
 
+.scroll-text {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-xs);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -975,9 +985,9 @@ h4 { font-size: var(--text-lg); }
 
 .welcome-title {
   font-family: var(--font-script);
-  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-size: clamp(3rem, 12vw, 5.5rem);
   color: var(--card);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-2xl);
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -986,7 +996,7 @@ h4 { font-size: var(--text-lg); }
   font-size: var(--text-lg);
   color: var(--card);
   line-height: 1.8;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-2xl);
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -996,27 +1006,26 @@ h4 { font-size: var(--text-lg); }
 
 .welcome-bottom {
   margin-top: var(--space-2xl);
-  padding-bottom: var(--space-xl);
 }
 
 @media (max-width: 768px) {
   .welcome-content {
     justify-content: flex-start;
-    padding: calc(var(--header-height) + 4vh) var(--space-lg) 20vh;
+    padding: calc(var(--header-height) + 4vh) var(--space-lg) 15vh;
   }
   
   .welcome-title {
-    font-size: clamp(2rem, 7vw, 3rem);
-    margin-bottom: var(--space-lg);
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    margin-bottom: var(--space-xl);
   }
   
   .welcome-body {
     font-size: var(--text-base);
+    margin-bottom: var(--space-xl);
   }
   
   .welcome-bottom {
-    margin-top: auto;
-    padding-bottom: 5vh;
+    margin-top: var(--space-xl);
   }
 }
 
