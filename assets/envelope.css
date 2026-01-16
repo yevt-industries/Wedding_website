@@ -305,6 +305,78 @@
 }
 
 /* ============================================
+   LANGUAGE HINT ANIMATION
+   ============================================ */
+.envelope-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3vh;
+  opacity: 0;
+  animation: hintFadeIn 1s ease 1.5s forwards;
+}
+
+@keyframes hintFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.envelope-hint-text {
+  font-family: var(--font-serif);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  color: #6b5344;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.envelope-hint-arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(180deg);
+}
+
+.envelope-hint-arrow {
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid #9b7e6b;
+  border-bottom: 2px solid #9b7e6b;
+  transform: rotate(45deg);
+  animation: hintBounce 1.5s ease-in-out infinite;
+  opacity: 0;
+}
+
+.envelope-hint-arrow:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.envelope-hint-arrow:nth-child(2) {
+  animation-delay: 0.15s;
+  margin-top: -6px;
+}
+
+@keyframes hintBounce {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+
+/* ============================================
    RESPONSIVE ADJUSTMENTS
    ============================================ */
 
