@@ -89,6 +89,15 @@ const I18n = (() => {
       }
     });
 
+    const rsvpIframe = document.getElementById('rsvp-form-iframe');
+    if (rsvpIframe) {
+      const srcKey = `data-src-${lang}`;
+      const newSrc = rsvpIframe.getAttribute(srcKey);
+      if (newSrc && rsvpIframe.src !== newSrc) {
+        rsvpIframe.src = newSrc;
+      }
+    }
+
     currentLang = lang;
     updateLangToggle(lang);
   }
