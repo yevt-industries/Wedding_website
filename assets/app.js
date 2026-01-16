@@ -342,7 +342,7 @@ const App = (() => {
       await I18n.setLang(savedLang);
     }
 
-    Animations.animateEnvelopeEntrance();
+    await Animations.animateEnvelopeEntrance();
 
     initFaqAccordion();
     initScrollSpy();

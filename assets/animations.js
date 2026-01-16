@@ -30,8 +30,12 @@ const Animations = (() => {
     });
   }
 
-  function animateEnvelopeEntrance() {
-    if (!gsapLoaded) return;
+  async function animateEnvelopeEntrance() {
+    await waitForGSAP();
+    
+    if (document.fonts && document.fonts.ready) {
+      await document.fonts.ready;
+    }
     
     const pretext = document.querySelector('.envelope-header-pretext');
     const titleText = document.querySelector('.envelope-header-title-text');
