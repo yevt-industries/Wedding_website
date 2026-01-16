@@ -84,6 +84,7 @@ const App = (() => {
     overlay.innerHTML = `
       <!-- Header -->
       <div class="envelope-header">
+        <p class="envelope-header-pretext">The Wedding Of</p>
         <h1 class="envelope-header-title">Oleh & Inna</h1>
         <p class="envelope-header-date">May 24 – May 26, 2026</p>
         <p class="envelope-header-location">Budva, Montenegro</p>
