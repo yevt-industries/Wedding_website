@@ -93,6 +93,21 @@
   overflow: hidden;
 }
 
+/* Inner fold lines (X pattern) */
+.envelope-fold-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.envelope-fold-lines line {
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 0.5;
+}
+
 /* Subtle texture */
 .envelope-body::before {
   content: '';

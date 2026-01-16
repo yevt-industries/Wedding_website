@@ -100,6 +100,14 @@ const App = (() => {
           <!-- Envelope body (burgundy background) -->
           <div class="envelope-body"></div>
           
+          <!-- Inner fold lines (X pattern) -->
+          <svg class="envelope-fold-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <line x1="0" y1="0" x2="50" y2="50" />
+            <line x1="100" y1="0" x2="50" y2="50" />
+            <line x1="0" y1="100" x2="50" y2="50" />
+            <line x1="100" y1="100" x2="50" y2="50" />
+          </svg>
+          
           <!-- Inner card visible inside envelope -->
           <div class="envelope-inner-card" id="invitation-card">
             <h2 class="invitation-card-title" id="invitation-card-title">You're Invited</h2>
