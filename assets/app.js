@@ -137,11 +137,17 @@ const App = (() => {
       
       <!-- Language hint -->
       <div class="envelope-hint">
-        <span class="envelope-hint-text" id="envelope-hint-text">Choose your language</span>
-        <div class="envelope-hint-arrows">
-          <span class="envelope-hint-arrow"></span>
-          <span class="envelope-hint-arrow"></span>
+        <div class="envelope-hint-arrows-row">
+          <div class="envelope-hint-arrows">
+            <span class="envelope-hint-arrow"></span>
+            <span class="envelope-hint-arrow"></span>
+          </div>
+          <div class="envelope-hint-arrows">
+            <span class="envelope-hint-arrow"></span>
+            <span class="envelope-hint-arrow"></span>
+          </div>
         </div>
+        <span class="envelope-hint-text" id="envelope-hint-text">Choose your language</span>
       </div>
     `;
 
