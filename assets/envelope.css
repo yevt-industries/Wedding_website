@@ -365,6 +365,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 3px;
+  padding-top: 2px;
+  box-sizing: border-box;
   box-shadow: 
     0 6px 25px rgba(0, 0, 0, 0.35),
     0 3px 10px rgba(0, 0, 0, 0.2),
