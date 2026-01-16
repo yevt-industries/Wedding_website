@@ -488,7 +488,6 @@ h4 { font-size: var(--text-lg); }
 }
 
 .snap-card-dates .calendar-graphic {
-  margin-top: 100px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -496,8 +495,18 @@ h4 { font-size: var(--text-lg); }
 
 .snap-card-dates .calendar-graphic svg {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   height: auto;
+}
+
+@media (min-width: 769px) {
+  .snap-card-dates .calendar-graphic {
+    margin-top: 100px;
+  }
+  
+  .snap-card-dates .calendar-graphic svg {
+    max-width: 500px;
+  }
 }
 
 @media (max-width: 768px) {
