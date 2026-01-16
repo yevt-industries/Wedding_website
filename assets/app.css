@@ -1023,7 +1023,7 @@ h4 { font-size: var(--text-lg); }
 
 @media (max-width: 768px) {
   .welcome-content {
-    padding: 3vh var(--space-lg) 10vh;
+    padding: 3vh var(--space-lg) 15vh;
   }
   
   .welcome-title {
