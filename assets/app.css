@@ -101,6 +101,14 @@ body {
 
 /* ============================================
    SCROLL CONTAINER (for iOS Safari snap - mobile only)
+   ============================================
+   
+   POSITIONING ARCHITECTURE:
+   - Sections snap to viewport y=0 (top of screen)
+   - Each section handles header clearance via its own padding-top
+   - DO NOT add scroll-padding-top here - it would double-count
+     with the section-level padding that already includes header-height
+   
    ============================================ */
 .scroll-container {
   height: 100vh;
@@ -113,7 +121,6 @@ body {
 @media (max-width: 768px) {
   .scroll-container {
     scroll-snap-type: y mandatory;
-    scroll-padding-top: var(--header-height);
   }
 }
 
