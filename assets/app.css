@@ -1831,6 +1831,16 @@ h4 { font-size: var(--text-lg); }
   background-repeat: no-repeat;
 }
 
+@media (min-width: 769px) {
+  .dates-with-bg {
+    min-height: 90vh;
+  }
+  
+  .dates-bg {
+    background-position: center 35%;
+  }
+}
+
 .dates-bg::after {
   content: '';
   position: absolute;
