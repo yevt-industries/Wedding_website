@@ -1016,6 +1016,11 @@ h4 { font-size: var(--text-lg); }
   margin-bottom: 0;
 }
 
+.welcome-body-rsvp {
+  font-weight: 500;
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
   .welcome-content {
     padding: 5vh var(--space-lg) 20vh;
