@@ -23,11 +23,11 @@
   --text-hero: clamp(3rem, 2rem + 5vw, 6rem);
 
   /* Color Palette - Base */
-  --bg: #faf9f7;
+  --bg: #FAFCFC;
   --text: #2c2825;
   --muted: #5a6a7a;
   --card: #ffffff;
-  --border: #e8e4df;
+  --border: #dce4ec;
   --accent: #0F4C81;
   --accent-2: #2D8ACF;
   --link: #0F4C81;
@@ -35,9 +35,9 @@
 
   /* Wedding Palette Placeholders
      Update these 3 palette colors to the final wedding palette */
-  --palette-1: #9b7e6b; /* TODO: wedding color code */
-  --palette-2: #c4a98b; /* TODO: wedding color code */
-  --palette-3: #d4c5b5; /* TODO: wedding color code */
+  --palette-1: #0F4C81; /* Classic Blue */
+  --palette-2: #2D8ACF; /* Envelope Blue */
+  --palette-3: #6BA8D4; /* Light Blue */
 
   /* Spacing */
   --space-xs: 0.25rem;
@@ -1222,7 +1222,7 @@ h4 { font-size: var(--text-lg); }
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 120px auto 1fr;
+  grid-template-columns: 145px auto 1fr;
   gap: var(--space-md);
   padding-bottom: var(--space-xl);
   align-items: flex-start;
