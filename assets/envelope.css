@@ -286,14 +286,14 @@
 @keyframes btnArrowBounce {
   0% {
     opacity: 0;
-    transform: rotate(-135deg) translate(4px, 4px);
+    transform: rotate(-135deg) translate(-4px, -4px);
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: rotate(-135deg) translate(-4px, -4px);
+    transform: rotate(-135deg) translate(4px, 4px);
   }
 }
 
