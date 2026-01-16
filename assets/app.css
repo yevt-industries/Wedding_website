@@ -1924,11 +1924,10 @@ h4 { font-size: var(--text-lg); }
   font-family: 'Montserrat', var(--font-sans);
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
-  color: #ffffff;
+  color: #9b7e6b;
   line-height: 1;
   position: relative;
   z-index: 1;
-  -webkit-text-stroke: 1.5px var(--accent);
   text-shadow: none;
 }
 
@@ -1942,7 +1941,7 @@ h4 { font-size: var(--text-lg); }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--accent);
+  color: #9b7e6b;
   margin-top: var(--space-xs);
   position: relative;
   z-index: 1;
