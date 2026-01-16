@@ -353,7 +353,7 @@ h4 { font-size: var(--text-lg); }
   }
   
   .snap-section-dates > .container {
-    padding-bottom: 5vh;
+    padding-bottom: 15vh;
   }
 
   #intro.snap-section {
