@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d8 50%, #d4c5b5 100%);
+  background: #F0EDE5;
   opacity: 1;
   visibility: visible;
 }
@@ -25,7 +25,7 @@
 .envelope-header-title {
   font-family: var(--font-script);
   font-size: clamp(2.5rem, 6vw, 4rem);
-  color: #6b5344;
+  color: #0F4C81;
   margin-bottom: 10px;
   line-height: 1.1;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
@@ -34,7 +34,7 @@
 .envelope-header-date {
   font-family: var(--font-serif);
   font-size: clamp(1rem, 2.5vw, 1.4rem);
-  color: #4a3f35;
+  color: #0F4C81;
   letter-spacing: 0.1em;
   margin-bottom: 5px;
   font-weight: 500;
@@ -43,7 +43,7 @@
 .envelope-header-location {
   font-family: var(--font-serif);
   font-size: clamp(0.9rem, 2vw, 1.2rem);
-  color: #5a4d42;
+  color: #0F4C81;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 500;
@@ -80,11 +80,11 @@
   z-index: 10;
 }
 
-/* Envelope Body - Cashmere Blue */
+/* Envelope Body - Ice Melt */
 .envelope-body {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #B8D1DF 0%, #A5C4D4 50%, #8BAFC2 100%);
+  background: linear-gradient(145deg, #D6E8ED 0%, #C8DDE4 50%, #B5CFD9 100%);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 
@@ -156,7 +156,7 @@
 .invitation-card-title {
   font-family: var(--font-script);
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #4A7A8C;
+  color: #0F4C81;
   margin-bottom: 10px;
   line-height: 1.2;
   text-align: center;
@@ -165,14 +165,14 @@
 .invitation-card-divider {
   width: 80px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #4A7A8C, transparent);
+  background: linear-gradient(90deg, transparent, #0F4C81, transparent);
   margin: 0 auto 15px;
 }
 
 .invitation-card-names {
   font-family: var(--font-serif);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
-  color: #6b6560;
+  color: #0F4C81;
   letter-spacing: 0.1em;
 }
 
@@ -184,7 +184,7 @@
 .envelope-flap-bottom {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #7A9FB3 0%, #8BAFC2 100%);
+  background: linear-gradient(0deg, #A8C8D3 0%, #B5CFD9 100%);
   clip-path: polygon(0 100%, 50% 50%, 100% 100%);
   z-index: 10;
   filter: 
@@ -198,7 +198,7 @@
 .envelope-flap-left {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #7A9FB3 0%, #8AAEC0 100%);
+  background: linear-gradient(90deg, #A8C8D3 0%, #B5CFD9 100%);
   clip-path: polygon(0 0, 50% 50%, 0 100%);
   z-index: 11;
   filter: 
@@ -212,7 +212,7 @@
 .envelope-flap-right {
   position: absolute;
   inset: 0;
-  background: linear-gradient(270deg, #7A9FB3 0%, #8AAEC0 100%);
+  background: linear-gradient(270deg, #A8C8D3 0%, #B5CFD9 100%);
   clip-path: polygon(100% 0, 50% 50%, 100% 100%);
   z-index: 11;
   filter: 
@@ -234,7 +234,7 @@
 .envelope-flap-front {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #A5C4D4 0%, #8BAFC2 100%);
+  background: linear-gradient(180deg, #C8DDE4 0%, #B5CFD9 100%);
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   backface-visibility: hidden;
@@ -249,7 +249,7 @@
 .envelope-flap-back {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #6B94A8 0%, #7A9FB3 100%);
+  background: linear-gradient(0deg, #9BC0CC 0%, #A8C8D3 100%);
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   transform: rotateY(180deg);
   backface-visibility: hidden;
@@ -282,7 +282,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.2;
-  color: #4A7A8C;
+  color: #0F4C81;
   background: rgba(255, 255, 255, 0.95);
   border: none;
   border-radius: 14px;
@@ -375,8 +375,8 @@
     inset 0 -2px 4px rgba(0, 0, 0, 0.08);
   font-family: var(--font-script);
   font-size: 32px;
-  color: #4A7A8C;
-  border: 2px solid rgba(165, 196, 212, 0.5);
+  color: #0F4C81;
+  border: 2px solid rgba(200, 221, 228, 0.6);
 }
 
 /* Decorative elements */
@@ -433,7 +433,7 @@
 .envelope-hint-text {
   font-family: var(--font-serif);
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  color: #6b5344;
+  color: #0F4C81;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
