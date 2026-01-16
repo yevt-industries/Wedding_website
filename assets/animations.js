@@ -37,6 +37,8 @@ const Animations = (() => {
       await document.fonts.ready;
     }
     
+    await new Promise(resolve => setTimeout(resolve, 150));
+    
     const pretext = document.querySelector('.envelope-header-pretext');
     const titleText = document.querySelector('.envelope-header-title-text');
     const date = document.querySelector('.envelope-header-date');
