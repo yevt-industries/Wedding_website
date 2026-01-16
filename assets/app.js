@@ -169,6 +169,11 @@ const App = (() => {
       uk: "Вас Запрошено"
     };
 
+    const invitationNames = {
+      en: "Oleh & Inna",
+      uk: "Олег & Інна"
+    };
+
     document.querySelectorAll('.envelope-lang-btn').forEach(btn => {
       btn.addEventListener('click', async (e) => {
         e.stopPropagation();
@@ -181,6 +186,11 @@ const App = (() => {
         const cardTitle = document.getElementById('invitation-card-title');
         if (cardTitle) {
           cardTitle.textContent = invitationTexts[lang] || invitationTexts.en;
+        }
+        
+        const cardNames = document.querySelector('.invitation-card-names');
+        if (cardNames) {
+          cardNames.textContent = invitationNames[lang] || invitationNames.en;
         }
         
         await I18n.setLang(lang);
