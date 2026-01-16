@@ -103,6 +103,8 @@
   aspect-ratio: 1.4;
   margin: 0 auto;
   z-index: 10;
+  opacity: 0;
+  transform: translateY(-80vh);
 }
 
 /* Envelope Body */
@@ -374,6 +376,7 @@
   width: 80px;
   height: 80px;
   z-index: 30;
+  opacity: 0;
 }
 
 .envelope-seal-circle {

@@ -43,64 +43,62 @@ const Animations = (() => {
 
     if (!envelope || !titleText) return;
 
-    gsap.set(envelope, { y: -window.innerHeight * 0.8, opacity: 0, scale: 0.95 });
-    gsap.set(seal, { scale: 0, rotation: -180 });
-
     const tl = gsap.timeline();
 
     tl.to(pretext, {
       opacity: 1,
-      duration: 0.3,
+      duration: 0.5,
       ease: 'power2.out'
     })
     .to(titleText, {
       strokeDashoffset: 0,
-      duration: 0.8,
+      duration: 1.4,
       ease: 'power2.inOut'
-    }, 0)
+    }, 0.1)
     .to(titleText, {
       fillOpacity: 1,
-      duration: 0.4,
+      duration: 0.6,
       ease: 'power2.out'
-    }, 0.5)
+    }, 0.9)
     .to(date, {
       opacity: 1,
-      duration: 0.3,
+      duration: 0.4,
       ease: 'power2.out'
-    }, 0.3)
+    }, 0.7)
     .to(location, {
       opacity: 1,
-      duration: 0.3,
+      duration: 0.4,
       ease: 'power2.out'
-    }, 0.4)
+    }, 0.9)
     .to(hint, {
       opacity: 1,
-      duration: 0.3,
+      duration: 0.4,
       ease: 'power2.out'
-    }, 0.5)
+    }, 1.1)
     .to(envelope, {
       y: 0,
       opacity: 1,
       scale: 1,
-      duration: 0.5,
-      ease: 'power2.out'
-    }, 0.6)
+      duration: 0.8,
+      ease: 'power3.out'
+    }, 1.4)
     .to(envelope, {
-      y: 5,
-      duration: 0.1,
+      y: 8,
+      duration: 0.12,
       ease: 'power2.in'
     })
     .to(envelope, {
       y: 0,
-      duration: 0.15,
-      ease: 'bounce.out'
+      duration: 0.2,
+      ease: 'power2.out'
     })
     .to(seal, {
       scale: 1,
       rotation: 0,
-      duration: 0.35,
-      ease: 'back.out(2.5)'
-    }, '-=0.1');
+      opacity: 1,
+      duration: 0.5,
+      ease: 'back.out(2)'
+    }, '-=0.15');
   }
 
   function animateEnvelopeOpenAndDismiss(onComplete) {
