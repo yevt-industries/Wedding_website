@@ -995,6 +995,16 @@ h4 { font-size: var(--text-lg); }
   margin-top: auto;
 }
 
+.welcome-bottom .btn-primary {
+  background: var(--card);
+  color: var(--text);
+}
+
+.welcome-bottom .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+}
+
 .welcome-title {
   font-family: var(--font-script);
   font-size: clamp(3rem, 12vw, 5.5rem);
