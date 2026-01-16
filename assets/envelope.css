@@ -80,11 +80,11 @@
   z-index: 10;
 }
 
-/* Envelope Body - Burgundy */
+/* Envelope Body - Cashmere Blue */
 .envelope-body {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #722f37 0%, #5c252b 50%, #4a1e23 100%);
+  background: linear-gradient(145deg, #B8D1DF 0%, #A5C4D4 50%, #8BAFC2 100%);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 
@@ -127,7 +127,7 @@
   left: 15%;
   right: 15%;
   bottom: 10%;
-  background: url('/photos/Etretat-proposal-466.jpeg') 30% center / cover no-repeat;
+  background: url('/photos/Etretat-proposal-466.jpeg') center center / cover no-repeat;
   border-radius: 6px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -137,13 +137,14 @@
   padding: 25px 20px;
   z-index: 1;
   overflow: hidden;
+  filter: contrast(1.1);
 }
 
 .envelope-inner-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.7);
   z-index: 0;
 }
 
@@ -155,7 +156,7 @@
 .invitation-card-title {
   font-family: var(--font-script);
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #5c252b;
+  color: #4A7A8C;
   margin-bottom: 10px;
   line-height: 1.2;
   text-align: center;
@@ -164,7 +165,7 @@
 .invitation-card-divider {
   width: 80px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #5c252b, transparent);
+  background: linear-gradient(90deg, transparent, #4A7A8C, transparent);
   margin: 0 auto 15px;
 }
 
@@ -183,7 +184,7 @@
 .envelope-flap-bottom {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #4a1e23 0%, #5c252b 100%);
+  background: linear-gradient(0deg, #7A9FB3 0%, #8BAFC2 100%);
   clip-path: polygon(0 100%, 50% 50%, 100% 100%);
   z-index: 10;
   filter: 
@@ -197,7 +198,7 @@
 .envelope-flap-left {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #4a1e23 0%, #5a2428 100%);
+  background: linear-gradient(90deg, #7A9FB3 0%, #8AAEC0 100%);
   clip-path: polygon(0 0, 50% 50%, 0 100%);
   z-index: 11;
   filter: 
@@ -211,7 +212,7 @@
 .envelope-flap-right {
   position: absolute;
   inset: 0;
-  background: linear-gradient(270deg, #4a1e23 0%, #5a2428 100%);
+  background: linear-gradient(270deg, #7A9FB3 0%, #8AAEC0 100%);
   clip-path: polygon(100% 0, 50% 50%, 100% 100%);
   z-index: 11;
   filter: 
@@ -233,7 +234,7 @@
 .envelope-flap-front {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #5c252b 0%, #4a252a 100%);
+  background: linear-gradient(180deg, #A5C4D4 0%, #8BAFC2 100%);
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   backface-visibility: hidden;
@@ -248,7 +249,7 @@
 .envelope-flap-back {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #3d1a1e 0%, #4a252a 100%);
+  background: linear-gradient(0deg, #6B94A8 0%, #7A9FB3 100%);
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   transform: rotateY(180deg);
   backface-visibility: hidden;
@@ -281,7 +282,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.2;
-  color: #5c252b;
+  color: #4A7A8C;
   background: rgba(255, 255, 255, 0.95);
   border: none;
   border-radius: 14px;
@@ -371,8 +372,8 @@
     inset 0 -2px 4px rgba(0, 0, 0, 0.08);
   font-family: var(--font-script);
   font-size: 32px;
-  color: #5c252b;
-  border: 2px solid rgba(212, 175, 55, 0.35);
+  color: #4A7A8C;
+  border: 2px solid rgba(165, 196, 212, 0.5);
 }
 
 /* Decorative elements */
