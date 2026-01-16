@@ -83,7 +83,9 @@ const App = (() => {
       <!-- Header -->
       <div class="envelope-header">
         <p class="envelope-header-pretext">The Wedding Of</p>
-        <h1 class="envelope-header-title">Oleh & Inna</h1>
+        <svg class="envelope-header-title-svg" viewBox="0 0 400 90" preserveAspectRatio="xMidYMid meet">
+          <text x="200" y="65" text-anchor="middle" class="envelope-header-title-text">Oleh & Inna</text>
+        </svg>
         <p class="envelope-header-date">May 24 – May 26, 2026</p>
         <p class="envelope-header-location">Budva, Montenegro</p>
       </div>

@@ -33,16 +33,74 @@ const Animations = (() => {
   function animateEnvelopeEntrance() {
     if (!gsapLoaded) return;
     
+    const pretext = document.querySelector('.envelope-header-pretext');
+    const titleText = document.querySelector('.envelope-header-title-text');
+    const date = document.querySelector('.envelope-header-date');
+    const location = document.querySelector('.envelope-header-location');
+    const envelope = document.querySelector('.envelope-container');
     const seal = document.getElementById('envelope-seal');
-    if (!seal) return;
+    const hint = document.querySelector('.envelope-hint');
 
+    if (!envelope || !titleText) return;
+
+    gsap.set(envelope, { y: -window.innerHeight * 0.8, opacity: 0, scale: 0.95 });
     gsap.set(seal, { scale: 0, rotation: -180 });
-    gsap.to(seal, {
+
+    const tl = gsap.timeline();
+
+    tl.to(pretext, {
+      opacity: 1,
+      duration: 0.3,
+      ease: 'power2.out'
+    })
+    .to(titleText, {
+      strokeDashoffset: 0,
+      duration: 0.8,
+      ease: 'power2.inOut'
+    }, 0)
+    .to(titleText, {
+      fillOpacity: 1,
+      duration: 0.4,
+      ease: 'power2.out'
+    }, 0.5)
+    .to(date, {
+      opacity: 1,
+      duration: 0.3,
+      ease: 'power2.out'
+    }, 0.3)
+    .to(location, {
+      opacity: 1,
+      duration: 0.3,
+      ease: 'power2.out'
+    }, 0.4)
+    .to(hint, {
+      opacity: 1,
+      duration: 0.3,
+      ease: 'power2.out'
+    }, 0.5)
+    .to(envelope, {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 0.5,
+      ease: 'power2.out'
+    }, 0.6)
+    .to(envelope, {
+      y: 5,
+      duration: 0.1,
+      ease: 'power2.in'
+    })
+    .to(envelope, {
+      y: 0,
+      duration: 0.15,
+      ease: 'bounce.out'
+    })
+    .to(seal, {
       scale: 1,
       rotation: 0,
-      duration: 0.4,
-      ease: 'back.out(2)'
-    });
+      duration: 0.35,
+      ease: 'back.out(2.5)'
+    }, '-=0.1');
   }
 
   function animateEnvelopeOpenAndDismiss(onComplete) {
