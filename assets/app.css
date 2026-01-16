@@ -496,7 +496,7 @@ h4 { font-size: var(--text-lg); }
 
 .snap-card-dates .calendar-graphic svg {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
 }
 
@@ -1823,7 +1823,7 @@ h4 { font-size: var(--text-lg); }
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   background-repeat: no-repeat;
 }
 
