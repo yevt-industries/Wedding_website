@@ -488,7 +488,7 @@ h4 { font-size: var(--text-lg); }
 }
 
 .snap-card-dates .calendar-graphic {
-  margin-top: 60px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   width: 100%;
