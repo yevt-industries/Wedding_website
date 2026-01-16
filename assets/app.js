@@ -118,8 +118,20 @@ const App = (() => {
           
           <!-- Language buttons on envelope body -->
           <div class="envelope-lang-buttons">
-            <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
-            <button class="envelope-lang-btn" data-lang="uk">🇺🇦 UA</button>
+            <div class="envelope-lang-btn-wrapper">
+              <button class="envelope-lang-btn" data-lang="en">🇬🇧 EN</button>
+              <div class="envelope-btn-arrows">
+                <span class="envelope-btn-arrow"></span>
+                <span class="envelope-btn-arrow"></span>
+              </div>
+            </div>
+            <div class="envelope-lang-btn-wrapper">
+              <button class="envelope-lang-btn" data-lang="uk">🇺🇦 UA</button>
+              <div class="envelope-btn-arrows">
+                <span class="envelope-btn-arrow"></span>
+                <span class="envelope-btn-arrow"></span>
+              </div>
+            </div>
           </div>
           
           <!-- Top flap (opens when clicked) -->
@@ -135,18 +147,8 @@ const App = (() => {
         </div>
       </div>
       
-      <!-- Language hint -->
+      <!-- Language hint text -->
       <div class="envelope-hint">
-        <div class="envelope-hint-arrows-row">
-          <div class="envelope-hint-arrows">
-            <span class="envelope-hint-arrow"></span>
-            <span class="envelope-hint-arrow"></span>
-          </div>
-          <div class="envelope-hint-arrows">
-            <span class="envelope-hint-arrow"></span>
-            <span class="envelope-hint-arrow"></span>
-          </div>
-        </div>
         <span class="envelope-hint-text" id="envelope-hint-text">Choose your language</span>
       </div>
     `;
