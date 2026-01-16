@@ -1251,7 +1251,7 @@ h4 { font-size: var(--text-lg); }
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--accent);
-  text-align: right;
+  text-align: left;
   padding-top: 2px;
   white-space: nowrap;
 }
