@@ -353,7 +353,7 @@ h4 { font-size: var(--text-lg); }
   }
   
   .snap-section-dates > .container {
-    padding-bottom: 18vh;
+    padding-bottom: 5vh;
   }
 
   #intro.snap-section {
@@ -836,7 +836,7 @@ h4 { font-size: var(--text-lg); }
 @media (max-width: 768px) {
   .hero-content {
     justify-content: flex-start;
-    padding: calc(var(--header-height) + 4vh) var(--space-lg) 15vh;
+    padding: calc(var(--header-height) + 4vh) var(--space-lg) 5vh;
   }
   
   .hero-top {
@@ -849,7 +849,6 @@ h4 { font-size: var(--text-lg); }
   
   .hero-bottom {
     margin-top: auto;
-    padding-bottom: 5vh;
   }
 }
 
@@ -1057,7 +1056,7 @@ h4 { font-size: var(--text-lg); }
 
 @media (max-width: 768px) {
   .welcome-content {
-    padding: 3vh var(--space-lg) 15vh;
+    padding: 3vh var(--space-lg) 5vh;
   }
   
   .welcome-title {
