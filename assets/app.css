@@ -974,7 +974,7 @@ h4 { font-size: var(--text-lg); }
 .welcome-content {
   position: relative;
   z-index: 1;
-  padding: 5vh var(--space-2xl) 25vh;
+  padding: 3vh var(--space-2xl) 35vh;
   width: 100%;
   height: 100%;
   display: flex;
@@ -999,7 +999,7 @@ h4 { font-size: var(--text-lg); }
   font-family: var(--font-script);
   font-size: clamp(3rem, 12vw, 5.5rem);
   color: var(--card);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -1008,7 +1008,7 @@ h4 { font-size: var(--text-lg); }
   font-size: var(--text-lg);
   color: var(--card);
   line-height: 1.8;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -1023,17 +1023,17 @@ h4 { font-size: var(--text-lg); }
 
 @media (max-width: 768px) {
   .welcome-content {
-    padding: 5vh var(--space-lg) 20vh;
+    padding: 3vh var(--space-lg) 30vh;
   }
   
   .welcome-title {
     font-size: clamp(2.5rem, 10vw, 4rem);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
   }
   
   .welcome-body {
     font-size: var(--text-base);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
   }
 }
 
