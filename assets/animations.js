@@ -82,16 +82,6 @@ const Animations = (() => {
       duration: 0.8,
       ease: 'power3.out'
     }, 1.4)
-    .to(envelope, {
-      y: 8,
-      duration: 0.12,
-      ease: 'power2.in'
-    })
-    .to(envelope, {
-      y: 0,
-      duration: 0.2,
-      ease: 'power2.out'
-    })
     .to(seal, {
       scale: 1,
       rotation: 0,
