@@ -61,75 +61,64 @@
     "galleryBody": "A few moments and Montenegro inspiration."
   },
   "schedule": {
-    "title": "Schedule",
-    "subtitle": "A long weekend together • Details coming soon",
-    "placeholderTitle": "Placeholder Weekend Outline",
-    "placeholderNote": "Exact timings and locations will be confirmed closer to the date.",
+    "title": "Weekend Schedule",
+    "subtitle": "Times may shift slightly.",
     "day1": {
-      "title": "May 24 — Welcome Day",
+      "title": "Sunday, May 24 — Welcome Day",
+      "desc": "A relaxed start to the weekend — come meet everyone, enjoy the Adriatic sea views, and ease into the festive vibe.",
       "e1": {
-        "time": "4:00 PM",
-        "event": "Guest Arrivals",
-        "desc": "Check in and settle at the villa"
+        "time": "4:00 – 5:00 PM",
+        "event": "Welcome Drinks"
       },
       "e2": {
-        "time": "6:00 PM",
-        "event": "Welcome Cocktails",
-        "desc": "Drinks and light bites by the pool"
+        "time": "5:00 – 8:00 PM",
+        "event": "Pre-Party Begins"
       },
       "e3": {
         "time": "8:00 PM",
-        "event": "Welcome Dinner",
-        "desc": "Casual dinner together"
+        "event": "Welcome Dinner"
       }
     },
     "day2": {
-      "title": "May 25 — Wedding Day",
+      "title": "Monday, May 25 — Wedding Day",
+      "desc": "The Big Day! Come dressed to impress and ready to celebrate — make unforgettable memories with us, enjoy the view, the music and the food.",
       "e1": {
-        "time": "3:00 PM",
-        "event": "Getting Ready",
-        "desc": "Hair, makeup & preparations"
+        "time": "4:30 PM",
+        "event": "Cocktail Hour"
       },
       "e2": {
         "time": "5:00 PM",
-        "event": "Ceremony",
-        "desc": "Exchange of vows"
+        "event": "Ceremony"
       },
       "e3": {
-        "time": "6:30 PM",
-        "event": "Cocktail Hour",
-        "desc": "Drinks and canapés"
+        "time": "6:00 PM",
+        "event": "Wedding Dinner"
       },
       "e4": {
-        "time": "8:00 PM",
-        "event": "Reception & Celebration",
-        "desc": "Dinner, dancing & festivities"
+        "time": "After",
+        "event": "The best night of the summer"
       }
     },
     "day3": {
-      "title": "May 26 — After Party",
+      "title": "Tuesday, May 26 — After Party",
+      "desc": "This day is all about relaxing, swimming, music, and keeping the party going.",
       "e1": {
-        "time": "11:00 AM",
-        "event": "Brunch",
-        "desc": "Relaxed late morning brunch"
+        "time": "2:00 PM",
+        "event": "Pool Party / Chill Time Begins"
       },
       "e2": {
-        "time": "3:00 PM",
-        "event": "Pool & Chill",
-        "desc": "Relax by the pool, games & refreshments"
+        "time": "4:00 PM",
+        "event": "Summer Drink Tasting"
       },
       "e3": {
-        "time": "7:00 PM",
-        "event": "Farewell Dinner",
-        "desc": "Final dinner together"
+        "time": "6:00 PM",
+        "event": "BBQ Dinner"
       },
       "e4": {
-        "time": "9:00 PM",
-        "event": "Party Night",
-        "desc": "Dancing & celebrating into the night"
+        "time": "After",
+        "event": "Music + dancing until we can't anymore"
       }
-    },
-    "callout": "Please plan to arrive by May 23 if you can."
+    }
   },
   "rsvp": {
     "title": "RSVP",
