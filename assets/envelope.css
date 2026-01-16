@@ -94,7 +94,7 @@
 .envelope-body {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #4DA5E3 0%, #3895D9 50%, #2A7FC3 100%);
+  background: linear-gradient(145deg, #3D9AD9 0%, #2D8ACF 50%, #2074B5 100%);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 
@@ -194,7 +194,7 @@
 .envelope-flap-bottom {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #2A7FC3 0%, #3895D9 100%);
+  background: linear-gradient(0deg, #2074B5 0%, #2D8ACF 100%);
   clip-path: polygon(0 100%, 50% 50%, 100% 100%);
   z-index: 10;
   filter: 
@@ -208,7 +208,7 @@
 .envelope-flap-left {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #2A7FC3 0%, #3895D9 100%);
+  background: linear-gradient(90deg, #2074B5 0%, #2D8ACF 100%);
   clip-path: polygon(0 0, 50% 50%, 0 100%);
   z-index: 11;
   filter: 
@@ -222,7 +222,7 @@
 .envelope-flap-right {
   position: absolute;
   inset: 0;
-  background: linear-gradient(270deg, #2A7FC3 0%, #3895D9 100%);
+  background: linear-gradient(270deg, #2074B5 0%, #2D8ACF 100%);
   clip-path: polygon(100% 0, 50% 50%, 100% 100%);
   z-index: 11;
   filter: 
@@ -244,7 +244,7 @@
 .envelope-flap-front {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #4DA5E3 0%, #3895D9 100%);
+  background: linear-gradient(180deg, #3D9AD9 0%, #2D8ACF 100%);
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   backface-visibility: hidden;
@@ -259,7 +259,7 @@
 .envelope-flap-back {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #1E6FB0 0%, #2A7FC3 100%);
+  background: linear-gradient(0deg, #185F9B 0%, #2074B5 100%);
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   transform: rotateY(180deg);
   backface-visibility: hidden;
@@ -386,7 +386,7 @@
   font-family: var(--font-script);
   font-size: 32px;
   color: #0F4C81;
-  border: 2px solid rgba(56, 149, 217, 0.4);
+  border: 2px solid rgba(45, 138, 207, 0.4);
 }
 
 /* Decorative elements */
