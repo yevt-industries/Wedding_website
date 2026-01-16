@@ -53,8 +53,8 @@ const Animations = (() => {
     .to(titleText, {
       strokeDashoffset: 0,
       duration: 1.4,
-      ease: 'power2.inOut'
-    }, 0.1)
+      ease: 'power2.out'
+    }, 0)
     .to(titleText, {
       fillOpacity: 1,
       duration: 0.6,
