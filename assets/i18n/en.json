@@ -168,40 +168,32 @@
     "confirmation": "Thank you — we can't wait to celebrate with you. This website will be updated with details as we get closer."
   },
   "faq": {
-    "title": "Event FAQ",
-    "subtitle": "Helpful details • More to be added",
-    "basics": {
-      "title": "Basics",
-      "q1": "Where is the wedding?",
-      "a1": "Near Budva, Montenegro at Villa Mona Lisa.",
-      "q2": "What are the dates?",
-      "a2": "May 24–26, 2026. Many guests will arrive May 23."
-    },
-    "dress": {
-      "title": "Dress Code",
-      "q1": "What should I wear?",
-      "a1": "Dress code will be shared closer to the date. (Placeholder: TBD)"
-    },
-    "menu": {
-      "title": "Menu",
-      "q1": "What will food be like?",
-      "a1": "Menu details will be shared closer to the date. (Placeholder: TBD)"
-    },
-    "gifts": {
-      "title": "Gifts",
-      "q1": "Is there a registry?",
-      "a1": "Your presence is the biggest gift. More details (if any) will be shared later."
-    },
-    "transport": {
-      "title": "Getting around",
-      "q1": "What's the easiest way to get there?",
-      "a1": "Most guests will arrive via Podgorica Airport (TGD) and take a private transfer or taxi. Budget option: bus to Podgorica station, then bus to Budva."
-    },
-    "updates": {
-      "title": "Updates",
-      "q1": "When will you share final details?",
-      "a1": "We'll update the site closer to the date. Please check back for schedule timing, RSVP, dress code, and menu."
-    }
+    "title": "FAQ",
+    "subtitle": "Everything you need to know",
+    "q1": "What's the location?",
+    "a1": "Villa address: [INSERT EXACT VILLA ADDRESS HERE] Budva, Montenegro (mountain villa above Budva)",
+    "q2": "What's the best airport to fly into?",
+    "a2": "For most international guests, Podgorica Airport (TGD) is the best option.",
+    "q3": "What are the dates?",
+    "a3": "May 24, 2026 — Pre-party / Welcome day • May 25, 2026 — Wedding day • May 26, 2026 — After-party",
+    "q4": "What's the dress code?",
+    "a4": "Details coming soon.",
+    "q5": "When is the RSVP deadline?",
+    "a5": "Please RSVP by February 28, 2026.",
+    "q6": "How do I get to Budva?",
+    "a6": "There are lots of options: Taxi / private transfer, Bus, or Car rental. If you'd like help choosing the best option for your arrival time (or coordinating with others), just reach out to us.",
+    "q7": "Where should I stay?",
+    "a7": "Budva has plenty of great options — hotels, Airbnbs, and apartments. If you want recommendations based on your preferences (close to the beach, quieter area, walkable, budget-friendly, etc.), message us and we'll help you pick something.",
+    "q8": "Do I need a visa to visit Montenegro?",
+    "a8": "No visa is required for Canadian or Ukrainian passport holders for tourist travel to Montenegro.",
+    "q9": "What will the weather be like?",
+    "a9": "Late May on the coast is usually warm and sunny. Expect around ~20°C during the day, but it can feel chilly at night, especially up at the villa. We recommend bringing a light sweater or jacket for evenings.",
+    "q10": "What currency should I bring?",
+    "a10": "Montenegro uses the Euro (€). We recommend having some cash, especially for taxis and small purchases (cash is often preferred).",
+    "q11": "Will food and drinks be provided?",
+    "a11": "Yes — food and drinks will be provided at all events listed in the schedule. If you have dietary restrictions or allergies, please make sure you note them in your RSVP (especially allergies).",
+    "q12": "Gifts",
+    "a12": "No gifts needed — your presence is the best gift. If you still feel like doing something meaningful, you absolutely can — but please don't feel any pressure."
   },
   "travel": {
     "title": "Travel & Stay",
