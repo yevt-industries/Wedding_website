@@ -312,7 +312,7 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  margin-top: 3vh;
+  margin-top: 1.5vh;
   opacity: 0;
   animation: hintFadeIn 1s ease 1.5s forwards;
 }
@@ -331,7 +331,7 @@
 .envelope-hint-arrows-row {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 120px;
 }
 
 .envelope-hint-text {
@@ -463,6 +463,6 @@
   }
   
   .envelope-hint-arrows-row {
-    gap: 50px;
+    gap: 70px;
   }
 }
