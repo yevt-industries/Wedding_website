@@ -111,7 +111,7 @@
   left: 15%;
   right: 15%;
   bottom: 10%;
-  background: linear-gradient(145deg, #ffffff 0%, #faf8f5 100%);
+  background: url('/photos/Etretat-proposal-466.jpeg') center center / cover no-repeat;
   border-radius: 6px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -119,6 +119,20 @@
   align-items: center;
   justify-content: center;
   padding: 25px 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.envelope-inner-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 0;
+}
+
+.envelope-inner-card > * {
+  position: relative;
   z-index: 1;
 }
 
