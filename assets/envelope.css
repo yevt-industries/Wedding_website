@@ -86,6 +86,7 @@
   inset: 0;
   background: linear-gradient(145deg, #722f37 0%, #5c252b 50%, #4a1e23 100%);
   border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.3),
     0 8px 25px rgba(0, 0, 0, 0.2);
@@ -170,7 +171,11 @@
   background: linear-gradient(0deg, #4a1e23 0%, #5c252b 100%);
   clip-path: polygon(0 100%, 50% 50%, 100% 100%);
   z-index: 10;
-  filter: drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.3));
+  filter: 
+    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.7));
 }
 
 /* Left triangle - points RIGHT to center */
@@ -180,7 +185,11 @@
   background: linear-gradient(90deg, #4a1e23 0%, #5a2428 100%);
   clip-path: polygon(0 0, 50% 50%, 0 100%);
   z-index: 11;
-  filter: drop-shadow(1px 0 0 rgba(255, 255, 255, 0.3));
+  filter: 
+    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.7));
 }
 
 /* Right triangle - points LEFT to center */
@@ -190,7 +199,11 @@
   background: linear-gradient(270deg, #4a1e23 0%, #5a2428 100%);
   clip-path: polygon(100% 0, 50% 50%, 100% 100%);
   z-index: 11;
-  filter: drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.3));
+  filter: 
+    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.7));
 }
 
 /* Top flap/triangle (the one that opens) - points DOWN to center */
@@ -209,7 +222,11 @@
   clip-path: polygon(0 0, 50% 50%, 100% 0);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   backface-visibility: hidden;
-  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.3));
+  filter: 
+    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.7))
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.7));
 }
 
 /* Back of top flap (visible when opened) */
