@@ -936,7 +936,7 @@ h4 { font-size: var(--text-lg); }
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
 }
@@ -976,10 +976,8 @@ h4 { font-size: var(--text-lg); }
 }
 
 .welcome-text {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .welcome-title {
