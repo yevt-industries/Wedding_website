@@ -33,39 +33,16 @@ const Animations = (() => {
   function animateEnvelopeEntrance() {
     if (!gsapLoaded) return;
     
-    const scene = document.querySelector('.envelope-scene');
-    const envelope = document.getElementById('envelope');
     const seal = document.getElementById('envelope-seal');
-    const decors = document.querySelectorAll('.envelope-decor');
+    if (!seal) return;
 
-    if (!envelope) return;
-
-    const tl = gsap.timeline();
-
-    gsap.set(scene, { opacity: 0, y: 50, scale: 0.9 });
     gsap.set(seal, { scale: 0, rotation: -180 });
-    gsap.set(decors, { opacity: 0, scale: 0 });
-
-    tl.to(scene, {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      duration: 0.8,
-      ease: 'power3.out'
-    })
-    .to(seal, {
+    gsap.to(seal, {
       scale: 1,
       rotation: 0,
-      duration: 0.6,
-      ease: 'back.out(1.7)'
-    }, '-=0.3')
-    .to(decors, {
-      opacity: 0.4,
-      scale: 1,
-      duration: 0.5,
-      stagger: 0.1,
-      ease: 'back.out(1.5)'
-    }, '-=0.4');
+      duration: 0.4,
+      ease: 'back.out(2)'
+    });
   }
 
   function animateEnvelopeOpenAndDismiss(onComplete) {

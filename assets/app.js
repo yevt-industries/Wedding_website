@@ -88,11 +88,6 @@ const App = (() => {
         <p class="envelope-header-location">Budva, Montenegro</p>
       </div>
       
-      <!-- Decorative elements -->
-      <span class="envelope-decor envelope-decor-1">✿</span>
-      <span class="envelope-decor envelope-decor-2">❀</span>
-      <span class="envelope-decor envelope-decor-3">✾</span>
-      
       <div class="envelope-scene">
         <!-- The envelope itself -->
         <div class="envelope-container" id="envelope">
