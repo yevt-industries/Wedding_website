@@ -168,6 +168,17 @@ h2 { font-size: var(--text-2xl); }
 h3 { font-size: var(--text-xl); }
 h4 { font-size: var(--text-lg); }
 
+.hero-pretext {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  color: var(--card);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--space-sm);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
 .hero-title {
   font-family: var(--font-script);
   font-size: var(--text-hero);
