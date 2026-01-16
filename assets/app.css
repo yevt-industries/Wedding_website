@@ -458,7 +458,7 @@ h4 { font-size: var(--text-lg); }
   }
   
   .snap-card-dates .calendar-graphic {
-    margin-top: var(--space-sm);
+    margin-top: auto;
   }
   
   .snap-card-dates .calendar-graphic svg {
@@ -836,7 +836,7 @@ h4 { font-size: var(--text-lg); }
 @media (max-width: 768px) {
   .hero-content {
     justify-content: flex-start;
-    padding: calc(var(--header-height) + 4vh) var(--space-lg) 5vh;
+    padding: 2vh var(--space-lg) 2vh;
   }
   
   .hero-top {
