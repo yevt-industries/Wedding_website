@@ -300,9 +300,9 @@ const App = (() => {
     if (!scrollContainer || !progressFill || !progressHeart) return;
 
     const sectionNames = {
-      'home': 'Home',
-      'welcome': 'Welcome', 
-      'intro': 'Our Story',
+      'home': 'Welcome',
+      'welcome': 'Invitation', 
+      'intro': 'Countdown',
       'dates': 'Save the Date',
       'venue': 'Venue',
       'rsvp': 'RSVP',
@@ -376,7 +376,7 @@ const App = (() => {
     
     updateProgress();
     if (sectionName) {
-      sectionName.textContent = sectionNames['home'];
+      sectionName.textContent = sectionNames['home'] || 'Welcome';
     }
   }
 
