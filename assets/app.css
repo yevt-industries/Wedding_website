@@ -2939,7 +2939,7 @@ section.snap-section-casual > .container {
     padding: 0;
   }
   
-  .snap-section-casual > .container {
+  section.snap-section-casual > .container {
     max-width: 100%;
     height: calc(100vh - var(--header-height));
     height: calc(100dvh - var(--header-height));
