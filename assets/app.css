@@ -2944,6 +2944,7 @@ section.snap-section-casual > .container {
     height: calc(100vh - var(--header-height));
     height: calc(100dvh - var(--header-height));
     padding: 0;
+    align-items: stretch;
   }
   
   .snap-section-casual .snap-section-title {
