@@ -36,6 +36,11 @@ const App = (() => {
       <div class="header-inner">
         <a href="${isHomePage ? '#home' : '/index.html'}" class="site-logo">O & I</a>
         
+        <!-- Mobile Progress Indicator -->
+        <div class="header-progress" aria-hidden="true">
+          <span class="header-section-name"></span>
+        </div>
+        
         <button class="menu-toggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
@@ -53,6 +58,16 @@ const App = (() => {
             <button data-lang="uk">UA</button>
           </div>
         </nav>
+      </div>
+      
+      <!-- Progress Track (bottom of header) -->
+      <div class="header-progress-track" aria-hidden="true">
+        <div class="header-progress-fill"></div>
+        <div class="header-progress-heart">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
       </div>
     `;
 
@@ -275,6 +290,96 @@ const App = (() => {
     updateActiveLink();
   }
 
+  function initHeaderProgress() {
+    const scrollContainer = document.getElementById('scroll-container');
+    const progressFill = document.querySelector('.header-progress-fill');
+    const progressHeart = document.querySelector('.header-progress-heart');
+    const sectionName = document.querySelector('.header-section-name');
+    const sections = document.querySelectorAll('section[id]');
+    
+    if (!scrollContainer || !progressFill || !progressHeart) return;
+
+    const sectionNames = {
+      'home': 'Home',
+      'welcome': 'Welcome', 
+      'intro': 'Our Story',
+      'dates': 'Save the Date',
+      'venue': 'Venue',
+      'rsvp': 'RSVP',
+      'schedule': 'Schedule',
+      'faq': 'FAQ',
+      'contact': 'Contact'
+    };
+
+    let currentSection = '';
+    let targetProgress = 0;
+    let currentProgress = 0;
+    let animationFrame = null;
+
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+    const animateProgress = () => {
+      const diff = targetProgress - currentProgress;
+      
+      if (Math.abs(diff) > 0.1) {
+        currentProgress += diff * 0.12;
+        
+        progressFill.style.width = `${currentProgress}%`;
+        progressHeart.style.left = `${currentProgress}%`;
+        
+        animationFrame = requestAnimationFrame(animateProgress);
+      } else {
+        currentProgress = targetProgress;
+        progressFill.style.width = `${currentProgress}%`;
+        progressHeart.style.left = `${currentProgress}%`;
+        animationFrame = null;
+      }
+    };
+
+    const updateProgress = () => {
+      const scrollTop = scrollContainer.scrollTop;
+      const scrollHeight = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+      const scrollPercent = Math.min(Math.max(scrollTop / scrollHeight, 0), 1) * 100;
+      
+      targetProgress = scrollPercent;
+      
+      if (!animationFrame) {
+        animationFrame = requestAnimationFrame(animateProgress);
+      }
+
+      if (sectionName) {
+        const scrollPosition = scrollTop + 150;
+        let newSection = 'home';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionId = section.getAttribute('id');
+          
+          if (scrollPosition >= sectionTop) {
+            newSection = sectionId;
+          }
+        });
+
+        if (newSection !== currentSection) {
+          currentSection = newSection;
+          sectionName.classList.add('changing');
+          
+          setTimeout(() => {
+            sectionName.textContent = sectionNames[currentSection] || '';
+            sectionName.classList.remove('changing');
+          }, 150);
+        }
+      }
+    };
+
+    scrollContainer.addEventListener('scroll', updateProgress, { passive: true });
+    
+    updateProgress();
+    if (sectionName) {
+      sectionName.textContent = sectionNames['home'];
+    }
+  }
+
   function initCountdown() {
     const weddingDate = new Date('2026-05-25T00:00:00');
     
@@ -357,6 +462,7 @@ const App = (() => {
     initFaqAccordion();
     initScrollSpy();
     initCountdown();
+    initHeaderProgress();
 
     const currentLang = I18n.getCurrentLang();
     document.querySelectorAll('.lang-toggle button').forEach(btn => {

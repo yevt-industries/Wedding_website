@@ -719,6 +719,94 @@ h4 { font-size: var(--text-lg); }
   background: var(--border);
 }
 
+/* Header Progress Indicator (Mobile) */
+.header-progress {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header-section-name {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  opacity: 1;
+  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+
+.header-section-name.changing {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+.header-progress-track {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--border);
+  overflow: visible;
+}
+
+.header-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+  transition: none;
+}
+
+.header-progress-heart {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  filter: drop-shadow(0 1px 2px rgba(15, 76, 129, 0.3));
+  z-index: 10;
+  animation: heartPulse 2s ease-in-out infinite;
+}
+
+.header-progress-heart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@keyframes heartPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-progress {
+    display: block;
+  }
+  
+  .header-progress-track {
+    display: block;
+  }
+  
+  .site-header {
+    padding-bottom: 3px;
+  }
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
