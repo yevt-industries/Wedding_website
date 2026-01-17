@@ -719,6 +719,41 @@ h4 { font-size: var(--text-lg); }
   background: var(--border);
 }
 
+/* Header Animated Rings (Mobile) */
+.header-rings-container {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.header-rings {
+  width: 52px;
+  height: 28px;
+  overflow: visible;
+}
+
+.ring-group {
+  transform-origin: center;
+  will-change: transform;
+}
+
+.ring-left {
+  transform-origin: 22px 16px;
+}
+
+.ring-right {
+  transform-origin: 38px 16px;
+}
+
+@media (max-width: 768px) {
+  .header-rings-container {
+    display: block;
+  }
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;

@@ -36,6 +36,43 @@ const App = (() => {
       <div class="header-inner">
         <a href="${isHomePage ? '#home' : '/index.html'}" class="site-logo">O & I</a>
         
+        <!-- Mobile Animated Rings -->
+        <div class="header-rings-container" aria-hidden="true">
+          <svg class="header-rings" viewBox="0 0 60 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ringGradientLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#D4AF37"/>
+                <stop offset="25%" stop-color="#F5E6A3"/>
+                <stop offset="50%" stop-color="#D4AF37"/>
+                <stop offset="75%" stop-color="#AA8C2C"/>
+                <stop offset="100%" stop-color="#D4AF37"/>
+              </linearGradient>
+              <linearGradient id="ringGradientRight" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#E8D5B0"/>
+                <stop offset="25%" stop-color="#FFF8E7"/>
+                <stop offset="50%" stop-color="#E8D5B0"/>
+                <stop offset="75%" stop-color="#C9B896"/>
+                <stop offset="100%" stop-color="#E8D5B0"/>
+              </linearGradient>
+              <filter id="ringGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="1" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <g class="ring-group ring-left" filter="url(#ringGlow)">
+              <ellipse cx="22" cy="16" rx="12" ry="12" stroke="url(#ringGradientLeft)" stroke-width="3" fill="none"/>
+              <ellipse cx="22" cy="16" rx="12" ry="12" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
+            </g>
+            <g class="ring-group ring-right" filter="url(#ringGlow)">
+              <ellipse cx="38" cy="16" rx="12" ry="12" stroke="url(#ringGradientRight)" stroke-width="3" fill="none"/>
+              <ellipse cx="38" cy="16" rx="12" ry="12" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
+            </g>
+          </svg>
+        </div>
+        
         <button class="menu-toggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
@@ -275,6 +312,44 @@ const App = (() => {
     updateActiveLink();
   }
 
+  function initHeaderRings() {
+    const scrollContainer = document.getElementById('scroll-container');
+    const ringLeft = document.querySelector('.ring-left');
+    const ringRight = document.querySelector('.ring-right');
+    
+    if (!scrollContainer || !ringLeft || !ringRight) return;
+
+    let ticking = false;
+    let currentRotation = 0;
+    let targetRotation = 0;
+
+    const updateRings = () => {
+      const scrollTop = scrollContainer.scrollTop;
+      const scrollHeight = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+      const scrollPercent = Math.min(scrollTop / scrollHeight, 1);
+      
+      targetRotation = scrollPercent * 720;
+      
+      currentRotation += (targetRotation - currentRotation) * 0.1;
+      
+      ringLeft.style.transform = `rotate(${currentRotation}deg)`;
+      ringRight.style.transform = `rotate(${-currentRotation}deg)`;
+      
+      if (Math.abs(targetRotation - currentRotation) > 0.5) {
+        requestAnimationFrame(updateRings);
+      } else {
+        ticking = false;
+      }
+    };
+
+    scrollContainer.addEventListener('scroll', () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateRings);
+      }
+    }, { passive: true });
+  }
+
   function initCountdown() {
     const weddingDate = new Date('2026-05-25T00:00:00');
     
@@ -357,6 +432,7 @@ const App = (() => {
     initFaqAccordion();
     initScrollSpy();
     initCountdown();
+    initHeaderRings();
 
     const currentLang = I18n.getCurrentLang();
     document.querySelectorAll('.lang-toggle button').forEach(btn => {
