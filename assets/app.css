@@ -2801,12 +2801,13 @@ h4 { font-size: var(--text-lg); }
 }
 
 section.snap-section-casual > .container {
-  max-width: 1400px !important;
+  max-width: 1400px;
   width: 100%;
   height: calc(100vh - var(--header-height));
   height: calc(100dvh - var(--header-height));
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   padding: 0 var(--space-xl);
   margin-top: var(--header-height);
 }
