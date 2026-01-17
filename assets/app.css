@@ -307,20 +307,31 @@ h4 { font-size: var(--text-lg); }
 }
 
 @media (max-width: 768px) {
-  .snap-section-venue,
+  .snap-section-venue {
+    padding: 0 !important;
+  }
+  
   .snap-section-dates {
     justify-content: flex-start;
     padding: 0;
   }
   
-  .snap-section-venue > .container,
+  .snap-section-venue > .container {
+    height: 100vh;
+    height: 100dvh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
   .snap-section-dates > .container {
     height: 100vh;
     height: 100dvh;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 0;
+    padding-bottom: 15vh;
   }
   
   .snap-section-dates .snap-section-title {
@@ -359,13 +370,19 @@ h4 { font-size: var(--text-lg); }
   }
   
   .snap-section-venue .venue-image {
-    height: 40vh;
+    height: 50vh;
     min-height: 200px;
     max-height: none;
+    flex-shrink: 0;
+  }
+  
+  .snap-section-venue .venue-content {
+    flex-shrink: 0;
   }
   
   .snap-section-venue .venue-map {
-    flex: 1;
+    flex: 1 1 auto;
+    min-height: 100px;
     height: auto;
     max-height: none;
     margin-bottom: 0;
@@ -373,10 +390,7 @@ h4 { font-size: var(--text-lg); }
   
   .snap-section-venue .venue-map iframe {
     height: 100%;
-  }
-  
-  .snap-section-dates > .container {
-    padding-bottom: 15vh;
+    min-height: 100%;
   }
 
   #intro.snap-section {
