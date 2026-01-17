@@ -2952,11 +2952,14 @@ h4 { font-size: var(--text-lg); }
   
   .dresscode-split {
     gap: var(--space-xs);
-    padding-bottom: var(--space-sm);
+    padding: 0 var(--space-md) var(--space-sm);
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .dresscode-day {
     border-radius: var(--radius-sm);
+    width: 100%;
   }
   
   .dresscode-day-text {
