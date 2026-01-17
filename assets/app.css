@@ -320,10 +320,9 @@ h4 { font-size: var(--text-lg); }
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 15vh;
+    padding-bottom: 0;
   }
   
-  .snap-section-venue .snap-section-title,
   .snap-section-dates .snap-section-title {
     background: transparent;
     color: var(--accent);
@@ -335,10 +334,34 @@ h4 { font-size: var(--text-lg); }
     text-shadow: none;
   }
   
+  .snap-section-venue .snap-section-title {
+    position: absolute;
+    top: calc(var(--header-height) + var(--space-sm));
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: transparent;
+    color: #fff;
+    padding: var(--space-md) var(--space-lg);
+    margin-bottom: 0;
+    font-size: clamp(3.5rem, 14vw, 5rem);
+    font-weight: 700;
+    width: 100%;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), 0 4px 40px rgba(0, 0, 0, 0.4);
+  }
+  
   .snap-section-venue .snap-card-venue {
     flex: 1;
     border-radius: 0;
     box-shadow: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .snap-section-venue .venue-image {
+    height: 40vh;
+    min-height: 200px;
+    max-height: none;
   }
   
   .snap-section-venue .venue-map {
@@ -395,6 +418,21 @@ h4 { font-size: var(--text-lg); }
 .snap-card-venue {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.snap-section-venue {
+  position: relative;
+}
+
+.snap-section-venue .snap-section-title {
+  position: absolute;
+  top: calc(var(--header-height) + var(--space-lg));
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), 0 4px 40px rgba(0, 0, 0, 0.4);
 }
 
 .snap-card-venue .venue-image {
@@ -436,7 +474,7 @@ h4 { font-size: var(--text-lg); }
   height: 20vh;
   min-height: 130px;
   max-height: 180px;
-  margin-bottom: var(--space-lg);
+  margin-bottom: 0;
 }
 
 .snap-card-dates {
@@ -544,7 +582,7 @@ h4 { font-size: var(--text-lg); }
   .snap-card-venue .venue-map {
     height: 18vh;
     min-height: 110px;
-    margin-bottom: var(--space-md);
+    margin-bottom: 0;
   }
   
   .snap-card-venue .venue-content {
