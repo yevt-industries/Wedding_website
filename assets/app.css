@@ -2800,8 +2800,8 @@ h4 { font-size: var(--text-lg); }
   background: var(--card);
 }
 
-.snap-section-casual > .container {
-  max-width: 1400px;
+section.snap-section-casual > .container {
+  max-width: 1400px !important;
   width: 100%;
   height: calc(100vh - var(--header-height));
   height: calc(100dvh - var(--header-height));
