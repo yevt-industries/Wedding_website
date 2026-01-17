@@ -2942,12 +2942,12 @@ h4 { font-size: var(--text-lg); }
     max-width: 100%;
     height: calc(100vh - var(--header-height));
     height: calc(100dvh - var(--header-height));
-    padding: 0 var(--space-sm);
+    padding: 0;
   }
   
   .snap-section-casual .snap-section-title {
     font-size: clamp(1.8rem, 7vw, 2.5rem);
-    padding: var(--space-sm) 0;
+    padding: var(--space-sm) var(--space-md);
   }
   
   .dresscode-split {
