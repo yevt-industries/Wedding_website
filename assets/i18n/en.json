@@ -58,7 +58,15 @@
       "b3": "Most guests will arrive via Podgorica Airport (TGD)"
     },
     "galleryTitle": "Photos",
-    "galleryBody": "A few moments and Montenegro inspiration."
+    "galleryBody": "A few moments and Montenegro inspiration.",
+    "dresscodeWeddingTitle": "Wedding Day Dress Code",
+    "dresscodeWeddingBody": "For our wedding day, we'd love for you to dress in elegant semi-formal attire. Feel free to incorporate these Mediterranean-inspired colors into your outfit.",
+    "inspoTitle": "Wedding Day Inspo",
+    "dresscodeCasualTitle": "Day 1 & Day 3 Dress Code",
+    "day1Title": "Day 1 — Welcome Party",
+    "day1Body": "Smart casual vibes — think summer evening by the sea. Light fabrics, relaxed elegance.",
+    "day3Title": "Day 3 — Pool Party",
+    "day3Body": "Beach & pool ready! Swimwear, cover-ups, sandals. Casual and comfortable for a day of sun and fun."
   },
   "schedule": {
     "title": "Weekend Schedule",
