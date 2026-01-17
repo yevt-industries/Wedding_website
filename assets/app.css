@@ -362,7 +362,7 @@ h4 { font-size: var(--text-lg); }
   }
   
   .snap-section-venue .snap-card-venue {
-    flex: 1;
+    height: 100%;
     border-radius: 0;
     box-shadow: none;
     display: flex;
@@ -370,27 +370,37 @@ h4 { font-size: var(--text-lg); }
   }
   
   .snap-section-venue .venue-image {
-    height: 50vh;
-    min-height: 200px;
-    max-height: none;
-    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    flex: 0 0 auto;
+  }
+  
+  .snap-section-venue .venue-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   
   .snap-section-venue .venue-content {
-    flex-shrink: 0;
+    flex: 0 0 auto;
+    padding: var(--space-md);
   }
   
   .snap-section-venue .venue-map {
+    position: relative;
     flex: 1 1 auto;
-    min-height: 100px;
+    min-height: 0;
     height: auto;
     max-height: none;
     margin-bottom: 0;
   }
   
   .snap-section-venue .venue-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    min-height: 100%;
   }
 
   #intro.snap-section {
@@ -586,17 +596,6 @@ h4 { font-size: var(--text-lg); }
   
   .snap-card {
     border-radius: var(--radius-md);
-  }
-  
-  .snap-card-venue .venue-image {
-    height: 28vh;
-    min-height: 140px;
-  }
-  
-  .snap-card-venue .venue-map {
-    height: 18vh;
-    min-height: 110px;
-    margin-bottom: 0;
   }
   
   .snap-card-venue .venue-content {
