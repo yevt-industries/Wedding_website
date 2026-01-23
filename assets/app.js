@@ -15,15 +15,15 @@ const App = (() => {
     const isHomePage = currentPage === 'index' || currentPage === '';
     
     const navItems = isHomePage ? [
-      { key: 'nav.home', href: '#home' },
       { key: 'nav.schedule', href: '#schedule' },
       { key: 'nav.rsvp', href: '#rsvp' },
+      { key: 'nav.home', href: '#home' },
       { key: 'nav.faq', href: '#faq' },
       { key: 'nav.contact', href: '#contact' }
     ] : [
-      { key: 'nav.home', href: '/index.html#home' },
       { key: 'nav.schedule', href: '/index.html#schedule' },
       { key: 'nav.rsvp', href: '/index.html#rsvp' },
+      { key: 'nav.home', href: '/index.html#home' },
       { key: 'nav.faq', href: '/index.html#faq' },
       { key: 'nav.contact', href: '/index.html#contact' }
     ];
