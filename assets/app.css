@@ -2580,7 +2580,7 @@ h4 { font-size: var(--text-lg); }
 .color-palette {
   display: flex;
   justify-content: center;
-  gap: var(--space-xl);
+  gap: var(--space-xxl);
   margin: 0 auto;
 }
 
@@ -2588,21 +2588,22 @@ h4 { font-size: var(--text-lg); }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .swatch-circle {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: var(--swatch-color);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .color-group:hover .swatch-circle {
   transform: scale(1.08);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
 }
 
 .swatch-label {
@@ -2610,7 +2611,7 @@ h4 { font-size: var(--text-lg); }
   font-size: var(--text-sm);
   color: var(--muted);
   font-style: italic;
-  margin-top: var(--space-xs);
+  margin-top: var(--space-sm);
 }
 
 .dresscode-note {
@@ -2642,16 +2643,17 @@ h4 { font-size: var(--text-lg); }
   }
   
   .color-palette {
-    gap: var(--space-lg);
+    gap: var(--space-xl);
   }
   
   .color-group {
-    gap: var(--space-xs);
+    gap: var(--space-sm);
   }
   
   .swatch-circle {
-    width: 55px;
-    height: 55px;
+    width: 65px;
+    height: 65px;
+    border-width: 3px;
   }
   
   .swatch-label {
@@ -2666,12 +2668,12 @@ h4 { font-size: var(--text-lg); }
 
 @media (max-width: 380px) {
   .color-palette {
-    gap: var(--space-md);
+    gap: var(--space-lg);
   }
   
   .swatch-circle {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
   }
 }
 
