@@ -2578,41 +2578,65 @@ h4 { font-size: var(--text-lg); }
 }
 
 .color-palette {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
   margin: 0 auto;
 }
 
-.color-swatch {
+.color-group {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
 }
 
+.swatch-pair {
+  display: flex;
+  position: relative;
+}
+
+.swatch-pair .swatch-circle:first-child {
+  z-index: 2;
+}
+
+.swatch-pair .swatch-circle:last-child {
+  margin-left: -20px;
+  z-index: 1;
+}
+
 .swatch-circle {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background-color: var(--swatch-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.3);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 3px solid rgba(255, 255, 255, 0.8);
 }
 
-.color-swatch:hover .swatch-circle {
+.color-group:hover .swatch-circle {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .swatch-label {
   font-family: var(--font-sans);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.dresscode-note {
+  margin-top: var(--space-lg);
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  opacity: 0.85;
 }
 
 @media (max-width: 768px) {
@@ -2634,30 +2658,40 @@ h4 { font-size: var(--text-lg); }
   }
   
   .color-palette {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
-    max-width: 320px;
+    gap: var(--space-lg);
   }
   
   .swatch-circle {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .swatch-pair .swatch-circle:last-child {
+    margin-left: -15px;
   }
   
   .swatch-label {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
+  }
+  
+  .dresscode-note {
+    font-size: var(--text-xs);
+    margin-top: var(--space-md);
   }
 }
 
 @media (max-width: 380px) {
   .color-palette {
-    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
   }
   
   .swatch-circle {
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .swatch-pair .swatch-circle:last-child {
+    margin-left: -12px;
   }
 }
 
