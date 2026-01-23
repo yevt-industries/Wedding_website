@@ -2651,8 +2651,8 @@ h4 { font-size: var(--text-lg); }
   }
   
   .swatch-circle {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
     border-width: 3px;
   }
   
@@ -2672,8 +2672,8 @@ h4 { font-size: var(--text-lg); }
   }
   
   .swatch-circle {
-    width: 55px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
   }
 }
 
