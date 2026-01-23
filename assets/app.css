@@ -2591,42 +2591,26 @@ h4 { font-size: var(--text-lg); }
   gap: var(--space-sm);
 }
 
-.swatch-pair {
-  display: flex;
-  position: relative;
-}
-
-.swatch-pair .swatch-circle:first-child {
-  z-index: 2;
-}
-
-.swatch-pair .swatch-circle:last-child {
-  margin-left: -20px;
-  z-index: 1;
-}
-
 .swatch-circle {
-  width: 55px;
-  height: 55px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: var(--swatch-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.3);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
-  border: 3px solid rgba(255, 255, 255, 0.8);
 }
 
 .color-group:hover .swatch-circle {
-  transform: scale(1.1);
+  transform: scale(1.08);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .swatch-label {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: var(--text-sm);
   color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 600;
+  font-style: italic;
+  margin-top: var(--space-xs);
 }
 
 .dresscode-note {
@@ -2661,17 +2645,17 @@ h4 { font-size: var(--text-lg); }
     gap: var(--space-lg);
   }
   
-  .swatch-circle {
-    width: 45px;
-    height: 45px;
+  .color-group {
+    gap: var(--space-xs);
   }
   
-  .swatch-pair .swatch-circle:last-child {
-    margin-left: -15px;
+  .swatch-circle {
+    width: 55px;
+    height: 55px;
   }
   
   .swatch-label {
-    font-size: 0.7rem;
+    font-size: var(--text-xs);
   }
   
   .dresscode-note {
@@ -2686,12 +2670,8 @@ h4 { font-size: var(--text-lg); }
   }
   
   .swatch-circle {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .swatch-pair .swatch-circle:last-child {
-    margin-left: -12px;
+    width: 45px;
+    height: 45px;
   }
 }
 
